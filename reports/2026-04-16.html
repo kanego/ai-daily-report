@@ -379,32 +379,18 @@
         <span>由丫头自动生成 ✨ Powered by AI</span>
     </div>
     <script>
-        // Auto-generate TOC from h2 sections
-        const h2s = document.querySelectorAll('#content h2.section-title');
-        if (h2s.length > 1) {
-            const toc = document.getElementById('toc');
-            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
-            h2s.forEach((h2, i) => {
-                const id = 'sec-' + i;
-                h2.id = id;
-                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
-                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
-            });
-            html += '</div></div>';
-            toc.innerHTML = html;
-        }
-
-        // Wrap sections in cards
+        // 1. Wrap sections in cards FIRST
         const container = document.getElementById('content');
         const children = Array.from(container.children);
         let currentCard = null;
         const fragment = document.createDocumentFragment();
+        let actionsEl = null;
 
         children.forEach(el => {
             if (el.classList.contains('actions')) {
                 if (currentCard) fragment.appendChild(currentCard);
                 currentCard = null;
-                fragment.appendChild(el);
+                actionsEl = el;
                 return;
             }
             if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
@@ -420,7 +406,6 @@
                 currentCard.appendChild(el);
             } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
                 el.classList.add('content-h1');
-                // skip duplicate title
             } else {
                 if (!currentCard) {
                     currentCard = document.createElement('div');
@@ -430,12 +415,25 @@
             }
         });
         if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
 
-        // Re-insert
         while (container.firstChild) container.removeChild(container.firstChild);
         container.appendChild(fragment);
-        // Re-add actions at end
-        const actions = container.querySelector('.actions') || document.querySelector('.actions');
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
     </script>
 </body>
 </html>
