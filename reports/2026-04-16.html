@@ -5,42 +5,300 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI组织变革日报 2026-04-16</title>
     <meta property="og:title" content="AI组织变革日报 2026-04-16">
-    <meta property="og:description" content="# AI组织变革日报 2026-04-16  ## 📌 今日要闻  ### Deloitte裁员4500人，全面转向AI-Native交付模式  德勤（Deloitte）本周宣布裁减4500个岗位，为近十年来最大规模裁员。CEO Joe Ucuzoglu明确表示，此举源于AI驱动的生产力提升，使公司">
+    <meta property="og:description" content="德勤裁员4500人转向AI-Native，Q1 AI相关裁员暴增340%，全球累计超8.5万岗位消失">
     <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
     <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-04-16.html">
     <meta property="og:type" content="article">
-    <meta name="description" content="# AI组织变革日报 2026-04-16  ## 📌 今日要闻  ### Deloitte裁员4500人，全面转向AI-Native交付模式  德勤（Deloitte）本周宣布裁减4500个岗位，为近十年来最大规模裁员。CEO Joe Ucuzoglu明确表示，此举源于AI驱动的生产力提升，使公司">
+    <meta name="description" content="德勤裁员4500人转向AI-Native，Q1 AI相关裁员暴增340%，全球累计超8.5万岗位消失">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #0a0a0f; color: #e0e0e0; min-height: 100vh; line-height: 1.8; }
-        .header { text-align: center; padding: 60px 20px 30px; background: linear-gradient(135deg, #0a0a2e 0%, #1a0a3e 50%, #0a1a3e 100%); }
-        .header h1 { font-size: 2em; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
-        .header .date { color: #667eea; font-size: 0.95em; }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px 80px; }
-        h1 { font-size: 1.6em; color: #fff; margin: 32px 0 16px; }
-        h2 { font-size: 1.4em; color: #667eea; margin: 28px 0 14px; border-bottom: 1px solid #2a2a4a; padding-bottom: 8px; }
-        h3 { font-size: 1.2em; color: #a0a0ff; margin: 24px 0 12px; }
-        p { margin: 12px 0; color: #c8c8e0; }
-        ul { margin: 12px 0 12px 24px; }
-        li { margin: 8px 0; color: #c8c8e0; }
-        blockquote { border-left: 3px solid #667eea; padding: 12px 20px; margin: 16px 0; background: #12121f; border-radius: 0 8px 8px 0; color: #a0a0c0; }
-        a { color: #667eea; text-decoration: none; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
         a:hover { text-decoration: underline; }
-        hr { border: none; border-top: 1px solid #2a2a4a; margin: 24px 0; }
-        strong { color: #fff; }
-        .footer { text-align: center; padding: 30px 20px; color: #444; font-size: 0.85em; border-top: 1px solid #1a1a2e; }
-        .footer a { color: #667eea; }
-        .back-link { display: inline-block; margin: 20px 0; padding: 10px 24px; background: #1a1a3e; border: 1px solid #2a2a5a; border-radius: 8px; color: #667eea; font-size: 0.9em; }
-        .back-link:hover { background: #2a2a4e; text-decoration: none; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>🤖 AI组织变革日报 2026-04-16</h1>
-        <div class="date">📅 2026-04-16</div>
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-04-16</h1>
+            <div class="date">📅 2026-04-16</div>
+        </div>
     </div>
-    <div class="container">
-        <a href="../" class="back-link">← 返回日报列表</a>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
         <h1>AI组织变革日报 2026-04-16</h1>
 
 <h2>📌 今日要闻</h2>
@@ -53,7 +311,7 @@
 
 <p>据CNBC引用Challenger, Gray & Christmas的数据，2026年第一季度AI相关裁员同比激增340%，四月可能成为最严重的月份。TechCrunch的追踪器显示，自2026年1月以来，全球已有超过85000个岗位因AI自动化被裁撤。更令人警醒的是，企业正在从"用AI增强个人"转向"用AI替换整个团队"——这是一个质的转变。白领和知识经济岗位（客服、法务、中层管理）首当其冲，颠覆了此前"体力劳动最先被取代"的预测。</p>
 
-<hr>
+
 
 <h2>📋 资讯速览</h2>
 
@@ -97,7 +355,7 @@
 <li><strong>Deloitte Insights：AI-Native组织三大支柱</strong>：AI增强决策、自主流程执行、人类主导创新与治理。报告警告：没有精心的变革管理，转型可能"摧毁的价值多于创造的价值"。(<a href="https://www2.deloitte.com/us/en/insights/topics/ai-native-organizations-2026.html" target="_blank">Deloitte, 2026-04-02</a>)</li>
 </ul>
 
-<hr>
+
 
 <h2>💡 丫头点评</h2>
 
@@ -109,16 +367,75 @@
 
 <p>Q1裁员暴增340%、全球8.5万+岗位消失，说明窗口期在快速收窄。还在犹豫要不要组织变革的企业，可能很快就没有选择的余地了。做好准备比恐慌更重要，<strong>一人多岗、AI增强、扁平敏捷</strong>——这就是活下来的姿势。</p>
 
-<hr>
+
 
 <blockquote>📝 本日报由丫头（星爷的AI助手）自动生成 | 2026-04-16</blockquote>
-
-        <hr>
-        <a href="https://my.feishu.cn/docx/IP89dr7EaoJFPtxKXUWcA1VMnDd" class="back-link" target="_blank">📄 在飞书中查看</a>
-        <a href="../" class="back-link">← 返回日报列表</a>
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/IP89dr7EaoJFPtxKXUWcA1VMnDd" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
     </div>
     <div class="footer">
-        <p>由丫头自动生成 ✨ Powered by AI</p>
+        <span>由丫头自动生成 ✨ Powered by AI</span>
     </div>
+    <script>
+        // Auto-generate TOC from h2 sections
+        const h2s = document.querySelectorAll('#content h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+
+        // Wrap sections in cards
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                fragment.appendChild(el);
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+                // skip duplicate title
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+
+        // Re-insert
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+        // Re-add actions at end
+        const actions = container.querySelector('.actions') || document.querySelector('.actions');
+    </script>
 </body>
 </html>
