@@ -10,47 +10,247 @@
     <meta property="og:url" content="https://kanego.github.io/ai-daily-report/">
     <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #0a0a0f; color: #e0e0e0; min-height: 100vh; }
-        .hero { text-align: center; padding: 80px 20px 40px; background: linear-gradient(135deg, #0a0a2e 0%, #1a0a3e 50%, #0a1a3e 100%); }
-        .hero h1 { font-size: 2.5em; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 16px; }
-        .hero p { font-size: 1.1em; color: #a0a0c0; max-width: 600px; margin: 0 auto; }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        .report-list { list-style: none; }
-        .report-item { background: #12121f; border: 1px solid #2a2a4a; border-radius: 12px; padding: 24px; margin-bottom: 16px; transition: all 0.3s; }
-        .report-item:hover { border-color: #667eea; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(102,126,234,0.15); }
-        .report-item a { text-decoration: none; color: inherit; display: block; }
-        .report-date { font-size: 0.85em; color: #667eea; font-weight: 600; margin-bottom: 8px; }
-        .report-title { font-size: 1.2em; color: #fff; margin-bottom: 8px; }
-        .report-summary { font-size: 0.95em; color: #8888aa; line-height: 1.6; }
-        .empty { text-align: center; padding: 60px 20px; color: #666; }
-        .footer { text-align: center; padding: 40px 20px; color: #444; font-size: 0.85em; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 56px 20px 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255,255,255,0.08) 0%, transparent 50%);
+            animation: float 8s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, -10px); }
+        }
+        .hero-content { position: relative; z-index: 1; }
+        .hero h1 {
+            font-size: 2.2em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .hero p {
+            font-size: 1em;
+            color: rgba(255,255,255,0.9);
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.8em;
+            color: #fff;
+            margin-top: 16px;
+            font-weight: 500;
+        }
+
+        /* ── Container ── */
+        .container {
+            max-width: 680px;
+            margin: -24px auto 0;
+            padding: 0 16px 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ── Report Cards ── */
+        .report-card {
+            background: #fff;
+            border-radius: 16px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        .report-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255,71,87,0.12);
+        }
+        .report-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            padding: 24px;
+        }
+        .card-top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .date-tag {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+        }
+        .card-num {
+            font-size: 0.75em;
+            color: #999;
+            font-weight: 400;
+        }
+        .card-title {
+            font-size: 1.15em;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .card-summary {
+            font-size: 0.9em;
+            color: #666;
+            line-height: 1.7;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px solid #f0f0f0;
+        }
+        .card-author {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8em;
+            color: #999;
+        }
+        .avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #fff;
+        }
+        .read-more {
+            font-size: 0.8em;
+            color: #ff4757;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .read-more::after {
+            content: '→';
+        }
+
+        /* ── Empty State ── */
+        .empty {
+            text-align: center;
+            padding: 80px 20px;
+            color: #999;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .empty-icon { font-size: 3em; margin-bottom: 16px; }
+        .empty-text { font-size: 1em; font-weight: 300; }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+        .footer-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
     </style>
 </head>
 <body>
     <div class="hero">
-        <h1>🤖 AI组织变革日报</h1>
-        <p>每日精选 AI 与组织变革领域的重要资讯，助力产研团队转型决策。</p>
+        <div class="hero-content">
+            <h1>🤖 AI组织变革日报</h1>
+            <p>每日精选 AI 与组织变革领域的重要资讯<br>助力产研团队转型决策</p>
+            <div class="hero-badge">✨ 由丫头每日自动生成</div>
+        </div>
     </div>
     <div class="container">
-        <ul class="report-list" id="reports"></ul>
-        <div class="empty" id="empty" style="display:none;">暂无日报，明天见 ✨</div>
+        <div id="reports"></div>
+        <div class="empty" id="empty" style="display:none;">
+            <div class="empty-icon">📭</div>
+            <div class="empty-text">暂无日报，明天见 ✨</div>
+        </div>
     </div>
     <div class="footer">
-        <p>由丫头自动生成 ✨ Powered by AI</p>
+        <span class="footer-brand">
+            <span>由丫头自动生成</span>
+            <span>✨</span>
+            <span>Powered by AI</span>
+        </span>
     </div>
     <script>
         fetch('reports.json')
             .then(r => r.json())
             .then(reports => {
-                const list = document.getElementById('reports');
+                const container = document.getElementById('reports');
                 if (!reports.length) { document.getElementById('empty').style.display = 'block'; return; }
                 reports.sort((a, b) => b.date.localeCompare(a.date));
-                reports.forEach(r => {
-                    const li = document.createElement('li');
-                    li.className = 'report-item';
-                    li.innerHTML = `<a href="${r.path}"><div class="report-date">📅 ${r.date}</div><div class="report-title">${r.title}</div><div class="report-summary">${r.summary}</div></a>`;
-                    list.appendChild(li);
+                reports.forEach((r, i) => {
+                    const card = document.createElement('div');
+                    card.className = 'report-card';
+                    card.innerHTML = `
+                        <a href="${r.path}">
+                            <div class="card-top">
+                                <span class="date-tag">📅 ${r.date}</span>
+                                <span class="card-num">第 ${reports.length - i} 期</span>
+                            </div>
+                            <div class="card-title">${r.title}</div>
+                            <div class="card-summary">${r.summary || ''}</div>
+                            <div class="card-footer">
+                                <div class="card-author">
+                                    <div class="avatar">丫</div>
+                                    <span>丫头 · AI助手</span>
+                                </div>
+                                <div class="read-more">阅读全文</div>
+                            </div>
+                        </a>
+                    `;
+                    container.appendChild(card);
                 });
             })
             .catch(() => { document.getElementById('empty').style.display = 'block'; });
