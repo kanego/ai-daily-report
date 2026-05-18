@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发者工具/开源周刊 2026-05-18</title>
+    <meta property="og:title" content="开发者工具/开源周刊 2026-05-18">
+    <meta property="og:description" content="# 🛠️ 开发者工具/开源周刊 2026-05-18  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。  ## 🏆 本周 Top 10  ### 1. OpenAI Codex ⭐ 云端软件工程 Agent（HN 1200">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-05-18-weekly.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# 🛠️ 开发者工具/开源周刊 2026-05-18  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。  ## 🏆 本周 Top 10  ### 1. OpenAI Codex ⭐ 云端软件工程 Agent（HN 1200">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 开发者工具/开源周刊 2026-05-18</h1>
+            <div class="date">📅 2026-05-18</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>🛠️ 开发者工具/开源周刊 2026-05-18</h1>
+
+<blockquote>每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。</blockquote>
+
+<h2>🏆 本周 Top 10</h2>
+
+<h3>1. OpenAI Codex ⭐ 云端软件工程 Agent（HN 1200+ points）</h3>
+<p><strong>来源：</strong> Hacker News 热榜 #1 | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://news.ycombinator.com/item?id=43936702" target="_blank">Hacker News</a> | <a href="https://github.com/openai/openai-agents-python" target="_blank">GitHub</a></p>
+
+<p>OpenAI 发布了云端软件工程 Agent——Codex，能够自主完成复杂的多步骤编码任务。Codex CLI 同步开源，允许开发者在终端中使用 Agent 能力。这是 OpenAI 在 Agentic Coding 领域的重要落子，直接对标 Cursor、Devin 等产品。HN 讨论量超 600 条，社区对其代码生成质量和自主性评价积极。</p>
+
+<p><strong>为什么值得关注：</strong> Agent 化编码正式进入大厂军备竞赛阶段。对产研团队而言，这意味着更多"一人多岗"的可能性——一个开发者+AI Agent 可以承担过去 2-3 人的编码产出。</p>
+
+<hr>
+
+<h3>2. AlphaEvolve ⭐ Gemini 驱动的算法设计 Agent（HN 850+ points）</h3>
+<p><strong>来源：</strong> Hacker News / Google DeepMind | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://news.ycombinator.com/item?id=43945890" target="_blank">Hacker News</a></p>
+
+<p>Google DeepMind 发布 AlphaEvolve，一个基于 Gemini 的编码 Agent，专门用于自动设计和优化算法。不同于通用编码助手，AlphaEvolve 聚焦于算法层面的创新——能够自主生成、评估并迭代改进算法方案。这标志着 AI 从"写代码"向"设计算法"迈进了一步。</p>
+
+<p><strong>为什么值得关注：</strong> 算法优化是技术壁垒最高的工作之一，AlphaEvolve 展示了 AI 在高阶技术工作上的潜力，对研发团队的算法岗位有直接冲击。</p>
+
+<hr>
+
+<h3>3. Marimo 1.0 ⭐ Jupyter 的现代化替代（HN 500+ points）</h3>
+<p><strong>来源：</strong> Hacker News Show HN | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://news.ycombinator.com/item?id=43899456" target="_blank">Hacker News</a></p>
+
+<p>Marimo 1.0 正式发布——一个响应式 Python Notebook，定位为 Jupyter 的现代替代品。核心创新是"响应式执行"：当你修改一个 Cell，所有依赖它的下游 Cell 自动重新执行，解决了 Jupyter 长期被诟病的执行顺序混乱问题。同时支持将 Notebook 导出为可部署的 Web 应用。</p>
+
+<p><strong>为什么值得关注：</strong> 数据科学和 ML 团队的核心工具升级。响应式 Notebook 大幅减少调试时间，对数据分析师和 ML 工程师的效率提升立竿见影。</p>
+
+<hr>
+
+<h3>4. Plandex 2.0 ⭐ 开源终端 AI 编码引擎（HN 450+ points）</h3>
+<p><strong>来源：</strong> Hacker News Show HN | <strong>语言：</strong> Go/Python</p>
+<p><strong>链接：</strong> <a href="https://news.ycombinator.com/item?id=43920145" target="_blank">Hacker News</a></p>
+
+<p>Plandex 2.0 是一个开源的 AI 编码引擎，专注于在终端中处理复杂的多文件编码任务。相比 Aider 等工具，Plandex 的差异化在于"计划优先"——它先生成完整的修改计划，经用户确认后再执行，让开发者对 AI 的输出保持控制力。</p>
+
+<p><strong>为什么值得关注：</strong> 开源、终端原生、计划驱动的设计理念适合追求透明和可控的工程团队。对于担心 AI"黑箱操作"的技术 Leader，这是一个更容易接受的方案。</p>
+
+<hr>
+
+<h3>5. Lovable v2 ⭐ AI 全栈应用构建器（PH 1500+ upvotes）</h3>
+<p><strong>来源：</strong> Product Hunt 周榜 #1 | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://www.producthunt.com/posts/lovable-v2" target="_blank">Product Hunt</a></p>
+
+<p>Lovable v2 在 Product Hunt 斩获 1500+ upvotes，新版本加入了后端支持、身份认证和数据库能力，从"前端原型工具"进化为"全栈应用构建器"。用自然语言描述需求，AI 自动生成包含前后端的完整 Web 应用，号称"10倍速度"。</p>
+
+<p><strong>为什么值得关注：</strong> Vibe Coding（氛围编程）工具的代表作。对于需要快速验证想法的产品经理和创业者，Lovable v2 可以显著压缩从想法到原型的周期。</p>
+
+<hr>
+
+<h3>6. Cursor Agent Mode ⭐ 全自主编码 Agent（PH 1100+ upvotes）</h3>
+<p><strong>来源：</strong> Product Hunt | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://www.producthunt.com/posts/cursor-agent-mode" target="_blank">Product Hunt</a></p>
+
+<p>Cursor 推出 Agent Mode——完全自主的 AI 编码代理，能执行多步骤任务、运行终端命令、编辑文件。这把 Cursor 从"AI 辅助编辑器"升级为"AI 自主编码平台"。配合 Cursor 2B 美元估值的消息，Agentic IDE 赛道竞争白热化。</p>
+
+<p><strong>为什么值得关注：</strong> IDE 大战进入 Agent 阶段。Cursor 的 Agent Mode 对标 Devin，但深度集成在编辑器里体验更流畅。产研团队应该考虑让开发者试用。</p>
+
+<hr>
+
+<h3>7. OpenHands ⭐ 48k stars 的 AI 软件开发平台</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/All-Hands-AI/OpenHands" target="_blank">GitHub</a></p>
+
+<p>OpenHands（原 OpenDevin）是开源的 AI 软件开发 Agent 平台，stars 突破 48k。它能自主浏览代码库、编写代码、运行测试、提交 PR，本质上是一个完整的 AI 软件工程师。社区活跃度极高，每周都有显著更新。</p>
+
+<p><strong>为什么值得关注：</strong> 作为 Devin 的开源替代品，OpenHands 让每个团队都能搭建自己的 AI 开发 Agent。适合有技术实力、追求数据安全的企业自建 AI 编码能力。</p>
+
+<hr>
+
+<h3>8. browser-use ⭐ 52k stars 的 AI 浏览器自动化</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/browser-use/browser-use" target="_blank">GitHub</a></p>
+
+<p>browser-use 让 AI Agent 能够自主操作浏览器——点击、输入、导航、提取信息。stars 已突破 52k，是 GitHub 增长最快的项目之一。它解决了 AI Agent 与 Web 世界交互的关键问题，是构建自动化工作流的基础设施。</p>
+
+<p><strong>为什么值得关注：</strong> 对于需要做数据采集、自动化测试、流程自动化的团队，browser-use 是连接 AI 和 Web 的桥梁。RPA 岗位将被重新定义。</p>
+
+<hr>
+
+<h3>9. Daydream ⭐ AI 深度研究浏览器（PH 1200+ upvotes）</h3>
+<p><strong>来源：</strong> Product Hunt | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://www.producthunt.com/posts/daydream-3" target="_blank">Product Hunt</a></p>
+
+<p>Daydream 是一款 AI 驱动的研究浏览器——输入一个研究问题，它能自主花数小时在互联网上搜索、阅读、综合信息，最后给出结构化的研究报告。PH 上获得 1200+ upvotes，直接对标 Perplexity 的深度研究功能。</p>
+
+<p><strong>为什么值得关注：</strong> 对产品经理和研究人员是效率倍增器。一个人+Daydream 可以完成过去需要研究助理花一天做的竞品调研和行业分析。</p>
+
+<hr>
+
+<h3>10. uv ⭐ 55k stars 的 Rust 版 Python 包管理器</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Rust</p>
+<p><strong>链接：</strong> <a href="https://github.com/astral-sh/uv" target="_blank">GitHub</a></p>
+
+<p>Astral 的 uv 是用 Rust 重写的 Python 包管理和项目管理工具，速度比 pip 快 10-100 倍。stars 突破 55k，已经成为 Python 生态系统中增长最快的基础设施工具。它整合了 pip、pip-tools、virtualenv、pyenv 的功能，一个工具解决 Python 项目管理的所有痛点。</p>
+
+<p><strong>为什么值得关注：</strong> Python 开发者的必备升级。uv 正在重定义 Python 项目管理的标准，早用早受益。Rust 重写 Python 工具链已成确定趋势（ruff、uv、Biome）。</p>
+
+<hr>
+
+<h2>📊 趋势洞察</h2>
+
+<h3>本周热门方向</h3>
+
+<ul>
+<li><strong>Agentic Coding 全面爆发：</strong> OpenAI Codex、Cursor Agent Mode、Plandex 2.0、OpenHands——AI 编码从"辅助"全面进入"自主 Agent"阶段。Sequoia 数据显示该市场 YoY 增长 340%。</li>
+<li><strong>LLM 框架生态整合：</strong> LangChain v0.4、LlamaIndex 2.0、DSPy 3.0、Pydantic AI——框架层正在快速整合，多 Agent 编排成为核心能力。</li>
+<li><strong>Rust 重写一切：</strong> uv（55k stars）、Ruff（38k）、Biome（18k）——Rust 语言正在系统性地重写开发者工具链，性能提升 10-100 倍。</li>
+<li><strong>开源 Agent 追赶商业产品：</strong> Cline、Aider、Continue 等开源 AI 编码工具增速超过商业对手（ossinsight 数据），"开源 Devin"们正在缩小差距。</li>
+</ul>
+
+<h3>值得关注的信号</h3>
+
+<ul>
+<li>Stack Overflow 2026 调查显示 <strong>67% 的专业开发者每天使用 AI 编码助手</strong>，Agentic IDE 采用增速最快</li>
+<li>Cursor 估值达 <strong>20 亿美元</strong>，AI 编辑器赛道融资持续升温</li>
+<li>Ollama 2.0 支持多模型同时服务，本地 LLM 部署进入"生产就绪"阶段</li>
+<li>Google I/O 发布一系列 AI 能力更新，Gemini 2.5 Pro 登顶 LMArena，与 GPT-5/Claude 4 的三足鼎立格局确立</li>
+</ul>
+
+<h2>💡 丫头推荐</h2>
+
+<p>本周最值得你花时间看的 3 个项目：</p>
+
+<p>1. <strong>Marimo 1.0</strong> — 如果你的团队有数据分析或 ML 工作流，强烈建议试用。响应式 Notebook 解决了 Jupyter 最大的痛点（执行顺序混乱），还能一键导出为 Web 应用。学习成本低，收益立竿见影。</p>
+<p>2. <strong>Plandex 2.0</strong> — 对于追求透明和可控的工程团队，这是目前最好的开源终端 AI 编码方案。"先规划后执行"的设计理念比 Aider 更适合严肃的生产环境。</p>
+<p>3. <strong>browser-use</strong> — 如果你在思考如何用 AI 替代重复性 Web 操作（数据采集、自动化测试、流程自动化），这是当前最成熟的开源方案。52k stars 的社区活跃度保证了持续迭代。</p>
+
+<h2>🔗 星爷视角</h2>
+
+<p>本周工具趋势的核心词是"Agent 化"——从 OpenAI Codex 到 Cursor Agent Mode，再到 AlphaEvolve，AI 正在从"工具"进化为"同事"。这恰恰印证了 AI Native Pod 的核心逻辑：当 AI Agent 能自主完成编码、测试、调研、浏览器操作时，传统的"多人分工"组织模式将被"一人+多 Agent"模式取代。</p>
+
+<p>对于四层→两层半的组织变革，本周有两个关键信号：一是 Lovable v2 和 Daydream 这类工具，让产品经理能直接构建原型、完成深度调研，加速了"I型→T型"人才的转变；二是 OpenHands 和 browser-use 的成熟，意味着 QA、RPA、初级开发等角色正在被 AI Agent 系统性地替代。Agentic IDE 市场 340% 的增速不是泡沫，而是生产力工具进化的必然方向。组织架构的扁平化将随之加速——不是因为管理理念变了，而是因为 AI Agent 让小团队具备了大团队的产出能力。</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/CG0Ed6mxMoYLSaxvUeQctViWnoc" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
