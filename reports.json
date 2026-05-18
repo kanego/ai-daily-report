@@ -1,6 +1,14 @@
 [
   {
     "date": "2026-05-18",
+    "title": "开发者工具/开源周刊 2026-05-18",
+    "path": "reports/2026-05-18-weekly.html",
+    "url": "https://kanego.github.io/ai-daily-report/reports/2026-05-18-weekly.html",
+    "feishu_url": "https://my.feishu.cn/docx/CG0Ed6mxMoYLSaxvUeQctViWnoc",
+    "summary": "> 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。 **来源：** Hacker News 热榜 #1 | **语言：** Python"
+  },
+  {
+    "date": "2026-05-18",
     "title": "AI组织变革日报 2026-05-18",
     "path": "reports/2026-05-18.html",
     "url": "https://kanego.github.io/ai-daily-report/reports/2026-05-18.html",
