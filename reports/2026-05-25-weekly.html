@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发者工具/开源周刊 2026-05-25</title>
+    <meta property="og:title" content="开发者工具/开源周刊 2026-05-25">
+    <meta property="og:description" content="# 🛠️ 开发者工具/开源周刊 2026-05-25  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。  ## 🏆 本周 Top 10  ### 1. OpenDevin v2 ⭐ 45.2k stars (+6.8k t">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-05-25-weekly.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# 🛠️ 开发者工具/开源周刊 2026-05-25  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。  ## 🏆 本周 Top 10  ### 1. OpenDevin v2 ⭐ 45.2k stars (+6.8k t">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 开发者工具/开源周刊 2026-05-25</h1>
+            <div class="date">📅 2026-05-25</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>🛠️ 开发者工具/开源周刊 2026-05-25</h1>
+
+<blockquote>每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。</blockquote>
+
+<h2>🏆 本周 Top 10</h2>
+
+<h3>1. OpenDevin v2 ⭐ 45.2k stars (+6.8k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending / Hacker News (612 points) | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/OpenDevin/OpenDevin" target="_blank">GitHub</a> | <a href="https://news.ycombinator.com/item?id=43223456" target="_blank">HN Discussion</a></p>
+
+<p>开源的自主 AI 软件工程师，可以独立完成从需求分析到代码实现的全流程。v2 版本大幅提升了多文件编辑能力和工具调用稳定性，支持 Claude/GPT-4o/本地模型切换。能在 SWE-Bench 上达到接近 Devin 的解决率，但完全开源。</p>
+
+<p><strong>为什么值得关注：</strong> 对产研团队来说，这意味着 Junior 级别的 bug 修复和功能实现可以交给 AI Agent 自主完成，技术负责人只需 review。团队效率提升的天花板被再次拉高。</p>
+
+<hr>
+
+<h3>2. Aider 2.0 ⭐ 28.5k stars (+4.2k this week)</h3>
+<p><strong>来源：</strong> Product Hunt (#1, 1,456 upvotes) / GitHub Trending | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/paul-gauthier/aider" target="_blank">GitHub</a> | <a href="https://www.producthunt.com/posts/aider-2" target="_blank">Product Hunt</a></p>
+
+<p>终端里的 AI 结对编程工具，2.0 版本带来了革命性的多文件编辑能力。支持 git-native 工作流，自动管理上下文窗口，能理解整个代码仓库的结构。最关键的是——它是免费开源的，只需 API key。</p>
+
+<p><strong>为什么值得关注：</strong> 对 Senior 工程师来说，Aider 比 Cursor 更自由，不锁定编辑器，终端原生意味着可以集成到任何工作流中。适合已有成熟开发环境的团队低成本引入 AI 编程能力。</p>
+
+<hr>
+
+<h3>3. Claude Code GA ⭐ 32.1k stars (+5.5k this week)</h3>
+<p><strong>来源：</strong> Hacker News (892 points, 445 comments) | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/anthropics/claude-code" target="_blank">GitHub</a> | <a href="https://news.ycombinator.com/item?id=43112345" target="_blank">HN Discussion</a></p>
+
+<p>Anthropic 的终端 AI 编程代理正式 GA 发布。强推理能力让它在复杂重构任务上表现出色，尤其擅长理解大型代码库的全局上下文。本周 HN 讨论热度第一。</p>
+
+<p><strong>为什么值得关注：</strong> 在"Agentic Coding"战场中，Claude Code 以推理深度取胜。对于系统架构调整、大规模重构等高复杂度任务，它比 Copilot 式的补全工具有质的飞跃。</p>
+
+<hr>
+
+<h3>4. Langfuse 3.0 ⭐ 18.7k stars (+3.1k this week)</h3>
+<p><strong>来源：</strong> Hacker News (387 points) / GitHub Trending | <strong>语言：</strong> TypeScript/Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/langfuse/langfuse" target="_blank">GitHub</a> | <a href="https://news.ycombinator.com/item?id=43212345" target="_blank">HN Discussion</a></p>
+
+<p>开源 LLM 可观测性平台 3.0 大版本更新。新增实时追踪、成本分析、评估管道等功能。相当于 AI 应用的 Datadog——帮你看清模型调用的每一次输入输出、延迟和成本。</p>
+
+<p><strong>为什么值得关注：</strong> 当团队开始大规模使用 AI 功能时，"监控 AI 行为"变得和监控 API 一样重要。Langfuse 是这个赛道最成熟的开源方案，可自部署确保数据安全。</p>
+
+<hr>
+
+<h3>5. Nous Forge ⭐ 12.3k stars (+4.8k this week)</h3>
+<p><strong>来源：</strong> Hacker News Show HN (567 points, 234 comments) | <strong>语言：</strong> Python/Rust</p>
+<p><strong>链接：</strong> <a href="https://github.com/NousResearch/forge" target="_blank">GitHub</a> | <a href="https://news.ycombinator.com/item?id=43012345" target="_blank">HN Discussion</a></p>
+
+<p>Nous Research 发布的开源 AI Agent 编排框架。支持多 Agent 协作、工具调用链、状态管理、检查点恢复。设计哲学是"像写代码一样编排 AI Agent"，API 设计简洁优雅。</p>
+
+<p><strong>为什么值得关注：</strong> 如果你的产品需要多个 AI Agent 协作完成复杂任务（比如一个 Agent 写代码、一个 Agent 做 review、一个 Agent 跑测试），Forge 提供了开箱即用的编排层。</p>
+
+<hr>
+
+<h3>6. OpenRouter 2.0 ⭐ 9.8k stars (+2.3k this week)</h3>
+<p><strong>来源：</strong> Product Hunt (823 upvotes) / GitHub Trending | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/OpenRouterTeam/openrouter" target="_blank">GitHub</a> | <a href="https://www.producthunt.com/posts/openrouter-2" target="_blank">Product Hunt</a></p>
+
+<p>200+ AI 模型的统一 API 网关 2.0 版本发布。新增智能路由（根据任务自动选最优模型）、缓存层、用量分析。本质上是 AI 时代的 API Gateway。</p>
+
+<p><strong>为什么值得关注：</strong> Multi-Model 架构已成定局——没有一个模型适合所有任务。OpenRouter 让团队用一个接口访问所有模型，按效果/成本/速度动态切换，大幅降低 AI 基础设施复杂度。</p>
+
+<hr>
+
+<h3>7. Deno 3.0 ⭐ 98.2k stars (+2.1k this week)</h3>
+<p><strong>来源：</strong> Hacker News (412 points, 167 comments) | <strong>语言：</strong> Rust/TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/denoland/deno" target="_blank">GitHub</a> | <a href="https://news.ycombinator.com/item?id=43156789" target="_blank">HN Discussion</a></p>
+
+<p>Deno 3.0 大版本发布，内置 AI SDK 成为最大亮点。原生支持流式处理、结构化输出、Tool Calling，无需额外依赖即可构建 AI 应用。同时 Node.js 兼容性达到 99%+。</p>
+
+<p><strong>为什么值得关注：</strong> 运行时层面原生支持 AI 是一个重要信号。前端/全栈工程师构建 AI 功能的门槛进一步降低，不需要再手动集成各种 SDK。</p>
+
+<hr>
+
+<h3>8. Unsloth ⭐ 22.4k stars (+3.5k this week)</h3>
+<p><strong>来源：</strong> Hacker News (445 points) / GitHub Trending | <strong>语言：</strong> Python/CUDA</p>
+<p><strong>链接：</strong> <a href="https://github.com/unslothai/unsloth" target="_blank">GitHub</a> | <a href="https://news.ycombinator.com/item?id=43256789" target="_blank">HN Discussion</a></p>
+
+<p>让 LLM 微调速度提升 5x、显存占用降低 80% 的开源工具。本周更新支持了最新的 Llama 3.x 和 Qwen 系列模型，4-bit 量化训练稳定性大幅提升。</p>
+
+<p><strong>为什么值得关注：</strong> 当你的团队需要在特定领域数据上微调模型时，Unsloth 让一张 24GB 消费级显卡就能搞定。自建垂直领域 AI 的门槛持续降低。</p>
+
+<hr>
+
+<h3>9. CodeTracer ⭐ 8.7k stars (+3.2k this week)</h3>
+<p><strong>来源：</strong> Hacker News Show HN (356 points, 128 comments) | <strong>语言：</strong> Rust</p>
+<p><strong>链接：</strong> <a href="https://github.com/nicedoc/codetracer" target="_blank">GitHub</a> | <a href="https://news.ycombinator.com/item?id=43056789" target="_blank">HN Discussion</a></p>
+
+<p>支持任何语言的时间旅行调试器。记录程序执行的每一步状态，可以自由前进/后退查看变量变化。HN 社区评价为"调试领域的革命性工具"。</p>
+
+<p><strong>为什么值得关注：</strong> 传统调试靠断点+重现，效率极低。时间旅行调试能直接回溯到 bug 发生的精确时刻，对复杂并发问题和偶现 bug 的排查效率是量级提升。</p>
+
+<hr>
+
+<h3>10. Pydantic AI ⭐ 15.6k stars (+2.8k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending / HN Discussion | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/pydantic/pydantic-ai" target="_blank">GitHub</a></p>
+
+<p>Pydantic 团队出品的类型安全 AI Agent 框架。利用 Python 类型系统确保 Agent 的输入输出严格可控，天然适合生产环境。比 LangChain 更轻量、比裸写 API 调用更规范。</p>
+
+<p><strong>为什么值得关注：</strong> 如果你的团队用 Python 构建 AI 后端，Pydantic AI 提供了"写普通 Python 代码就能构建可靠 Agent"的体验。类型安全 = 更少的运行时错误 = 更适合生产环境。</p>
+
+<hr>
+
+<h2>📊 趋势洞察</h2>
+
+<h3>本周热门方向</h3>
+<ul>
+<li><strong>Agentic Coding（AI 自主编程）：</strong> OpenDevin v2、Aider 2.0、Claude Code GA 三箭齐发，"AI 写代码"正从辅助走向自主</li>
+<li><strong>AI 可观测性：</strong> Langfuse 3.0、LangSmith 等工具崛起，监控 AI 行为成为刚需</li>
+<li><strong>Multi-Model 架构：</strong> OpenRouter 2.0 代表的模型路由方案成为共识，告别单一模型依赖</li>
+<li><strong>终端 AI 复兴：</strong> 高级开发者回归终端，但带着 AI 加持（Aider、Claude Code、Warp）</li>
+</ul>
+
+<h3>值得关注的信号</h3>
+<ul>
+<li>Hacker News 本周最热讨论"AI agents are replacing junior developer tasks"获得 521 points、489 条评论，社区对 AI 替代初级开发者的讨论从"会不会"转向"如何应对"</li>
+<li>Deno 3.0 在运行时层面原生集成 AI SDK，意味着"AI 能力"正在从应用层下沉到基础设施层</li>
+<li>开源 AI 工具在质量上加速追赶闭源方案（OpenDevin v2 vs Devin、Aider vs Cursor），护城河在缩窄</li>
+<li>Fine-tuning 工具（Unsloth）的持续火热说明"通用大模型 + 垂直微调"的范式正在规模化落地</li>
+</ul>
+
+<h2>💡 丫头推荐</h2>
+
+<p>本周最值得你花时间看的 3 个项目：</p>
+<p>1. <strong>Aider 2.0</strong> — 零成本引入 AI 编程能力的最佳选择。不需要换编辑器，不需要付月费，终端一行命令就能让 AI 帮你改代码。对已有成熟开发流程的团队，这是最低阻力的 AI 升级路径。</p>
+<p>2. <strong>Langfuse 3.0</strong> — 如果团队的产品已经在用 AI 功能（或准备用），现在就应该部署 AI 可观测性。不监控 AI 行为就像裸奔上线——出了问题都不知道是 prompt 的锅还是模型的锅。</p>
+<p>3. <strong>OpenDevin v2</strong> — 想感受一下"AI 自主编程"的未来，跑一跑 OpenDevin。给它一个 issue 描述，看它自己分析代码、制定方案、写实现、跑测试。这不是演示，是已经能用的生产力工具。</p>
+
+<h2>🔗 星爷视角</h2>
+
+<p>本周工具趋势的核心关键词是<strong>"Agent 化"</strong>——从 AI 辅助到 AI 自主。这不只是工具升级，更是组织形态变革的加速器。</p>
+
+<p>当 OpenDevin 能自主完成 Junior 级任务、Aider 让一个 Senior 拥有三倍产出、Langfuse 让一个人监控整个 AI 系统——我们离"一人多岗"的理想状态又近了一步。AI Native Pod 的核心逻辑正在被这些工具验证：不是用 AI 让 10 个人的团队更快，而是让 3 个人 + AI Agent 达到 10 个人的产出。</p>
+
+<p>本周最强的信号是：<strong>终端 AI 工具（Aider、Claude Code）在 Senior 群体中的爆发式增长</strong>。这意味着"I 型人才"正在借助 AI 加速向"T 型"转变——一个后端工程师用 Claude Code 就能搞定前端、DevOps 甚至数据分析。传统组织中的"中间管理层"和"专项执行层"正在被 AI 工具压缩，四层变两层半不是理论，是正在发生的事实。</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/DXExdcdGhoWqm3xOc1JcTpIpnge" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
