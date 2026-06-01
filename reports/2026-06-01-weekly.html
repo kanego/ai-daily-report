@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发者工具/开源周刊 2026-06-01</title>
+    <meta property="og:title" content="开发者工具/开源周刊 2026-06-01">
+    <meta property="og:description" content="# 🛠️ 开发者工具/开源周刊 2026-06-01  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。  ## 🏆 本周 Top 10  ### 1. Void Editor ⭐ 开源新星 (+4.2k this week">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-06-01-weekly.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# 🛠️ 开发者工具/开源周刊 2026-06-01  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。  ## 🏆 本周 Top 10  ### 1. Void Editor ⭐ 开源新星 (+4.2k this week">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 开发者工具/开源周刊 2026-06-01</h1>
+            <div class="date">📅 2026-06-01</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>🛠️ 开发者工具/开源周刊 2026-06-01</h1>
+
+<blockquote>每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。</blockquote>
+
+<h2>🏆 本周 Top 10</h2>
+
+<h3>1. Void Editor ⭐ 开源新星 (+4.2k this week)</h3>
+<p><strong>来源：</strong> Hacker News Show HN (756 points) | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/voideditor/void" target="_blank">GitHub</a></p>
+
+<p>基于 VS Code 构建的完全开源 AI 代码编辑器，支持任何 LLM 提供商（本地或云端），具备内联编辑、聊天和自主 Agent 模式。在 Cursor 订阅费持续上涨的背景下，Void 提供了免费、可自托管、数据隐私有保障的替代方案。本周在 HN 上爆火，社区评价极高。</p>
+
+<p><strong>为什么值得关注：</strong> 团队可以部署私有实例，使用内部模型进行代码辅助，零数据泄露风险。对在意代码安全的产研团队是刚需。</p>
+
+<hr>
+
+<h3>2. Windsurf IDE Pro ⭐ 1,847 upvotes on Product Hunt</h3>
+<p><strong>来源：</strong> Product Hunt #1 本周 | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://www.producthunt.com/posts/windsurf-ide-pro" target="_blank">Product Hunt</a></p>
+
+<p>AI 原生 IDE，能自主编写生产级代码。深度集成 MCP 工具协议、Git 感知上下文、内置终端 AI、多文件自主编辑。5月27日发布后迅速登顶 Product Hunt 周榜。</p>
+
+<p><strong>为什么值得关注：</strong> 代表了"AI 编写代码 → 人类审查"的新范式。对产研效率有革命性提升，一人可承担原来2-3人的开发量。</p>
+
+<hr>
+
+<h3>3. AgentFS ⭐ 新项目 (623 points on HN)</h3>
+<p><strong>来源：</strong> Hacker News Show HN | <strong>语言：</strong> Go/Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/agentfs/agentfs" target="_blank">GitHub</a></p>
+
+<p>基于 FUSE 的虚拟文件系统，专为 AI Agent 设计。提供沙箱化文件访问、审计日志、权限控制，兼容任何 LLM 框架。解决了 AI Agent 操作代码库时的安全性和可控性问题。</p>
+
+<p><strong>为什么值得关注：</strong> 随着 AI Agent 越来越多地直接操作代码和文件，安全沙箱成为基础设施级需求。对部署 AI 编码助手的团队是关键组件。</p>
+
+<hr>
+
+<h3>4. Anthropic MCP Hub ⭐ 823 upvotes on Product Hunt</h3>
+<p><strong>来源：</strong> Product Hunt + Hacker News (634 points) | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://www.producthunt.com/posts/anthropic-mcp-hub" target="_blank">Product Hunt</a></p>
+
+<p>Model Context Protocol 官方市场，提供 MCP 服务器/工具的发现、安装和管理。MCP 正在成为"AI 工具集成的 USB-C"——一个通用标准，OpenAI、Google 也已开始采用。</p>
+
+<p><strong>为什么值得关注：</strong> MCP 生态爆发意味着 AI 助手能力的组合式增长。产研团队可通过 MCP 快速为内部 AI 工具扩展能力边界。</p>
+
+<hr>
+
+<h3>5. Suna AI ⭐ 18.2k stars</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/kortix-ai/suna" target="_blank">GitHub</a></p>
+
+<p>开源通用型 AI Agent，能通过自然语言完成广泛任务——包括浏览器自动化、文件管理、代码执行、计算机操作。模块化架构，可扩展性强。本周持续保持 GitHub Trending 前列。</p>
+
+<p><strong>为什么值得关注：</strong> 开箱即用的通用 Agent，降低了 AI 自动化的门槛。产研团队可快速构建内部自动化工作流。</p>
+
+<hr>
+
+<h3>6. OpenRouter 2.0 ⭐ 1,341 upvotes on Product Hunt</h3>
+<p><strong>来源：</strong> Product Hunt | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://www.producthunt.com/posts/openrouter-2-0" target="_blank">Product Hunt</a></p>
+
+<p>200+ AI 模型的统一 API 网关，新增智能路由、自动故障切换、成本优化、流式聚合、多模型共识决策。让团队无需绑定单一模型供应商。</p>
+
+<p><strong>为什么值得关注：</strong> 解决了多模型管理的痛点。产研团队可以用统一接口测试不同模型，按需切换，降低供应商锁定风险。</p>
+
+<hr>
+
+<h3>7. Kaizen ⭐ 534 points on HN</h3>
+<p><strong>来源：</strong> Hacker News Show HN | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://kaizen.dev" target="_blank">Kaizen</a></p>
+
+<p>AI 代码审查工具，能学习团队的编码规范、架构模式和偏好。随着使用时间增长越来越懂你的团队，提供个性化 review 建议。支持 GitHub/GitLab 集成。</p>
+
+<p><strong>为什么值得关注：</strong> 直接解决代码审查效率问题。特别适合人手紧张但要保持代码质量的团队，可替代部分 Senior 的 Review 工作。</p>
+
+<hr>
+
+<h3>8. Memoria AI ⭐ 1,523 upvotes on Product Hunt</h3>
+<p><strong>来源：</strong> Product Hunt #2 本周 | <strong>语言：</strong> Python/TypeScript</p>
+<p><strong>链接：</strong> <a href="https://www.producthunt.com/posts/memoria-ai" target="_blank">Product Hunt</a></p>
+
+<p>个人 AI 知识助手，自动索引你读过、看过、浏览过的所有内容，建立知识图谱。支持本地处理，隐私优先。像是有了一个永不遗忘的第二大脑。</p>
+
+<p><strong>为什么值得关注：</strong> 知识工作者的效率倍增器。对需要频繁学习新技术的研发人员尤其有用，再也不怕"看过但想不起来"。</p>
+
+<hr>
+
+<h3>9. UV 1.0 ⭐ 60k+ stars (+2.1k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Rust</p>
+<p><strong>链接：</strong> <a href="https://github.com/astral-sh/uv" target="_blank">GitHub</a></p>
+
+<p>Astral 出品的超快 Python 包管理器，本周正式发布 1.0 版本，完全兼容 pip，支持工作区。比 pip 快 10-100 倍，正在成为 Python 生态事实标准。</p>
+
+<p><strong>为什么值得关注：</strong> 如果团队用 Python，UV 是必须切换的工具。构建时间大幅缩短，依赖管理更可靠，CI/CD pipeline 速度显著提升。</p>
+
+<hr>
+
+<h3>10. Piko ⭐ 445 points on HN</h3>
+<p><strong>来源：</strong> Hacker News Show HN | <strong>语言：</strong> Go</p>
+<p><strong>链接：</strong> <a href="https://piko.sh" target="_blank">Piko</a></p>
+
+<p>3 秒从终端部署 Serverless 函数的 CLI 工具。写完函数，执行 `piko deploy`，立即获得 URL。支持 JS/TS/Python/Go。极简主义的 Serverless 体验。</p>
+
+<p><strong>为什么值得关注：</strong> 极大降低后端部署门槛，前端/全栈工程师也能轻松部署微服务。适合快速验证想法和构建内部工具。</p>
+
+<hr>
+
+<h2>📊 趋势洞察</h2>
+
+<h3>本周热门方向</h3>
+<ul>
+<li><strong>AI Agent 工具化</strong>：AgentFS、Suna、MCP Hub——Agent 从"能聊天"走向"能安全地操作系统"</li>
+<li><strong>AI-Native IDE 之战</strong>：Windsurf Pro、Void、Cursor 三强鼎立，编辑器成为 AI 能力的载体</li>
+<li><strong>开发者工具的 Rust 化</strong>：UV 1.0、Ruff、Biome——Rust 重写经典工具已成主流模式</li>
+<li><strong>MCP 协议生态爆发</strong>：成为 AI 集成的事实标准，连接 AI 和外部世界的桥梁</li>
+</ul>
+
+<h3>值得关注的信号</h3>
+<ul>
+<li><strong>GPT-5 Turbo 发布（1M 上下文窗口）</strong>：上下文长度的数量级提升将改变 RAG 架构的必要性</li>
+<li><strong>DeepSeek V4 开源（Apache 2.0）</strong>：开源模型持续逼近商业模型，自托管方案越来越可行</li>
+<li><strong>AI 替代 CI/CD pipeline（892 points on HN）</strong>：从"AI辅助开发"到"AI替代DevOps流程"的跃迁</li>
+<li><strong>AI 替代初级开发者讨论白热化</strong>：行业对 AI 重塑岗位结构的关注达到新高</li>
+</ul>
+
+<h2>💡 丫头推荐</h2>
+
+<p>本周最值得你花时间看的 3 个项目：</p>
+<p>1. <strong>Void Editor</strong> — 如果你在用 Cursor 但担心代码隐私或订阅成本，Void 是开源替代方案的最佳选择。可以自部署+接内部模型。</p>
+<p>2. <strong>AgentFS</strong> — 如果团队正在让 AI Agent 操作代码库，这个项目解决了"如何安全可控地让 AI 操作文件"的核心问题。</p>
+<p>3. <strong>UV 1.0</strong> — 如果团队用 Python，这是本周最值得执行的技术升级。10分钟切换，立即获得 10-100x 的包管理加速。</p>
+
+<h2>🔗 星爷视角</h2>
+
+<p>本周工具趋势印证了一个核心判断：<strong>AI 正在消灭"执行层"，放大"决策层"</strong>。</p>
+
+<p>Windsurf、Void 这类 AI-Native IDE 让一个工程师的产出接近原来三个人的水平，这正是"一人多岗"从口号变为现实的技术基础。Kaizen 让 AI 承担了 Senior 的 Code Review 工作，AgentFS 让 AI 安全地执行原本需要 DevOps 工程师手动操作的任务——这些都在加速组织从"四层"向"两层半"的扁平化。</p>
+
+<p>MCP 协议的爆发是另一个关键信号：当工具之间能无缝互联，T型人才用 AI 工具组合就能覆盖多个专业领域的产出。I型→T型转变的障碍不再是"学不会"，而是"有没有合适的 AI 工具"——而本周的趋势表明，这些工具正以指数级速度涌现。</p>
+
+<p>对 AI Native Pod 来说，本周的启示是：<strong>不要招更多人，要给每个人更强的 AI 工具链</strong>。</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/XkyXdclftobtozxOlYvcXJfaneg" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
