@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发者工具/开源周刊 2026-06-08</title>
+    <meta property="og:title" content="开发者工具/开源周刊 2026-06-08">
+    <meta property="og:description" content="# 🛠️ 开发者工具/开源周刊 2026-06-08  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。  ## 🏆 本周 Top 10  ### 1. Headroom ⭐ 16.9k stars (+14.3k this">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-06-08-weekly.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# 🛠️ 开发者工具/开源周刊 2026-06-08  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。  ## 🏆 本周 Top 10  ### 1. Headroom ⭐ 16.9k stars (+14.3k this">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 开发者工具/开源周刊 2026-06-08</h1>
+            <div class="date">📅 2026-06-08</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>🛠️ 开发者工具/开源周刊 2026-06-08</h1>
+
+<blockquote>每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。</blockquote>
+
+<h2>🏆 本周 Top 10</h2>
+
+<h3>1. Headroom ⭐ 16.9k stars (+14.3k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending #1 | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/chopratejas/headroom" target="_blank">GitHub</a></p>
+
+<p>Headroom 是一个用于压缩 LLM 输入的工具库/代理/MCP 服务器。它能将工具输出、日志文件、RAG chunks 等发送给 LLM 前先压缩 60-95% 的 token 量，同时保持答案准确性不变。支持作为库、代理代理（proxy）或 MCP 服务器三种模式部署。本周从零到近 17k 星，爆发力极强。</p>
+
+<p><strong>为什么值得关注：</strong> 直接解决 LLM 使用成本和上下文窗口限制问题。产研团队在构建 AI Agent 时，工具输出经常占据大量 token，Headroom 可以立即降低 API 成本并提升响应速度。</p>
+
+<hr>
+
+<h3>2. Microsoft MarkItDown ⭐ 147.3k stars (+13.4k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending #2 | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/microsoft/markitdown" target="_blank">GitHub</a></p>
+
+<p>微软出品的文件转 Markdown 工具，支持将 Office 文档（Word/Excel/PPT）、PDF、图片等各种格式转换为 Markdown。本周持续高热，新增 13k+ 星。作为 AI 数据处理管道中的关键基础设施组件，MarkItDown 已成为 RAG 和文档解析的事实标准。</p>
+
+<p><strong>为什么值得关注：</strong> 任何涉及文档处理的 AI 项目都需要这个工具。从知识库构建到企业文档自动化，MarkItDown 是最可靠的选择。</p>
+
+<hr>
+
+<h3>3. NousResearch/Hermes-Agent ⭐ 185.9k stars (+11.4k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/NousResearch/hermes-agent" target="_blank">GitHub</a></p>
+
+<p>Hermes Agent 是 Nous Research 推出的自主 AI 代理框架，主打"与你一起成长的代理"。支持多工具调用、记忆系统、技能学习、MCP 集成和跨平台部署。本周新增 11.4k 星，持续保持高热度。</p>
+
+<p><strong>为什么值得关注：</strong> 作为开源 AI Agent 的标杆项目，Hermes Agent 代表了"一人多岗"工作方式的技术底座。其技能系统和持久化记忆架构对产研团队构建自动化工作流极具参考价值。</p>
+
+<hr>
+
+<h3>4. ECC (Engineering Compound Configuration) ⭐ 209.8k stars (+10.2k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending #5 | <strong>语言：</strong> JavaScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/affaan-m/ECC" target="_blank">GitHub</a></p>
+
+<p>ECC 是一个 AI Agent 性能优化系统，为 Claude Code、Codex、OpenCode、Cursor 等编码代理提供技能（skills）、本能（instincts）、记忆（memory）、安全（security）和研究优先开发模式。本周新增超过 1 万星。</p>
+
+<p><strong>为什么值得关注：</strong> 如果你的团队已经在使用 AI 编码工具，ECC 能显著提升这些工具的输出质量和一致性。它代表了"元优化"——优化 AI 本身的工作方式。</p>
+
+<hr>
+
+<h3>5. MoneyPrinterTurbo ⭐ 81.2k stars (+8.0k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending #3 | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank">GitHub</a></p>
+
+<p>利用 AI 大模型一键生成高清短视频。从脚本编写、素材搜集、视频剪辑到配音配乐，全流程自动化。支持多种 LLM 后端和视频风格模板。本周新增 8k 星，中文开源社区爆款。</p>
+
+<p><strong>为什么值得关注：</strong> 短视频内容生产自动化是 AI Native 内容团队的刚需。这个项目展示了 AI 如何在内容创作领域实现"一人即一个工作室"。</p>
+
+<hr>
+
+<h3>6. Taste-Skill ⭐ 36.6k stars (+6.4k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Shell</p>
+<p><strong>链接：</strong> <a href="https://github.com/Leonxlnx/taste-skill" target="_blank">GitHub</a></p>
+
+<p>Taste-Skill 给 AI 代理注入"审美品味"，阻止 AI 生成无聊、通用、低质量的内容（anti-slop）。通过精心设计的 prompt 工程和风格约束，让 AI 输出更有个性和质量。本周新增 6.4k 星。</p>
+
+<p><strong>为什么值得关注：</strong> 解决了 AI 生成内容同质化的核心痛点。对于重视品牌调性和内容质量的产研团队，这是提升 AI 输出品味的实用方案。</p>
+
+<hr>
+
+<h3>7. Hermes WebUI ⭐ 13.8k stars (+4.3k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/nesquena/hermes-webui" target="_blank">GitHub</a></p>
+
+<p>Hermes Agent 的 Web/移动端界面，让用户可以从浏览器或手机上使用 Hermes Agent 的全部功能。提供美观的交互界面，支持多会话管理、工具执行可视化和实时状态展示。</p>
+
+<p><strong>为什么值得关注：</strong> 降低了 AI Agent 的使用门槛。非技术团队成员也能通过 Web 界面使用强大的 AI 自动化能力，推动全员 AI 化。</p>
+
+<hr>
+
+<h3>8. Impeccable ⭐ 35.5k stars (+3.6k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> JavaScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/pbakaus/impeccable" target="_blank">GitHub</a></p>
+
+<p>一套设计语言系统，专门提升 AI 代理在设计方面的能力。通过结构化的设计规范和约束，让 AI 生成的 UI/前端代码具有更好的视觉品质和设计一致性。</p>
+
+<p><strong>为什么值得关注：</strong> 补齐了 AI 编程在"审美"方面的短板。前端开发者使用 AI 工具时，设计品质一直是痛点，Impeccable 提供了系统性解决方案。</p>
+
+<hr>
+
+<h3>9. Open-Notebook ⭐ 27.2k stars (+3.0k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/lfnovo/open-notebook" target="_blank">GitHub</a></p>
+
+<p>Google NotebookLM 的开源替代品，功能更灵活、可自托管。支持多模态文档输入、智能摘要、播客生成、知识图谱构建等。相比 NotebookLM 的封闭生态，Open-Notebook 支持自选 LLM 后端和完全数据自主。</p>
+
+<p><strong>为什么值得关注：</strong> 知识管理和研究场景的杀手级应用。产研团队可以用它构建内部知识库、自动生成研究综述，完全掌控数据隐私。</p>
+
+<hr>
+
+<h3>10. Agent-Reach ⭐ 23.1k stars (+2.3k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/Panniantong/Agent-Reach" target="_blank">GitHub</a></p>
+
+<p>给 AI Agent 提供"眼睛"去看互联网全貌。一个 CLI 工具，让 AI 能读取和搜索 Twitter、Reddit、YouTube、GitHub、Bilibili、小红书等平台内容，零 API 费用。支持 MCP 集成。</p>
+
+<p><strong>为什么值得关注：</strong> 解决了 AI Agent 获取实时互联网信息的难题。对需要舆情监控、竞品分析、内容策展的团队来说是一站式解决方案。</p>
+
+<hr>
+
+<h2>📊 趋势洞察</h2>
+
+<h3>本周热门方向</h3>
+
+<ul>
+<li><strong>AI Agent 元优化（Meta-optimization）：</strong> ECC、Headroom、Taste-Skill 等项目专注于优化 AI Agent 本身的工作方式——压缩输入、提升品味、优化技能。这是 Agent 生态成熟的标志。</li>
+<li><strong>AI 内容自动化：</strong> MoneyPrinterTurbo（短视频）、Open-Notebook（研究笔记）展示了 AI 从"辅助创作"到"自主生产"的跃迁。</li>
+<li><strong>Agent 基础设施：</strong> Hermes Agent、Hermes WebUI、Agent-Reach 构成了完整的 Agent 技术栈——核心引擎 + 用户界面 + 信息获取能力。</li>
+</ul>
+
+<h3>值得关注的信号</h3>
+
+<ul>
+<li><strong>"Agent Skills" 成为新范式：</strong> 多个项目（ECC、Taste-Skill、Harness）围绕"技能化"设计 AI 能力模块，这预示着 AI 工具将从"通用工具"走向"专业技能组合"。</li>
+<li><strong>Token 经济学兴起：</strong> Headroom 本周爆炸性增长说明 LLM 使用成本优化已成为刚需，"每个 token 都珍贵"正在成为共识。</li>
+<li><strong>开源正在吞噬 AI SaaS：</strong> Open-Notebook vs NotebookLM、Hermes vs 商业 Agent 平台——高质量开源替代品持续涌现。</li>
+<li><strong>中文 AI 开源力量崛起：</strong> MoneyPrinterTurbo、Agent-Reach 等中文项目表现抢眼，中文 AI 开源社区活跃度显著提升。</li>
+</ul>
+
+<h2>💡 丫头推荐</h2>
+
+<p>本周最值得你花时间看的 3 个项目：</p>
+
+<p>1. <strong>Headroom</strong> — 如果你的 AI 工作流面临 token 成本或上下文长度瓶颈，这是本周最实用的工具。集成简单，效果立竿见影，60-95% 的 token 压缩率意味着直接的成本节省。</p>
+<p>2. <strong>ECC</strong> — 已经在用 Claude Code 或 Cursor 的团队必看。它不是另一个 AI 工具，而是让你现有 AI 工具变得更强的"增强包"。技能系统、记忆管理、安全策略一应俱全。</p>
+<p>3. <strong>Open-Notebook</strong> — Google NotebookLM 的完美开源替代。如果你需要构建内部知识库或研究助手，又不想把数据交给第三方，这是最佳选择。</p>
+
+<h2>🔗 星爷视角</h2>
+
+<p>本周开发者工具趋势呈现一个清晰信号：<strong>AI Agent 生态正在从"工具层"进化到"元工具层"</strong>。</p>
+
+<p>Headroom 压缩 token、ECC 优化 Agent 技能、Taste-Skill 注入审美品味——这些项目不是在做新工具，而是在"优化优化器"。这恰恰是 AI Native Pod 理念的技术映射：当 AI 足够强大时，人的价值不在于操作工具，而在于<strong>定义工具应该如何工作</strong>。</p>
+
+<p>MoneyPrinterTurbo 和 Agent-Reach 展示了"一人多岗"的新境界：一个人 + 合适的 AI 工具栈 = 视频团队 + 情报分析团队。这正是从 I 型（单一技能）到 T 型（跨域协作）的加速器。传统组织中的视频编导、情报分析师等角色，正在被"精通 AI 工具编排的通才"所整合。</p>
+
+<p>而 Hermes Agent + WebUI 的组合说明，四层组织向两层半转型的技术条件正在快速成熟——AI Agent 作为"数字员工"不再需要专业技术背景才能调度，非技术管理者也能直接指挥 AI 完成复杂任务。当组织的"中间层"可以被 AI Agent 替代时，扁平化不再是理想，而是必然。</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/MpYgdyZJko734zxXKWucAta8nkh" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
