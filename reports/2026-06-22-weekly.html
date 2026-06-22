@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发者工具/开源周刊 2026-06-22</title>
+    <meta property="og:title" content="开发者工具/开源周刊 2026-06-22">
+    <meta property="og:description" content="# 🛠️ 开发者工具/开源周刊 2026-06-22  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。  ## 🏆 本周 Top 10  ### 1. OpenAI Codex ⭐ 28.7k stars (+4.1k t">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-06-22-weekly.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# 🛠️ 开发者工具/开源周刊 2026-06-22  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。  ## 🏆 本周 Top 10  ### 1. OpenAI Codex ⭐ 28.7k stars (+4.1k t">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 开发者工具/开源周刊 2026-06-22</h1>
+            <div class="date">📅 2026-06-22</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>🛠️ 开发者工具/开源周刊 2026-06-22</h1>
+
+<blockquote>每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。</blockquote>
+
+<h2>🏆 本周 Top 10</h2>
+
+<h3>1. OpenAI Codex ⭐ 28.7k stars (+4.1k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending #1 | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/openai/codex" target="_blank">GitHub</a></p>
+
+<p>OpenAI 新推出的轻量级终端编码代理。与 ChatGPT 不同，Codex 专注于在你的终端中运行，直接理解项目上下文、读写文件、运行命令。本周星标暴涨 4.1k，成为 GitHub 全站最热项目。它代表了 AI 编码工具从"IDE插件"向"终端原生代理"转变的趋势。</p>
+
+<p><strong>为什么值得关注：</strong> 轻量、开源、终端原生，适合与现有工作流无缝集成。对于习惯命令行开发的产研团队，这可能是比 Copilot 更自然的选择。</p>
+
+<hr>
+
+<h3>2. Claude Code ⭐ 42.4k stars (+3.8k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending #2 | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/anthropics/claude-code" target="_blank">GitHub</a></p>
+
+<p>Anthropic 的开源终端 AI 编码工具，本周持续火爆。Claude Code 不仅能写代码，还能理解整个代码库上下文、自主规划多步骤任务、与 Git 深度集成。支持 MCP 协议，可连接外部工具和数据源。</p>
+
+<p><strong>为什么值得关注：</strong> MCP 生态支持使其可扩展性极强，是目前最成熟的"AI 结对编程"方案之一。企业级安全性和 Anthropic 的模型能力是核心竞争力。</p>
+
+<hr>
+
+<h3>3. Block Goose ⭐ 20.1k stars (+3.0k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending #3 | <strong>语言：</strong> Rust</p>
+<p><strong>链接：</strong> <a href="https://github.com/block/goose" target="_blank">GitHub</a></p>
+
+<p>Block（前Square）开源的可扩展 AI 代理，超越代码建议——能安装依赖、执行命令、编辑文件、运行测试和调试。用 Rust 编写，性能卓越。本周飙升 3k stars，成为 AI Agent 领域的黑马。</p>
+
+<p><strong>为什么值得关注：</strong> Rust 编写保证性能，Block 的工程实力背书。作为"全能型"AI 代理，它补齐了从编码到 DevOps 全流程自动化的缺口。</p>
+
+<hr>
+
+<h3>4. Cline ⭐ 35.2k stars (+2.9k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending #4 | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/Cline/cline" target="_blank">GitHub</a></p>
+
+<p>IDE 中的自主编码代理，能创建/编辑文件、执行命令、使用浏览器，每步都需要你的确认。本周增长 2.9k stars，持续保持高热度。</p>
+
+<p><strong>为什么值得关注：</strong> "Human-in-the-loop"设计理念让它在自主性和可控性间取得平衡。对于重视代码质量和安全的团队，这是比完全自主代理更实际的选择。</p>
+
+<hr>
+
+<h3>5. FridayAI/friday-agents ⭐ 8.9k stars (+2.5k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending (Python) | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/FridayAI/friday-agents" target="_blank">GitHub</a></p>
+
+<p>轻量级生产级 AI 代理框架，支持工具使用和长期记忆。本周爆发式增长 2.5k stars，是新晋 Agent 框架中势头最猛的一个。</p>
+
+<p><strong>为什么值得关注：</strong> "轻量级 + 生产级"定位精准——既不像 LangChain 那么重，又不像简单 wrapper 那么弱。适合想快速构建内部 AI Agent 的产研团队。</p>
+
+<hr>
+
+<h3>6. Mistral Agents ⭐ 7.5k stars (+2.4k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending (Python) | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/mistralai/mistral-agents" target="_blank">GitHub</a></p>
+
+<p>Mistral AI 官方推出的多代理系统构建框架。基于 Mistral 模型打造，支持多 Agent 协作、工具调用和复杂任务编排。本周新增 2.4k stars，显示社区对欧洲 AI 力量的关注。</p>
+
+<p><strong>为什么值得关注：</strong> 对于想减少对 OpenAI/Anthropic 依赖的团队，Mistral 提供了高质量的欧洲替代方案。多 Agent 编排是下一代 AI 应用的核心能力。</p>
+
+<hr>
+
+<h3>7. Lovable 2.0 🏆 1,876 票 (Product Hunt #1)</h3>
+<p><strong>来源：</strong> Product Hunt 本周冠军 | <strong>类型：</strong> AI 全栈工程师</p>
+<p><strong>链接：</strong> <a href="https://www.producthunt.com" target="_blank">Product Hunt</a></p>
+
+<p>号称"能发布生产级应用的 AI 全栈工程师"。Lovable 2.0 让非技术用户通过自然语言描述就能构建、部署完整的 Web 应用。本周在 Product Hunt 获得近 1,900 票，引发"AI 是否会取代初级开发者"的激烈讨论。</p>
+
+<p><strong>为什么值得关注：</strong> 代表了"Vibe Coding"趋势的极致——用自然语言描述需求即可生成应用。对产品经理和设计师来说，独立验证想法的门槛降到了历史最低。</p>
+
+<hr>
+
+<h3>8. DeepSeek Coder V3 🏆 1,678 票 (Product Hunt)</h3>
+<p><strong>来源：</strong> Product Hunt | <strong>类型：</strong> 开源编程模型</p>
+<p><strong>链接：</strong> <a href="https://www.producthunt.com" target="_blank">Product Hunt</a></p>
+
+<p>DeepSeek 最新开源编程模型，在多个编程基准测试上达到最先进水平。完全开源、可本地部署，支持超长上下文。</p>
+
+<p><strong>为什么值得关注：</strong> 开源编码模型追上闭源模型的里程碑。可本地部署意味着企业无需将代码发送到第三方 API，隐私和安全问题得到解决。</p>
+
+<hr>
+
+<h3>9. MCP Servers ⭐ 45.9k stars (+2.1k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/ModelContextProtocol/servers" target="_blank">GitHub</a></p>
+
+<p>Model Context Protocol 的参考实现和社区服务器集合。MCP 正在成为 AI 工具互操作的事实标准，本周仍保持 2.1k 的高增长，生态快速扩张。</p>
+
+<p><strong>为什么值得关注：</strong> MCP 是连接 AI 代理与外部世界的"USB 接口"。掌握 MCP 开发，就掌握了 AI Agent 时代的基础设施能力。产研团队应开始构建内部 MCP 服务器。</p>
+
+<hr>
+
+<h3>10. Dify ⭐ 82.5k stars (+2.0k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending (Python) | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/DifyAI/dify" target="_blank">GitHub</a></p>
+
+<p>开源 LLM 应用开发平台，支持智能体工作流、RAG 和模型管理。82k+ stars 使其成为同类工具中最受欢迎的项目。本周仍保持强劲增长。</p>
+
+<p><strong>为什么值得关注：</strong> 对于想快速搭建内部 AI 应用的团队，Dify 是"开箱即用"的最佳选择。可视化工作流 + 开源部署 = 低门槛 + 高可控。</p>
+
+<hr>
+
+<h2>📊 趋势洞察</h2>
+
+<h3>本周热门方向</h3>
+<ul>
+<li><strong>AI Agent 框架大战：</strong> Goose、Friday Agents、Mistral Agents、CrewAI 同台竞技，Agent 框架进入淘汰赛阶段</li>
+<li><strong>终端 AI 工具崛起：</strong> Codex、Claude Code、Gemini CLI——命令行成为 AI 编程的新战场</li>
+<li><strong>MCP 协议生态爆发：</strong> browser-tools-mcp、playwright-mcp 等工具让 AI Agent 能"看到"和"操作"整个数字世界</li>
+<li><strong>开源编码模型追平：</strong> DeepSeek Coder V3 标志着开源模型在编程任务上已接近闭源水平</li>
+</ul>
+
+<h3>值得关注的信号</h3>
+<ul>
+<li>Cursor 以 100 亿美元估值融资，AI IDE 赛道被资本热捧</li>
+<li>GitHub 统计 AI 生成代码已占新代码的 40%，拐点已到来</li>
+<li>Windsurf IDE 宣布开源，"开源 vs 闭源"的竞争延伸到 IDE 领域</li>
+<li>本地 AI 推理需求持续增长，Ollama 本周仍增 1.6k stars</li>
+</ul>
+
+<h2>💡 丫头推荐</h2>
+
+<p>本周最值得你花时间看的 3 个项目：</p>
+
+<p>1. <strong>Block Goose</strong> — 如果你还没试过"AI Agent 帮你做 DevOps"是什么体验，Goose 是目前最好的入门选择。Rust 编写保证性能，Block 背书保证持续维护。对于想让 AI 参与更多工程流程（而不仅是写代码）的团队，这是必看项目。</p>
+
+<p>2. <strong>FridayAI/friday-agents</strong> — 如果你团队想构建自己的 AI Agent 但被 LangChain 的复杂度吓退，试试 Friday Agents。轻量、生产级、好上手，适合快速原型验证。</p>
+
+<p>3. <strong>MCP Servers</strong> — 不是一个工具，而是一个生态。建议产研团队现在就开始了解 MCP 协议，并评估将内部 API 封装为 MCP Server 的可能性。这是 AI Native 基础设施的必经之路。</p>
+
+<h2>🔗 星爷视角</h2>
+
+<p>本周最显著的趋势是 <strong>"AI Agent 从玩具变成工具"</strong>——Codex、Claude Code、Goose 这些终端代理已经不是 Demo，而是能真正接入日常工作流的生产力工具。</p>
+
+<p>对 AI Native Pod 的启示：这些工具正在加速 <strong>"I 型→T 型"</strong> 转变。一个后端工程师配合 Goose/Cline，就能完成以前需要 DevOps + 前端 + 测试三个角色协作的任务。这不是"替代"，而是"增能"——一个人通过 AI Agent 扩展了自己的能力边界。</p>
+
+<p>MCP 协议的爆发则预示了一种新的组织协作模式：<strong>不是人与人对接，而是 Agent 与 Agent 对接</strong>。当内部系统都暴露了 MCP 接口，"四层→两层半"的组织愿景就有了技术基础——中间层的信息传递和协调工作，可以由 Agent 承担。</p>
+
+<p>"一人多岗"不再是口号，而是有了具体的工具支撑：Dify 让产品经理能搭 AI 应用，Lovable 让设计师能发布产品，MCP 让每个人都能编排 AI 工具链。组织变革的技术准备度，本周又进了一步。</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/Glind2fb1op3juxQV7icr6A3nde" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
