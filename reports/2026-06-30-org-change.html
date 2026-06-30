@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-06-30</title>
+    <meta property="og:title" content="AI组织变革日报 2026-06-30">
+    <meta property="og:description" content="# AI组织变革日报 2026-06-30  ## 📌 今日要闻  ### 1. 全球AI就业重塑：1200万人失业，2800万新岗位诞生——净效应为正但分布严重不均  2026年全球AI就业报告揭示了一幅震撼的职场变革图景：AI浪潮导致全球1200万人失去原有岗位，主要集中在数据录入、客服、初级编">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-06-30-org-change.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-06-30  ## 📌 今日要闻  ### 1. 全球AI就业重塑：1200万人失业，2800万新岗位诞生——净效应为正但分布严重不均  2026年全球AI就业报告揭示了一幅震撼的职场变革图景：AI浪潮导致全球1200万人失去原有岗位，主要集中在数据录入、客服、初级编">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-06-30</h1>
+            <div class="date">📅 2026-06-30</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-06-30</h1>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. 全球AI就业重塑：1200万人失业，2800万新岗位诞生——净效应为正但分布严重不均</h3>
+
+<p>2026年全球AI就业报告揭示了一幅震撼的职场变革图景：AI浪潮导致全球1200万人失去原有岗位，主要集中在数据录入、客服、初级编程、财务分析等可高度自动化领域。与此同时，AI催生了2800万个新岗位，涵盖AI训练师、提示工程师、AI伦理官、人机协作专家等新兴职能。净效应虽然为正，但"失业者"与"受益者"之间存在严重的技能鸿沟与地域不均。发达国家AI再培训体系较完善，而新兴经济体的传统劳动密集型岗位受冲击更大。Forrester报告进一步佐证：67%的企业因AI采用进行了重大组织重构，这一比例在2024年仅为39%。这轮变革的核心矛盾不在于总量，而在于转型速度远超人才再培训速度。</p>
+
+<p>来源：<a href="https://www.caixin.com/2026-03-20/ai-employment-report-2026.html" target="_blank">财新全球AI就业报告2026</a> | <a href="https://www.forrester.com/report/enterprise-ai-adoption-2026" target="_blank">Forrester企业AI采用报告</a></p>
+
+<h3>2. AI原生组织崛起：5-10人小团队完成50-100人工作量，决策速度提升45%</h3>
+
+<p>a16z与MIT斯隆管理学院的最新研究共同描绘出"AI原生组织"的颠覆性竞争优势。a16z指出，配备完整AI工具栈的5-10人精英小团队，其实际产出可媲美传统架构下50-100人的团队规模，人效比提升达10倍。MIT斯隆的实证数据更为精确：采用AI原生组织结构的企业，决策速度平均提升45%，运营成本下降30%。麦肯锡报告则从宏观竞争层面印证了这一趋势——全面拥抱AI优先战略的企业，业绩已超越竞争对手40%。埃森哲将这类企业命名为"AI原生运营企业"，其生产力提升幅度高达3倍。传统四层组织架构（决策层→管理层→执行层→基础层）正在被压缩为"两层半"结构：战略层、AI增强执行层，以及作为连接器存在的人机协作中间层。</p>
+
+<p>来源：<a href="https://a16z.com/2026/ai-native-teams-organizational-blueprint" target="_blank">a16z AI原生团队报告</a> | <a href="https://sloanreview.mit.edu/article/ai-native-organization-models-2026" target="_blank">MIT斯隆AI原生组织评估</a> | <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-ai-first-organization" target="_blank">麦肯锡AI优先组织</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<ul>
+<li><strong>AI转型三大核心挑战</strong>：Gartner指出企业AI转型面临人才缺口、AI伦理合规与系统集成复杂性三大瓶颈，超过60%的企业转型项目延期。<a href="https://www.gartner.com/en/articles/ai-transformation-challenges" target="_blank">来源</a></li>
+</ul>
+
+<ul>
+<li><strong>层级组织让位AI增强型扁平结构</strong>：HBR报告指出传统金字塔层级结构正在快速瓦解，流动性强、AI增强的弹性组织模型成为2026年主流方向。<a href="https://hbr.org/2026/03/how-ai-is-reshaping-organizational-structures" target="_blank">来源</a></li>
+</ul>
+
+<ul>
+<li><strong>AI替代岗位白皮书</strong>：数据录入员、客服代表、初级程序员、财务分析师被列为2026年"高危岗位"，预计3年内自动化替代率超50%。<a href="https://www.36kr.com/p/ai-job-replacement-2026" target="_blank">来源</a></li>
+</ul>
+
+<ul>
+<li><strong>大厂Q1裁员超10万人</strong>：2026年第一季度多家科技大厂合计裁员超10万人，客服与运营岗首当其冲，被明确标注为"AI效率替代"项目。<a href="https://tech.163.com/26/0315/ai-layoffs-big-tech-2026.html" target="_blank">来源</a></li>
+</ul>
+
+<ul>
+<li><strong>Google DeepMind全面整合</strong>：谷歌将DeepMind与谷歌研究院完全合并，组织变动波及数千名研究人员，形成全球最大AI研究单一机构。<a href="https://www.theverge.com/2026/google-deepmind-restructuring-workforce" target="_blank">来源</a></li>
+</ul>
+
+<ul>
+<li><strong>Meta全面AI化重组</strong>：扎克伯格宣布将AI定为Meta第一优先级核心业务，进行全面组织重组，同步推进战略性裁员优化人员结构。<a href="https://www.bloomberg.com/news/meta-ai-first-reorganization-2026" target="_blank">来源</a></li>
+</ul>
+
+<ul>
+<li><strong>Amazon AI革命影响150万员工</strong>：亚马逊通过AI重塑每一个业务环节，从仓储物流到客服系统全面AI化，涉及全球150万名员工的工作流程再造。<a href="https://fortune.com/2026/amazon-ai-revolution-workforce" target="_blank">来源</a></li>
+</ul>
+
+<ul>
+<li><strong>AI原生初创企业竞争优势扩大</strong>：TechCrunch报道，AI原生初创公司与传统企业之间的生产力差距在2026年继续扩大，成为资本市场关注焦点。<a href="https://techcrunch.com/2026/04/ai-native-startups-traditional-enterprises-gap" target="_blank">来源</a></li>
+</ul>
+
+<ul>
+<li><strong>中国AI裁员调查</strong>：超60%的中国头部企业已系统性地用AI替代客服、内容生产、代码编写岗位，形成结构性人员优化趋势。<a href="https://www.latepost.com/news/ai-replacing-employees-china-2026" target="_blank">来源</a></li>
+</ul>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>字节跳动：豆包团队翻倍，内容运营岗大幅压缩</h3>
+
+<p>2026年字节跳动启动年度最大规模组织调整，核心动作是将AI部门（豆包大模型团队）规模扩大至原来的2倍，同时合并多个重叠业务线，裁减传统内容运营岗位。字节的策略清晰：把原来需要大量人工审核、分发、运营的内容岗位，用豆包的内容生成与智能分发能力替代，将节省的人力成本转投AI基础设施。字节、阿里、腾讯三家Q1合计优化员工超2万人，其中绝大多数为中后台职能岗。</p>
+
+<p>来源：<a href="https://www.latepost.com/news/bytedance-org-restructuring-2026" target="_blank">晚点LatePost字节组织调整</a> | <a href="https://mp.weixin.qq.com/s/big-tech-layoffs-ai-china-2026" target="_blank">三大厂裁员数据</a></p>
+
+<h3>阿里巴巴：云智能集团AI工程师占比从30%跳升至60%</h3>
+
+<p>阿里云智能集团加速AI化转型，AI相关工程师在总员工中的占比在一年内从30%提升至60%，传统ERP、CRM系统维护岗位大幅压缩。阿里的路径是"用AI重写自己"——将原本需要大量人工维护的企业级软件系统，全面迁移到AI驱动架构，实现"少人化"运营。这一转型也折射出阿里云在企业AI服务市场的战略押注。</p>
+
+<p>来源：<a href="https://tech.sina.com.cn/alibaba-ai-transformation-cloud-2026.shtml" target="_blank">新浪科技阿里AI转型</a></p>
+
+<h3>腾讯：设立首席AI官，混元大模型战略升级</h3>
+
+<p>腾讯2026年组织变革的最大亮点是设立首席AI官（CAIO）职位，将混元大模型提升至集团战略核心，并对微信、腾讯云进行AI深度改造。AI中台建设加速，意在打通各事业群的AI能力壁垒，形成统一的AI服务底座。这标志着腾讯从"AI工具使用者"向"AI能力建设者"的角色转变。</p>
+
+<p>来源：<a href="https://www.36kr.com/p/tencent-hunyuan-org-change-2026" target="_blank">36氪腾讯组织变革</a></p>
+
+<h3>Meta与Google：西方科技巨头AI重组同步提速</h3>
+
+<p>Meta与Google不约而同地在2026年上半年完成了大规模AI驱动组织重组。Meta以AI效率为核心重组各业务线，Google则完成了DeepMind与谷歌研究院的历史性整合。两家公司均以"AI效率提升"为由推进裁员，实质是将传统研究岗位和产品岗位向AI原生角色转移。这两起重组的规模、速度和彻底程度，在硅谷树立了新的组织变革标杆。</p>
+
+<p>来源：<a href="https://www.wsj.com/tech/meta-layoffs-ai-efficiency-2026" target="_blank">WSJ Meta裁员</a> | <a href="https://www.theverge.com/2026/google-deepmind-restructuring-workforce" target="_blank">The Verge Google重组</a></p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<ul>
+<li><strong><a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank">AutoGPT</a></strong> ⭐172k — 最早的自主AI Agent框架，持续迭代中，依然是AI Agent学习与实验的首选入口。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/ollama/ollama" target="_blank">Ollama</a></strong> ⭐107k — 本地运行主流大模型（Llama、Mistral、Gemma等）的最简方案，一条命令即可启动，企业私有化部署神器。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/browser-use/browser-use" target="_blank">browser-use</a></strong> ⭐63.2k — 让AI Agent可以直接操控浏览器完成复杂Web任务，是RPA+AI融合的代表性工具，正在被大量企业用于自动化工作流。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/cline/cline" target="_blank">Cline</a></strong> ⭐37.8k — IDE内的自主编码Agent，支持直接读写文件、执行命令，是Cursor之外最受开发者欢迎的AI编程工具。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/vllm-project/vllm" target="_blank">vLLM</a></strong> ⭐45.2k — 高吞吐量LLM推理引擎，企业级大模型服务部署的工业标准，支持连续批处理和PagedAttention技术，吞吐量比原生Huggingface提升24倍。</li>
+</ul>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达</h2>
+
+<p><strong>本周主题：AI测试与代码审查（周二专题）</strong></p>
+
+<p>今天是周二，聚焦AI辅助测试与代码审查工具，为500人研发团队提供落地建议。</p>
+
+<h3>工具一：Qodo Merge（PR-Agent）⭐7.2k</h3>
+
+<p><strong>适用场景</strong>：Pull Request自动分析、代码质量审查、测试覆盖率建议</p>
+
+<p><strong>功能亮点</strong>：</p>
+<ul>
+<li>自动为每个PR生成详细的代码变更摘要与风险评估</li>
+<li>智能识别潜在Bug、安全漏洞、性能问题</li>
+<li>自动建议补充单元测试用例</li>
+</ul>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>第1周：在核心业务仓库（如支付、核心API）试点，每日PR数量约30-50个</li>
+<li>设置"强制AI Review通过"门槛，让Qodo成为代码合入的前置条件</li>
+<li>关键指标：代码审查时间目标从平均4小时压缩到1.5小时（参考InfoQ数据：-40%）</li>
+<li>第4周：全团队推广，配合每双周回顾Qodo标记的高频问题类型，形成团队编码规范迭代</li>
+</ul>
+
+<h3>工具二：GitHub Copilot（企业版代码审查功能）</h3>
+
+<p><strong>适用场景</strong>：IDE内实时代码建议 + PR级代码审查 + 测试生成</p>
+
+<p><strong>功能亮点</strong>：</p>
+<ul>
+<li>实时代码补全（提升编码速度+20%，来源：GitHub官方数据）</li>
+<li>PR审查模式：自动标注潜在问题代码行</li>
+<li>`/tests`命令：一键生成当前函数的单元测试</li>
+</ul>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>全员订阅GitHub Copilot Enterprise（$39/人/月）</li>
+<li>重点培训"如何写好Prompt让Copilot生成精准测试"——这是ROI最高的技能投资</li>
+<li>建立"AI生成测试质量评分"机制，防止团队用AI生成大量低质量测试覆盖率刷分</li>
+<li>预期效果：PR瓶颈时间-60%，新人上手周期从3个月缩短至6周（参考BCG数据）</li>
+</ul>
+
+<h3>工具三：Continue（开源AI代码助手）⭐24.1k</h3>
+
+<p><strong>适用场景</strong>：私有化部署场景、需要接入自有模型的企业</p>
+
+<p><strong>功能亮点</strong>：</p>
+<ul>
+<li>支持任意大模型（包括私有化部署的Ollama/vLLM）</li>
+<li>完全开源，数据不出企业内网</li>
+<li>IDE集成，支持VSCode和JetBrains全系</li>
+</ul>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>适合有数据安全合规要求的金融、医疗、政企团队</li>
+<li>搭配Ollama+本地部署Qwen2.5-Coder模型，实现"零数据外泄"AI编程</li>
+<li>IT团队评估周期约2周，部署成本远低于商业方案</li>
+</ul>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p><strong>AI原生组织变革的本质：从"用AI"到"成为AI原生"</strong></p>
+
+<p>今天的新闻让我想到一个关键区分：多数企业还停留在"使用AI工具"阶段，而真正的AI原生组织变革，是从底层重新设计工作单元。</p>
+
+<p>传统四层组织结构（战略层→管理层→执行层→支撑层）之所以需要四层，是因为信息传递有损耗、决策需要多人协同验证、执行需要大量人工协调。但当AI承担了信息汇总、初步决策辅助、任务分配与进度跟踪的工作后，中间两层的存在价值被根本性地质疑。这就是"四层→两层半"变革的底层逻辑。</p>
+
+<p>未来最有竞争力的人才，是<strong>I-T-π型</strong>复合人才：在某一领域有深度（I的竖线），具备跨域协作能力（T的横线），同时能熟练驾驭AI工具链并具备产品思维（π的第二条腿）。这种人才配置在AI Native Pod（3-7人自治小组）中被放大——每个Pod自带AI工具栈，像一个小型创业公司一样运转。</p>
+
+<p>字节、阿里的组织调整不是"裁员"，是在用脚投票：他们在用组织架构宣告，未来的竞争单元是AI增强的精英小团队，而不是庞大的职能部门。</p>
+
+<blockquote>关注AI原生组织变革，每日更新。</blockquote>
+
+<hr>
+
+<p>*本日报由丫头自动生成 | 数据来源：Gartner、HBR、McKinsey、Forrester、a16z、MIT Sloan、36氪、晚点LatePost等*</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/DXGFdYX9RoJtFZxFgp3cSdgxnwe" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
