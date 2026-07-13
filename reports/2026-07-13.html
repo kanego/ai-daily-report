@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-07-13</title>
+    <meta property="og:title" content="AI组织变革日报 2026-07-13">
+    <meta property="og:description" content="# AI组织变革日报 2026-07-13  > 丫头出品 · 每日AI组织变革洞察 · 聚焦AI Native团队转型  ---  ## 📌 今日要闻  ### 1. JPMorgan开始追踪员工AI使用行为，企业AI管控进入新阶段  摩根大通近期宣布启动员工AI使用行为追踪项目，系统将记录员工在">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-07-13.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-07-13  > 丫头出品 · 每日AI组织变革洞察 · 聚焦AI Native团队转型  ---  ## 📌 今日要闻  ### 1. JPMorgan开始追踪员工AI使用行为，企业AI管控进入新阶段  摩根大通近期宣布启动员工AI使用行为追踪项目，系统将记录员工在">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-07-13</h1>
+            <div class="date">📅 2026-07-13</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-07-13</h1>
+
+<blockquote>丫头出品 · 每日AI组织变革洞察 · 聚焦AI Native团队转型</blockquote>
+
+<hr>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. JPMorgan开始追踪员工AI使用行为，企业AI管控进入新阶段</h3>
+
+<p>摩根大通近期宣布启动员工AI使用行为追踪项目，系统将记录员工在工作中调用AI工具的频率、场景与输出质量。这标志着大型金融机构从"鼓励用AI"进入"量化管理AI使用"的新阶段。对于500人以上团队的管理者而言，这一趋势意味着未来不仅要问"你用了AI吗"，更要问"AI怎么改变了你的工作流程和产出"。企业正在构建AI使用的"可见性基础设施"，为下一步的绩效评估与岗位重构做准备。这一做法预计将在银行、保险、咨询等行业迅速扩散。</p>
+
+<p>来源：<a href="https://www.artificialintelligence-news.com/news/jpmorgan-begins-tracking-how-employees-use-ai-at-work/" target="_blank">JPMorgan begins tracking how employees use AI at work</a></p>
+
+<h3>2. Apple起诉OpenAI商业秘密侵权，AI巨头间竞争激化</h3>
+
+<p>苹果公司正式起诉OpenAI，指控其窃取商业机密，相关不当行为由OpenAI高层领导主导。这场诉讼的背后，是苹果已完成对Apple Intelligence的全面布局后，开始对AI赛道的知识产权边界发起主动防御。对于企业采购AI工具的决策者而言，头部AI厂商之间的法律战将增加供应商选择的不确定性，建议在合同条款中重视IP归属与数据使用权条款。此事件也预示着AI产业进入"围墙高筑"时代，开源与闭源阵营的博弈将更加复杂。</p>
+
+<p>来源：<a href="https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/" target="_blank">Apple sues OpenAI over alleged trade secret theft</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<p>1. <strong>OpenAI押注家庭市场</strong> — ChatGPT招募专职产品经理，主攻家庭/老年用户场景，AI进入千家万户加速。<a href="https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/" target="_blank">来源</a></p>
+
+<p>2. <strong>Meta撤回Instagram争议AI功能</strong> — AI自动生成内容因用户反弹被紧急下线，平台AI功能需更谨慎的灰度策略。<a href="https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/" target="_blank">来源</a></p>
+
+<p>3. <strong>Fidji Simo离开OpenAI二号位</strong> — OpenAI核心管理层再次重组，组织稳定性成为外部合作方的重要考量维度。<a href="https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/" target="_blank">来源</a></p>
+
+<p>4. <strong>Hugging Face CEO：企业不再租用AI</strong> — HuggingFace认为2026年企业已从调用API转向自建/自托管模型，AI自主化趋势明显。<a href="https://techcrunch.com/2026/07/10/hugging-faces-ceo-on-why-companies-are-done-renting-their-ai/" target="_blank">来源</a></p>
+
+<p>5. <strong>Datadog用Claude+Cursor完成生产迁移</strong> — 工程团队以TDD方式借助AI完成大规模代码重构，AI辅助工程落地典型案例。<a href="https://www.infoq.com/news/2026/07/datadog-ai-production-migration/" target="_blank">来源</a></p>
+
+<p>6. <strong>Slack引入Agent驱动的端到端测试</strong> — Slack内部工程团队使用AI Agent完成UI自动化测试，测试效率大幅提升。<a href="https://www.infoq.com/news/2026/07/slack-agentic-e2e-testing-ui/" target="_blank">来源</a></p>
+
+<p>7. <strong>GitHub Copilot CLI新版发布</strong> — 支持Tab补全与零配置工具接入，开发者命令行AI体验全面升级。<a href="https://www.infoq.com/news/2026/07/copilot-cli-terminal-ga/" target="_blank">来源</a></p>
+
+<p>8. <strong>L'Oreal/Mondelez/雀巢用AI加速产品研发</strong> — 三大消费品巨头通过AI将新品研发周期压缩，AI在制造业的提效已超越IT圈。<a href="https://www.artificialintelligence-news.com/news/ai-product-development-loreal-mondelez-nestle/" target="_blank">来源</a></p>
+
+<p>9. <strong>Anthropic揭秘Claude思维"隐藏空间"</strong> — MIT Tech Review报道，Anthropic发现Claude在回答前存在概念推演的中间状态，可解释性研究突破。<a href="https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/" target="_blank">来源</a></p>
+
+<p>10. <strong>MIT Tech Review：企业AI架构扩展基础要素</strong> — IT领导者在迁移至Agentic系统时，需优先建立数据治理、LLM网关与安全合规基础设施。<a href="https://www.technologyreview.com/2026/07/07/1139413/the-foundational-elements-of-ai-architecture-that-it-leaders-need-to" target="_blank">来源</a></p>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>1. 字节跳动 DeerFlow 开源超级Agent框架冲击7.7万星</h3>
+<p>字节跳动开源项目 `bytedance/deer-flow`（⭐76,850）持续高速增长，这是一个长时程SuperAgent框架，支持研究、编码和内容创作任务。字节正将内部多Agent协作架构对外释放，显示出其在AI-Native工程组织上的领先实践正在"外溢"为行业标准。对中国互联网团队而言，DeerFlow代表了从"工具调用"升级到"任务委托"的组织范式跃迁。</p>
+
+<h3>2. 美国大型金融机构 JPMorgan 推行AI使用追踪</h3>
+<p>JPMorgan 启动员工AI行为追踪，体现金融行业对"AI监管合规"的前瞻布局。与科技公司不同，金融机构的AI落地需兼顾监管合规和效率提升，这种"量化管理"模式将为其他传统行业树立参照系。预计2026年H2，国内银行、保险机构也将跟进类似措施。</p>
+
+<h3>3. Google工业机器人AI战略正式落地</h3>
+<p>Google正式推进工业机器人AI业务（Intrinsic），将AI能力从数字空间延伸至物理世界。这意味着AI对就业的冲击开始从白领蔓延至蓝领工种，制造业的组织结构将面临更深层次的重塑压力。</p>
+
+<h3>4. 消费品巨头AI提效实践：从IT到全行业</h3>
+<p>L'Oreal、Mondelez、雀巢等消费品龙头已将AI深度嵌入产品研发链路，研发周期压缩成为可量化的竞争优势。这标志着AI组织变革已从科技公司外溢至传统快消行业，"不用AI"正在成为竞争劣势。</p>
+
+<h3>5. AWS GraphRAG将药物研究周期压缩87%</h3>
+<p>AWS的GraphRAG部署在制药行业实现了研发效率的大幅提升，生命科学领域的AI落地正从概念验证进入规模化阶段。对于组织变革研究者而言，这是AI-Native团队在高度专业化领域创造"10倍效率"的有力佐证。来源：<a href="https://www.artificialintelligence-news.com/news/aws-graphrag-deployment-cuts-drug-research-cycles-by-87/" target="_blank">AWS GraphRAG deployment</a></p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<h3>1. obra/superpowers ⭐253,020</h3>
+<p><strong>Agentic Skills Framework + 软件开发方法论</strong>，结合技能框架与工程方法论，帮助开发者和团队用子Agent驱动开发（Subagent-Driven Development）。持续霸榜GitHub AI工具榜，今日更新。</p>
+<p><a href="https://github.com/obra/superpowers" target="_blank">https://github.com/obra/superpowers</a></p>
+
+<h3>2. thedotmack/claude-mem ⭐86,972</h3>
+<p><strong>AI Agent跨会话持久化记忆</strong>，自动捕获Agent会话内容、AI压缩后注入未来会话，兼容 Claude Code、Codex、Gemini、Hermes等主流Agent工具。解决AI编程Agent"失忆"痛点，是大团队部署AI编程工具的必备插件。</p>
+<p><a href="https://github.com/thedotmack/claude-mem" target="_blank">https://github.com/thedotmack/claude-mem</a></p>
+
+<h3>3. addyosmani/agent-skills ⭐77,591</h3>
+<p><strong>生产级AI编程Agent技能库</strong>，Addy Osmani（Google Chrome工程主管）维护，覆盖Claude Code、Cursor、Codex等工具，提供企业可直接使用的标准化工程技能。</p>
+<p><a href="https://github.com/addyosmani/agent-skills" target="_blank">https://github.com/addyosmani/agent-skills</a></p>
+
+<h3>4. bytedance/deer-flow ⭐76,850</h3>
+<p><strong>字节跳动开源超级Agent框架</strong>，支持长时程任务（分钟到小时级），含沙箱、记忆、工具调用和子Agent协作，基于LangChain/LangGraph构建。适合需要构建内部研究型AI Agent的技术团队。</p>
+<p><a href="https://github.com/bytedance/deer-flow" target="_blank">https://github.com/bytedance/deer-flow</a></p>
+
+<h3>5. pcliangx/AppGenesisForge ⭐740</h3>
+<p><strong>Claude Code 19角色协作脚手架</strong>，为AI-Native软件开发团队提供阶段门控（Stage-Gate）流程，19个角色分工协作完成从需求到上线全链路。小团队实践AI-Native开发流程的实用起点。</p>
+<p><a href="https://github.com/pcliangx/AppGenesisForge" target="_blank">https://github.com/pcliangx/AppGenesisForge</a></p>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达（周一：AI编码工具）</h2>
+
+<h3>1. Claude Code / Cursor — AI Pair Programming主力工具</h3>
+<p><strong>适用场景</strong>：日常代码编写、重构、Bug修复、PR Review</p>
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>从工程效率最高的20%工程师开始试点，建立内部"AI编程冠军"体系</li>
+<li>统一配置 `.cursorrules` 或 Claude Code Skills，确保AI理解团队代码规范</li>
+<li>建立AI编程产出的质量基线（PR合并率、测试覆盖率、Code Review轮次），量化ROI</li>
+<li>6周为一个周期：第1-2周工具熟悉 → 第3-4周工作流集成 → 第5-6周效率复盘</li>
+</ul>
+
+<h3>2. GitHub Copilot CLI（新版 GA）— 终端AI助手</h3>
+<p><strong>适用场景</strong>：命令行操作、脚本生成、DevOps自动化</p>
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>与CI/CD流程集成，用Copilot CLI辅助生成Dockerfile、Terraform配置</li>
+<li>在SRE/运维团队优先推广，解决"记命令"的低效问题</li>
+<li>配合企业GitHub Enterprise许可证统一管理，降低合规风险</li>
+</ul>
+<p>来源：<a href="https://www.infoq.com/news/2026/07/copilot-cli-terminal-ga/" target="_blank">InfoQ - GitHub Copilot CLI GA</a></p>
+
+<h3>3. obra/superpowers — Agentic开发方法论框架</h3>
+<p><strong>适用场景</strong>：希望系统化推进AI-Native开发流程的技术团队</p>
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>将superpowers的Skills体系与团队知识库对接，构建"公司级AI技能库"</li>
+<li>结合子Agent驱动开发（SDD）理念，将大任务拆解为可并行的Agent任务</li>
+<li>适合架构师和Tech Lead先行研究，再定制适合团队的落地版本</li>
+</ul>
+<p><a href="https://github.com/obra/superpowers" target="_blank">https://github.com/obra/superpowers</a></p>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>今天最让我深思的是两个信号同时出现：<strong>JPMorgan追踪AI使用行为</strong>和<strong>Datadog用AI完成生产迁移</strong>。</p>
+
+<p>这两件事放在一起，揭示了AI组织变革的一个关键矛盾：<strong>效率先行者在跑，管控体系在追</strong>。</p>
+
+<p>Datadog的工程师已经在用Claude+Cursor做TDD生产迁移了——这是典型的<strong>I型人才</strong>（AI工具使用深度超强），而他们所在的组织很快就会开始问：这位工程师创造了多少价值？岗位应该怎么重新定价？</p>
+
+<p>这正是我一直强调的<strong>四层→两层半</strong>组织变革路径的现实写照。原本需要4层（工程师→高级工程师→架构师→负责人）的交付链，在AI加持下正在坍缩成2.5层（AI-Native个人贡献者 + 产品/业务决策者 + 必要的专家顾问）。</p>
+
+<p>对于管理者：现在不是"要不要用AI"的问题，而是"怎么设计AI时代的绩效体系"。JPMorgan做的事，是把这个问题变得可量化——这一步，值得每个500人以上团队的CTO/CPO认真对待。</p>
+
+<p><strong>AI Native Pod的核心不是工具，是流程重设计。</strong></p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/TsuddX8h1oACtDxTrbTcubNEn8d" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
