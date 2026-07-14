@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-07-14</title>
+    <meta property="og:title" content="AI组织变革日报 2026-07-14">
+    <meta property="og:description" content="# AI组织变革日报 2026-07-14  > 丫头出品 · 每日AI组织变革洞察 · 聚焦AI Native团队转型  ---  ## 📌 今日要闻  ### 1. 微软CEO纳德拉发出震撼警告：AI时代企业最大风险是被专有模型&quot;绑架&quot;  微软CEO萨提亚·纳德拉近日向采用AI的企业发出严重警告">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-07-14.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-07-14  > 丫头出品 · 每日AI组织变革洞察 · 聚焦AI Native团队转型  ---  ## 📌 今日要闻  ### 1. 微软CEO纳德拉发出震撼警告：AI时代企业最大风险是被专有模型&quot;绑架&quot;  微软CEO萨提亚·纳德拉近日向采用AI的企业发出严重警告">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-07-14</h1>
+            <div class="date">📅 2026-07-14</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-07-14</h1>
+
+<blockquote>丫头出品 · 每日AI组织变革洞察 · 聚焦AI Native团队转型</blockquote>
+
+<hr>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. 微软CEO纳德拉发出震撼警告：AI时代企业最大风险是被专有模型"绑架"</h3>
+
+<p>微软CEO萨提亚·纳德拉近日向采用AI的企业发出严重警告——当前硅谷最令AI从业者担忧的问题，是大型AI实验室的专有模型是否在充当"特洛伊木马"。纳德拉明确表示，企业应在开源与闭源模型之间保持战略均衡，避免过度依赖单一厂商。这一信号对正在推进AI Native转型的企业有直接影响：选型时必须评估供应商锁定风险，建立"AI供应链"多元化策略。对于500人产研团队来说，这意味着工具选型不能只看当前能力，还要考虑数据归属权与模型可替换性。AI底层基础设施的主权争夺，将成为2026年企业AI战略的核心议题。</p>
+
+<p>来源：<a href="https://techcrunch.com/2026/07/13/satya-nadella-has-issued-a-shocking-warning-to-companies-using-ai/" target="_blank">Satya Nadella has issued a shocking warning to companies using AI</a></p>
+
+<h3>2. Nous Research拟以15亿美元估值融资，Hermes Agent引领AI产品化新范式</h3>
+
+<p>Hermes Agent的母公司Nous Research正在以15亿美元估值进行至少7500万美元的新一轮融资，由iRobot Ventures领投，USV等顶级机构参与。Nous Research的核心产品Hermes代表着AI从"工具"向"组织成员"演进的典型路径——一个能持续学习、自主执行复杂任务、嵌入组织流程的智能体。这轮融资的高估值说明资本市场已判断：下一阶段AI价值创造不在于模型本身，而在于AI与具体组织场景的深度融合。对AI Native组织变革的实践者而言，这一投资趋势指向了清晰方向：能落地、会协作、可管理的AI Agent正在成为组织新型"岗位"。</p>
+
+<p>来源：<a href="https://techcrunch.com/2026/07/13/hermes-agent-maker-nous-research-in-talks-for-new-funding-at-1-5b-valuation/" target="_blank">Hermes agent maker Nous Research in talks for new funding at $1.5B valuation</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<p>1. <strong>Apple起诉OpenAI商业秘密侵权</strong> — 前苹果员工离职后利用漏洞下载机密文件，核心AI人才流动引发的知识产权争夺战愈演愈烈。<a href="https://techcrunch.com/2026/07/13/apple-says-former-employee-exploited-rare-bug-to-download-confidential-files-after-leaving-for-openai/" target="_blank">来源</a></p>
+
+<p>2. <strong>视频生成独角兽PixVerse完成4.39亿美元融资</strong> — 估值突破20亿美元，月活1500万，阿里参投；AIGC内容生产工具进入规模化商业阶段。<a href="https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/" target="_blank">来源</a></p>
+
+<p>3. <strong>Anthropic本地化定价切入印度市场</strong> — Claude在印度推出卢比计价订阅，AI大模型厂商区域差异化定价战略加速，发展中市场AI渗透提速。<a href="https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/" target="_blank">来源</a></p>
+
+<p>4. <strong>Waze集成Gemini AI</strong> — Google将Gemini写入旗下导航产品，大模型"无处不在"战略持续推进，AI成基础设施而非独立产品。<a href="https://techcrunch.com/2026/07/13/waze-adds-new-ai-powered-features-and-customization-updates/" target="_blank">来源</a></p>
+
+<p>5. <strong>system-prompts仓库stars突破14万</strong> — GitHub项目x1xhlol/system-prompts-and-models-of-ai-tools已积累141,888 stars，收录Cursor、Claude Code、Devin等主流AI编码工具的完整系统提示词，AI工具透明度倒逼厂商开放。<a href="https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools" target="_blank">链接</a></p>
+
+<p>6. <strong>字节deer-flow开源AI研究助理</strong> — bytedance/deer-flow获76,940 stars，定位为长任务SuperAgent，可研究、写代码、生成内容，字节将AI能力开源输出，构建生态影响力。<a href="https://github.com/bytedance/deer-flow" target="_blank">链接</a></p>
+
+<p>7. <strong>code-review-graph本地化代码智能图谱</strong> — tirth8205/code-review-graph获19,489 stars，为MCP和CLI构建代码库持久映射，大幅降低AI代码审查上下文成本。<a href="https://github.com/tirth8205/code-review-graph" target="_blank">链接</a></p>
+
+<p>8. <strong>context-mode优化AI编码上下文窗口</strong> — mksglu/context-mode获18,896 stars，工具输出沙箱化可减少98%上下文占用，大规模代码库AI协作的关键性能瓶颈开始被系统性解决。<a href="https://github.com/mksglu/context-mode" target="_blank">链接</a></p>
+
+<p>9. <strong>Sam Altman与马斯克太空数据中心互怼</strong> — Altman回应马斯克"骗子"指控，两大AI巨头舆论战升级；AI基础设施话语权争夺折射行业格局重构。<a href="https://techcrunch.com/2026/07/13/sam-altmans-space-data-center-trash-talk-is-what-most-experts-already-believe/" target="_blank">来源</a></p>
+
+<p>10. <strong>OpenAgentsControl获4,556 stars</strong> — 计划优先+审批执行的AI Agent框架，为开发团队提供可控自动化工作流，AI Native开发流程落地工具快速涌现。<a href="https://github.com/darrenhinde/OpenAgentsControl" target="_blank">链接</a></p>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>1. 字节跳动AI原生化提速：deer-flow代表"AI即团队成员"方向</h3>
+
+<p>字节跳动将内部AI研究助理deer-flow开源（76,940 stars），该项目定位为"长任务超级Agent"，可执行研究、编码、内容创作等复合型任务。这一动作背后，是字节持续推进的研发组织AI化——从工具赋能转向Agent替代部分角色职能。字节的策略是：既内部使用，又开源输出，以生态影响力稳固技术话语权，同时倒逼竞争对手加速。</p>
+
+<h3>2. 微软AI工具链深度绑定组织流程，供应商锁定风险浮出水面</h3>
+
+<p>纳德拉的警告恰恰来自微软自身——Copilot已深入Word、Teams、GitHub等企业核心流程，微软的"开源友好"表态是防御姿态：防止企业因担忧锁定而转向竞争对手。对国内企业而言，这一警告同样适用于阿里云、字节、百度等国内AI厂商的套件产品——组织AI化落地越深，替换成本越高。</p>
+
+<h3>3. Apple vs OpenAI人才战：AI时代核心岗位的知识产权边界重划</h3>
+
+<p>苹果前员工利用离职后系统漏洞下载机密文件后跳槽OpenAI，苹果诉讼揭示了一个系统性风险：当AI研发能力高度集中在少数关键人才时，人才流动即等同于能力迁移。这对国内大厂同样是警示——AI Native转型依赖的π型人才，其知识产权归属与竞业保护需要更精细的制度设计。</p>
+
+<h3>4. Anthropic差异化定价：AI工具全球化进入"区域价格歧视"阶段</h3>
+
+<p>Claude在印度推出本地化定价，这是AI大模型厂商向更广泛市场渗透的标志性动作。对国内企业而言，这意味着原本"进口替代"的国产大模型在价格上的优势将被压缩——外资AI工具的本地化策略正在系统性推进。</p>
+
+<h3>5. 视频AIGC独角兽PixVerse：内容生产岗位变革加速到来</h3>
+
+<p>PixVerse月活1500万、估值20亿美元，视频生成AI正在从"可用"跨越到"规模化商用"门槛。内容生产领域的组织变革将比研发领域更快：原来需要10人完成的视频制作，现在2-3人+AI工具即可完成。教育、培训、营销等内容密集型团队首当其冲。</p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<h3>1. <strong>anthropics/claude-code</strong> — ⭐ 137,728 stars</h3>
+<p>AI编码代理，运行在终端，理解整个代码库并帮助完成复杂任务。已成为AI Native开发流程的事实标准工具，适合直接嵌入产研团队工作流。</p>
+<p><a href="https://github.com/anthropics/claude-code" target="_blank">GitHub</a></p>
+
+<h3>2. <strong>tirth8205/code-review-graph</strong> — ⭐ 19,489 stars</h3>
+<p>本地优先的代码智能图谱，为MCP和CLI构建持久代码库映射，解决AI代码审查时的上下文丢失问题。500人团队可用于构建统一的代码知识库，让AI能跨项目理解代码依赖关系。</p>
+<p><a href="https://github.com/tirth8205/code-review-graph" target="_blank">GitHub</a></p>
+
+<h3>3. <strong>mksglu/context-mode</strong> — ⭐ 18,896 stars</h3>
+<p>AI编码代理的上下文窗口优化器，工具输出沙箱化（减少98%上下文），支持会话持久化。大型代码库场景下AI辅助开发的核心效率工具，解决"AI代码助手越用越慢越贵"的痛点。</p>
+<p><a href="https://github.com/mksglu/context-mode" target="_blank">GitHub</a></p>
+
+<h3>4. <strong>darrenhinde/OpenAgentsControl</strong> — ⭐ 4,556 stars</h3>
+<p>计划优先的AI Agent开发框架，支持审批执行模式，多语言兼容。适合希望引入AI自动化但需要人工审批节点的团队，是AI Native流程落地的"安全气囊"。</p>
+<p><a href="https://github.com/darrenhinde/OpenAgentsControl" target="_blank">GitHub</a></p>
+
+<h3>5. <strong>u7079256/paperjury</strong> — ⭐ 676 stars</h3>
+<p>Claude Code技能，用于研究论文的AI评审压力测试：review → verdict → revision循环。可推广到产品需求文档、技术方案的AI结构化评审，将代码审查逻辑迁移到文档审查场景。</p>
+<p><a href="https://github.com/u7079256/paperjury" target="_blank">GitHub</a></p>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达</h2>
+
+<p><strong>本周主题：AI测试与代码审查（周二）</strong></p>
+
+<h3>🔍 工具一：code-review-graph + Claude Code 联合工作流</h3>
+
+<p><strong>适用场景：</strong> 中大型代码库的AI辅助代码审查，尤其是跨模块、跨服务的依赖关系理解</p>
+
+<p><strong>500人团队落地建议：</strong></p>
+<p>1. 由基础架构小组（1-2人）搭建全局代码图谱，每日增量更新</p>
+<p>2. 开发人员提PR时，AI自动拉取相关依赖图谱作为审查上下文</p>
+<p>3. 人工审查聚焦在"AI无法判断的业务逻辑合理性"，其余由AI完成初步扫描</p>
+<p>4. 预期效果：代码审查时间从平均2小时降至30分钟，漏测率降低40%</p>
+
+<hr>
+
+<h3>🔍 工具二：context-mode — 大型项目AI辅助的"省钱神器"</h3>
+
+<p><strong>适用场景：</strong> 代码库超过10万行、AI响应变慢变贵的团队</p>
+
+<p><strong>500人团队落地建议：</strong></p>
+<p>1. 作为Claude Code / Cursor的上层插件安装，无需改变现有工具链</p>
+<p>2. 建立团队级的context配置模板，统一沙箱规则降低学习成本</p>
+<p>3. 对接内部计费系统，按项目/团队统计AI Token消耗，建立ROI看板</p>
+<p>4. 预期效果：API调用成本降低60-80%，响应速度提升明显</p>
+
+<hr>
+
+<h3>🔍 工具三：OpenAgentsControl — AI自动化的"受控落地"框架</h3>
+
+<p><strong>适用场景：</strong> 希望将CI/CD、测试、部署流程AI化，但担心全自动风险的团队</p>
+
+<p><strong>500人团队落地建议：</strong></p>
+<p>1. 从"低风险自动化"开始：单元测试生成、文档更新、依赖版本检查</p>
+<p>2. 设置三级审批阈值：低风险=AI自动执行，中风险=Tech Lead审批，高风险=双人确认</p>
+<p>3. 建立AI操作日志与回滚机制，每周Review AI执行的操作记录</p>
+<p>4. 预期效果：研发流程中25-30%的重复性任务可由AI完成，释放工程师专注核心创造</p>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p><strong>今日关键词：AI工具选型的政治学</strong></p>
+
+<p>纳德拉今天的警告，表面是在说"别被专有模型绑架"，本质是在说：AI工具的选型，已经不是技术决策，而是战略决策。</p>
+
+<p>这和我们推的AI Native Pod理念高度呼应——Pod内部的工具生态要避免单一供应商锁定。一个500人团队如果把所有AI工作流都压在某一家大厂的套件上，等于把组织神经系统外包出去了。</p>
+
+<p>更重要的是人才侧。Apple vs OpenAI的诉讼，揭示了AI时代π型人才的脆弱性：他们掌握的不只是技能，而是系统性的组织知识。这类人才流失，等于AI能力的直接搬迁。</p>
+
+<p>对我们1500人的产研体系来说，现在要想的不只是"怎么用AI提效"，还要想"我们的AI能力是否可迁移、可复现"。能力不能只活在人的脑子里，要沉淀到流程、文档、工具配置里——这才是真正的AI Native组织。</p>
+
+<p>四层→两层半的架构变革，最终要解决的就是这个问题：让AI能力成为组织资产，而不是个人优势。✨</p>
+
+<hr>
+
+<p>*生成时间：2026-07-14 08:30 | 下期预告：周三=AI知识管理工具*</p>
+
+        <div class="actions">
+            <a href="https://kanego.feishu.cn/docx/MjkLdioGRoxSXoxLWNWc4sg9ncb" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
