@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-07-19</title>
+    <meta property="og:title" content="AI组织变革日报 2026-07-19">
+    <meta property="og:description" content="# AI组织变革日报 2026-07-19  ## 📌 今日要闻  ### 1. OpenAI GPT-5.6 成为 Microsoft 365 Copilot 首选模型，全面重塑企业AI工作流  OpenAI 正式宣布 GPT-5.6 成为 Microsoft 365 Copilot 的默认首选模">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-07-19.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-07-19  ## 📌 今日要闻  ### 1. OpenAI GPT-5.6 成为 Microsoft 365 Copilot 首选模型，全面重塑企业AI工作流  OpenAI 正式宣布 GPT-5.6 成为 Microsoft 365 Copilot 的默认首选模">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-07-19</h1>
+            <div class="date">📅 2026-07-19</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-07-19</h1>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. OpenAI GPT-5.6 成为 Microsoft 365 Copilot 首选模型，全面重塑企业AI工作流</h3>
+
+<p>OpenAI 正式宣布 GPT-5.6 成为 Microsoft 365 Copilot 的默认首选模型，这意味着全球数亿企业用户的日常办公工具将全面升级到新一代推理能力。GPT-5.6 在代码生成、长文处理和多步推理上的提升，直接触发了企业内部AI使用规范的重写浪潮——许多大型企业已开始将 Copilot 纳入员工KPI考核体系，要求团队"AI First"输出。与此同时，OpenAI 还发布了"Codex for Every Role"战略，覆盖销售、数据科学、财务等非技术岗位，推动 AI Agent 从开发者工具向全员工具跃迁。</p>
+
+<p>来源：OpenAI官网 | <a href="https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot" target="_blank">原文链接</a></p>
+
+<h3>2. Databricks 估值飙升至 1880 亿美元，AI数据基础设施成组织变革核心底座</h3>
+
+<p>TechCrunch 报道，Databricks 最新融资轮估值达 1880 亿美元，延续其成为"AI时代最受欢迎第二选择"的神话。这一估值背后的逻辑是：企业AI转型的核心瓶颈正在从"模型能力"向"数据治理与AI工作流基础设施"迁移。越来越多的500人以上中大型企业选择基于 Databricks 构建统一数据+AI层，以支撑 AI Native 组织所需的实时决策、自动化报表与智能客服等场景。数据平台即组织智能化的神经中枢，这一判断正在被资本和产业共同验证。</p>
+
+<p>来源：TechCrunch | <a href="https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-s" target="_blank">原文链接</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<ul>
+<li><strong>OpenAI 发布 GPT-Red 安全模型</strong>：专用于 LLM 红队测试，自我攻防提升模型鲁棒性，企业合规部门关注。来源：MIT Tech Review | <a href="https://www.technologyreview.com/2026/07/15/1140514/meet-gpt-red-an-llm-super-hacker-openai-built-to" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>Claude 1Password 集成上线</strong>：Claude 可直接调用用户 1Password 凭据操作浏览器，AI Agent 权限扩张再迈一步。来源：The Verge | <a href="https://www.theverge.com/tech/966442/1password-anthropic-claude-browser-integration" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>Google 将 NotebookLM 更名为 Gemini Notebook</strong>：知识管理类AI工具加速纳入大厂生态，独立产品窗口期收窄。来源：The Verge | <a href="https://www.theverge.com/tech/966112/google-gemini-notebook-notebooklm" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>New York 州长宣布用AI审查所有行政法规</strong>：政府AI化提速，AI审查替代人工审查的组织范式开始在政府层面落地。来源：The Verge | <a href="https://www.theverge.com/ai-artificial-intelligence/966647/new-york-governor-kathy-hochul-ai-policie" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>Kimi 国际版引发硅谷关注</strong>：TechCrunch 以"Threat or Menace?"为题专题报道中国AI在全球市场的竞争力，中美AI产品格局继续演变。来源：TechCrunch | <a href="https://techcrunch.com/2026/07/18/kimi-threat-or-menace/" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>AI投资人预测：AI的钱正在"回来"</strong>：VC Neil Rimer 表示 AI 投资热情重新点燃，新一轮以"AI落地效益"为驱动的融资周期已启动。来源：TechCrunch | <a href="https://techcrunch.com/2026/07/17/neil-rimer-thinks-the-ai-money-is-coming-back-out/" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>Vertu 为高管推出 $6880 AI Agent 服务</strong>：高端AI助理市场成型，CEO级别的AI决策辅助进入商业化轨道。来源：TechCrunch | <a href="https://techcrunch.com/2026/07/17/vertu-wants-executives-to-pay-6880-for-an-ai-agent-heres-how-it-ac" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>OpenAI 联手三星向员工全面推广 ChatGPT+Codex</strong>：三星全球员工开始强制使用 ChatGPT 和 Codex，是目前规模最大的企业级AI工具强制落地案例之一。来源：OpenAI官网 | <a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>Endava 重新设计软件交付流程以 AI Agent 为核心</strong>：软件外包巨头 Endava 将传统研发流程重构为以 AI Agent 主导的交付链，是 AI Native 研发组织的典型案例。来源：OpenAI官网 | <a href="https://openai.com/index/endava-frontiers" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>Patreon 从"拦截AI爬虫"转向"封堵AI爬虫"</strong>：内容平台对 AI 数据抓取态度全面强硬，训练数据版权战升级。来源：TechCrunch | <a href="https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-the" target="_blank">链接</a></li>
+</ul>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>字节跳动 deer-flow 开源超级Agent框架（⭐77,347）</h3>
+<p>字节跳动开源 deer-flow，一个支持长任务研究、代码生成与内容创作的 SuperAgent 框架，已获 7.7 万 Star。这背后折射出字节内部已将 AI Agent 作为研发标配——其产品线（抖音、TikTok、飞书、豆包）的大量运营与开发任务正在被 Agent 化。字节的"AI替换人力"策略已从内部实践向开源生态输出，加速行业人力替代。</p>
+
+<p>来源：GitHub | <a href="https://github.com/bytedance/deer-flow" target="_blank">deer-flow</a></p>
+
+<h3>OpenAI "欧洲AI劳动力机会"报告触发政策讨论</h3>
+<p>OpenAI 发布《Mapping Europe's AI Workforce Opportunity》，系统测量欧洲各国AI技能转型需求，并指出数百万传统岗位将被 AI 重新定义。这份报告直接影响欧盟劳动力政策制定，也为中国的"AI+"就业政策提供了参照样本。</p>
+
+<p>来源：OpenAI官网 | <a href="https://openai.com/index/mapping-ai-jobs-transition-eu" target="_blank">链接</a></p>
+
+<h3>三星：全员强制 AI 化的里程碑案例</h3>
+<p>三星电子宣布在全球员工中全面推广 ChatGPT 和 Codex，成为迄今为止规模最大的企业 AI 全员化落地案例。500人以上团队的 AI 强制使用已不再是话题讨论，而是三星等头部企业的现实操作——这对中国的华为、腾讯、阿里等推进AI落地具有直接参考价值。</p>
+
+<p>来源：OpenAI官网 | <a href="https://openai.com/index/samsung-electronics-chatgpt-codex-deployment" target="_blank">链接</a></p>
+
+<h3>Codex 向全角色渗透：销售、数据、财务团队均纳入</h3>
+<p>OpenAI 发布"Codex for Every Role"系列，涵盖销售团队使用 ChatGPT Work 的方法论、数据科学团队的 Codex 工作流。这标志着 AI 编程工具从"开发者专属"向"全员工具"跨越，直接冲击传统分工中的岗位边界。</p>
+
+<p>来源：OpenAI官网 | <a href="https://openai.com/academy/codex-for-work/how-sales-teams-use-codex" target="_blank">链接</a></p>
+
+<h3>Deutsche Telekom 以 AI 重构电信运营</h3>
+<p>德电联合 OpenAI 宣布全面 AI 化运营改造计划，涵盖客服、网络维护和销售预测。这是欧洲最大电信企业的组织变革样本，与中国三大运营商的 AI 战略具有直接参照价值。</p>
+
+<p>来源：OpenAI官网 | <a href="https://openai.com/index/deutsche-telekom" target="_blank">链接</a></p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<ul>
+<li><strong><a href="https://github.com/n8n-io/n8n" target="_blank">n8n</a></strong> ⭐196,971 — 原生AI能力的 Fair-code 工作流自动化平台，支持可视化+代码混合构建，可自托管。本周持续冲榜，企业AI流程编排首选。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/langgenius/dify" target="_blank">langgenius/dify</a></strong> ⭐149,261 — 生产级 Agentic 工作流开发平台，支持 RAG、Agent 编排、模型网关一体化。国内企业落地 AI 应用的高频选型。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/bytedance/deer-flow" target="_blank">bytedance/deer-flow</a></strong> ⭐77,347 — 字节跳动开源长任务 SuperAgent 框架，支持沙箱、记忆、代码执行，适合科研和内容生成类 Agent 场景。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/BloopAI/vibe-kanban" target="_blank">BloopAI/vibe-kanban</a></strong> ⭐27,436 — 专为 Claude Code/Codex 等编码 Agent 设计的 Kanban 看板，让 AI 编程任务管理提效 10x。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/datawhalechina/easy-vibe" target="_blank">datawhalechina/easy-vibe</a></strong> ⭐18,308 — 2026年最系统的 Vibe Coding 入门课程，从零基础到掌握现代 AI 辅助编程范式。</li>
+</ul>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达（周日：本周回顾）</h2>
+
+<h3>本周 Top 3 工具回顾</h3>
+
+<p><strong>1. Claude Code + Vibe Kanban 组合</strong></p>
+<p>→ <strong>适用场景</strong>：研发团队 AI 辅助编程提效，尤其适合小型 Pod（2-6人）</p>
+<p>→ <strong>500人团队建议</strong>：以 Pod 为单位试点，每 Pod 设1名"AI协调员"负责 Claude Code 任务分解和 Vibe Kanban 进度管理，先跑3-5个 Sprint 验证提效数据再全团队推广</p>
+
+<p><strong>2. n8n 企业工作流自动化</strong></p>
+<p>→ <strong>适用场景</strong>：中台/运营团队的跨系统数据流、审批流、报表流自动化</p>
+<p>→ <strong>500人团队建议</strong>：选择3-5个高频重复流程（如周报汇总、数据同步、审批推送）作为试点，数字化部门主导建设，2-4周即可见效；强烈建议自托管部署保障数据安全</p>
+
+<p><strong>3. Dify AI应用开发平台</strong></p>
+<p>→ <strong>适用场景</strong>：业务团队快速构建 RAG 知识库问答、AI客服、内容生成等应用</p>
+<p>→ <strong>500人团队建议</strong>：由业务部门的"π型人才"（同时具备业务理解和AI使用能力的员工）主导，联合IT部门在私有化环境部署，实现业务数据+AI能力的安全结合</p>
+
+<h3>本周变革关键词</h3>
+
+<ul>
+<li><strong>Agent化</strong>：AI Agent 从实验阶段进入大规模企业部署，三星、Endava 是标杆</li>
+<li><strong>Codex全员化</strong>：编程工具向非技术岗渗透，岗位边界加速模糊</li>
+<li><strong>工具爆发期</strong>：n8n、Dify、deer-flow 周均新增数千 Star，工具成熟度快速提升</li>
+</ul>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>这一周，最值得深想的信号是三星和 Endava 的案例——一个全员强制用 ChatGPT/Codex，一个把软件交付流程绕着 AI Agent 重建。这不是"AI辅助工作"，而是<strong>"人适配AI"的组织范式</strong>已经在头部企业落地。</p>
+
+<p>对500人规模的团队，这意味着什么？传统的"四层架构"（总监→经理→组长→执行）正在被压扁：AI 承担了大量信息处理、代码草稿、数据汇总的工作，中间管理层的协调价值被稀释。<strong>"两层半"组织</strong>（业务决策层 + AI协调层 + 执行Pod）不再是预测，而是现实参照。</p>
+
+<p>人才模型也在同步重写。传统 T 型人才（一深多浅）正在被 π 型人才（两个深度专长+AI使用能力）和 I-T 型人才（垂直极深+AI放大器）取代。AI Native Pod 的标准配置正在收敛：1个π型技术负责人 + 2-4个 I-T 执行者 + AI Agent 矩阵。</p>
+
+<p>今天的行动建议只有一条：<strong>给你团队里最有潜力的 π 型人，分配一个真实的 AI Agent 项目</strong>，让他们在3个 Sprint 内用 Claude Code + n8n 或 Dify 跑出一个可量化的效率提升数字。数字说话，比任何变革方法论都有说服力。</p>
+        <div class="actions">
+            <a href="https://nousresearch.feishu.cn/docx/G5I2drb2Co7QyNxysUoc6Q6an3g" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
