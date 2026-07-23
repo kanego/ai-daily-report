@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>郭志星 | 产研BP</title>
+<style>
+:root {
+  --gold: #c9a96e;
+  --gold-light: #e8d5a3;
+  --dark: #0a0a0f;
+  --dark-card: #12121a;
+  --text: #e8e8ec;
+  --text-muted: #8a8a9a;
+  --border: rgba(201,169,110,0.15);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, 'PingFang SC', 'Noto Sans SC', sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 24px;
+  position: relative;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(ellipse at 50% 30%, rgba(201,169,110,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-name {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.hero-tagline {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: var(--gold);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+.hero-line {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin-bottom: 30px;
+}
+.scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 3px;
+  animation: float 2s ease-in-out infinite;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 100px 24px;
+}
+.section-title {
+  font-size: 14px;
+  color: var(--gold);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+/* About */
+.about-text {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 2;
+  max-width: 700px;
+}
+.about-text strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Strengths */
+.strengths-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+.strength-card {
+  background: var(--dark-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 36px 28px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.strength-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+.strength-num {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--gold);
+  opacity: 0.4;
+  margin-bottom: 16px;
+}
+.strength-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.strength-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Works */
+.works-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.work-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 30px;
+  background: var(--dark-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: border-color 0.3s;
+}
+.work-item:hover { border-color: var(--gold); }
+.work-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--gold), #8a6d3b);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.work-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.work-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Contact */
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+.contact-item {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+.contact-item span {
+  color: var(--gold-light);
+  margin-left: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 60px 24px;
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  section { padding: 60px 20px; }
+  .work-item { flex-direction: column; gap: 16px; }
+  .strengths-grid { grid-template-columns: 1fr; }
+}
+
+/* Fade in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-line"></div>
+  <h1 class="hero-name">郭志星</h1>
+  <p class="hero-tagline">技术出身的组织变革者，用产研思维重塑团队效能</p>
+  <span class="scroll-hint">↓ SCROLL</span>
+</section>
+
+<section class="fade-in">
+  <div class="section-title">关于我</div>
+  <p class="about-text">
+    技术Leader转型，目前在一家教育培训集团担任<strong>产研BP</strong>，负责<strong>500人规模</strong>的产研团队管理。<br><br>
+    从写代码到看组织，转型近两年。我相信好的管理不是在旧流程上打补丁，而是从根本上重新思考——什么样的团队结构、什么样的协作方式，才能真正释放每个人的创造力。<br><br>
+    现在的工作重心是<strong>组织变革</strong>与<strong>产研效能提升</strong>，把技术人的系统思维带入团队管理。
+  </p>
+</section>
+
+<section class="fade-in">
+  <div class="section-title">核心优势</div>
+  <div class="strengths-grid">
+    <div class="strength-card">
+      <div class="strength-num">01</div>
+      <div class="strength-title">技术×管理双栖</div>
+      <div class="strength-desc">技术Leader出身，理解工程师的语言和痛点，能在技术深度与管理广度之间自如切换。</div>
+    </div>
+    <div class="strength-card">
+      <div class="strength-num">02</div>
+      <div class="strength-title">战略拆解力</div>
+      <div class="strength-desc">擅长将抽象战略目标拆解为可执行的颗粒度，从理念到方案到模板到话术，一路推到落地。</div>
+    </div>
+    <div class="strength-card">
+      <div class="strength-num">03</div>
+      <div class="strength-title">组织变革实践</div>
+      <div class="strength-desc">推动产研团队结构转型，重新定义岗位角色与协作模式，提出并落地I/T/π型人才发展模型。</div>
+    </div>
+  </div>
+</section>
+
+<section class="fade-in">
+  <div class="section-title">代表经历</div>
+  <div class="works-list">
+    <div class="work-item">
+      <div class="work-icon">🏗</div>
+      <div>
+        <div class="work-title">500人产研团队组织变革</div>
+        <div class="work-desc">主导集团产研团队的组织结构重塑，重新定义岗位为"系统设计者"与"系统构建者"，推行Pod化协作模式，提升端到端交付效率。</div>
+      </div>
+    </div>
+    <div class="work-item">
+      <div class="work-icon">📐</div>
+      <div>
+        <div class="work-title">I/T/π型人才模型设计</div>
+        <div class="work-desc">提出并推行面向未来的人才发展框架——从单一技能的I型，到跨领域的T型，再到不可替代的π型人才，为团队转型提供清晰路径。</div>
+      </div>
+    </div>
+    <div class="work-item">
+      <div class="work-icon">⚡</div>
+      <div>
+        <div class="work-title">产研流程重构</div>
+        <div class="work-desc">从零设计新一代产研协作流程，打破传统产品/开发/测试的串行模式，建立更高效的并行交付机制。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fade-in">
+  <div class="section-title">联系方式</div>
+  <div class="contact-block">
+    <div class="contact-item">📍 坐标<span>中国</span></div>
+    <div class="contact-item">💼 职位<span>产研BP · 教育培训集团</span></div>
+    <div class="contact-item">✉️ 飞书<span>郭志星</span></div>
+  </div>
+</section>
+
+<footer>
+  © 2026 郭志星 · Built with Passion
+</footer>
+
+<script>
+(function(){
+  var els = document.querySelectorAll('.fade-in');
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {threshold: 0.15});
+  els.forEach(function(el){ observer.observe(el); });
+})();
+</script>
+</body>
+</html>
