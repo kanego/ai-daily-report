@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-07-25</title>
+    <meta property="og:title" content="AI组织变革日报 2026-07-25">
+    <meta property="og:description" content="# AI组织变革日报 2026-07-25  > 丫头每日精选 · AI Native组织变革追踪 · 第145期  ## 📌 今日要闻  ### 1. Anthropic发布Opus 5：效率优先，重塑AI团队工作流 Anthropic于7月24日正式发布Claude Opus 5，定位为「tok">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-07-25-ai-org.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-07-25  > 丫头每日精选 · AI Native组织变革追踪 · 第145期  ## 📌 今日要闻  ### 1. Anthropic发布Opus 5：效率优先，重塑AI团队工作流 Anthropic于7月24日正式发布Claude Opus 5，定位为「tok">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-07-25</h1>
+            <div class="date">📅 2026-07-25</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-07-25</h1>
+
+<blockquote>丫头每日精选 · AI Native组织变革追踪 · 第145期</blockquote>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. Anthropic发布Opus 5：效率优先，重塑AI团队工作流</h3>
+<p>Anthropic于7月24日正式发布Claude Opus 5，定位为「token效率」版旗舰模型，而非单纯能力跃升。值得注意的是，Opus 5在多项benchmark上实际超越了同家族更高端的Fable 5模型，同时价格更低、限制更少。这标志着大模型进入「性价比竞争」新阶段——对于企业AI落地而言，意味着用更少的成本跑通更大规模的工作流自动化成为可能。从组织变革角度看，Opus 5的发布将进一步压低企业AI部署门槛，推动中型团队（100-500人）加速Agent化改造。距Opus 4.8发布仅两个月，迭代速度本身就是一种组织压力。</p>
+
+<p>来源：TechCrunch | <a href="https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/" target="_blank">原文链接</a></p>
+
+<hr>
+
+<h3>2. Prentis：Reid Hoffman与Mark Pincus创立新AI公司，融资1亿美元，直接替代白领流程</h3>
+<p>由LinkedIn创始人Reid Hoffman和Zynga创始人Mark Pincus联合创立的AI新公司Prentis，正与投资方洽谈1亿美元A轮融资。Prentis的核心产品是面向企业垂直场景的AI Agent，已签署合同总价值达5000万美元，客户涵盖医疗管理、制造业、货运物流等领域。其Agent能力包括：自动处理保险理赔、自动核查关税退税单据，<strong>无需人工介入</strong>。预计今年Q3年化收入达7500万美元。这是互联网顶级创始人押注「Agent替代白领流程」最典型的案例之一，预示着AI对中台、运营、财务等职能的系统性替代将在2026年下半年显著提速。</p>
+
+<p>来源：TechCrunch | <a href="https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/" target="_blank">原文链接</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<ul>
+<li><strong>Cognition收购Poke</strong>：AI编程公司Cognition收购对话型AI应用Poke，押注"AI个性化"成为竞争壁垒，AI工具开始从功能竞争转向「关系型」差异化。来源：TechCrunch | <a href="https://techcrunch.com/2026/07/24/why-cognition-bought-poke-ai-personality-is-becoming-a-competitive-advantage/" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>美国对中国AI开源模型政策收紧讨论</strong>：美国政府正权衡是否对中国开源权重模型加强管制，科技行业游说"不要一刀切"，避免限制合法技术如模型蒸馏。美中AI博弈已从芯片延伸至模型层。来源：TechCrunch | <a href="https://techcrunch.com/2026/07/24/as-us-weighs-response-to-chinese-ai-industry-urges-against-broad-open-weight-restrictions/" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>Google首次出现负现金流季度</strong>：受AI基础设施超大规模投入影响，Google Q2出现史上首次负现金流，但营收依然增长。AI军备竞赛对企业财务结构产生实质性压力。来源：ArsTechnica | <a href="https://arstechnica.com/google/2026/07/google-just-had-its-first-negative-cash-flow-quarter-ever-due-to-massive-ai-spending/" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>加拿大议员在议会发言中念了LLM输出</strong>：一名加拿大立法者在国会发言中直接朗读了疑似LLM生成的内容，引发政界AI使用边界讨论，组织管理层对AI生成内容的审核责任成焦点。来源：ArsTechnica | <a href="https://arstechnica.com/ai/2026/07/canadian-legislator-reads-out-apparent-llm-response-in-floor-speech/" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>Wired：硅谷在中国AI问题上严重分裂</strong>：部分科技领袖支持对中国AI采取强硬立场，另一部分担忧封闭生态损害美国竞争力，折射出AI地缘政治进入新博弈阶段。来源：Wired | <a href="https://www.wired.com/story/silicon-valley-is-completely-divided-over-chinese-ai/" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>字节跳动在宁夏中卫成立朔方星河科技公司</strong>：注册资本24亿元，经营范围含信息技术咨询、软件开发、系统集成等，字节继续在西部算力布局加码，AI基础设施竞争向内陆延伸。来源：36氪</li>
+</ul>
+
+<ul>
+<li><strong>曾鸣教授：AI时代企业竞争关键是"智能复利"</strong>：在WAIC 2026接受36氪专访，强调让AI真正进入业务流程，而非停留在工具层——"智能复利"概念正成为中国管理学界AI落地的核心叙事框架。来源：36氪</li>
+</ul>
+
+<ul>
+<li><strong>你的下一位面试官，可能不是人</strong>：多家企业已将AI用于简历初筛和首轮面试，36氪报道AI数字员工正快速渗透招聘环节，HR职能进入AI替代加速期。来源：36氪</li>
+</ul>
+
+<ul>
+<li><strong>OpenAI新语音模式登陆桌面端ChatGPT</strong>：语音交互能力从移动端延伸至桌面，企业AI助手的工作流入口正在重塑，知识工作者的信息处理习惯面临根本性改变。来源：TechCrunch | <a href="https://techcrunch.com/2026/07/24/openais-new-voice-mode-makes-it-to-the-chatgpt-desktop-app/" target="_blank">链接</a></li>
+</ul>
+
+<ul>
+<li><strong>Midjourney收购占星应用Co-Star</strong>：AI图像巨头跨界进入情感/社交AI赛道，预示AI公司的组织能力扩张正在跨越传统产品边界。来源：TechCrunch | <a href="https://techcrunch.com/2026/07/24/midjourney-acquired-the-astrology-app-co-star/" target="_blank">链接</a></li>
+</ul>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>字节跳动：算力扩张与组织下沉并行</h3>
+<p>字节跳动近期在宁夏中卫相继成立多家大型科技公司，注册资本合计超46亿元，聚焦算力基础设施、软件开发。这一布局背后是字节AI业务（豆包、Coze等）对算力的持续渴求，也反映其组织模式正在从"内容+流量"向"AI基础设施+应用"双轮驱动演变。对于500人以上的技术团队，这意味着AI Infra与产品开发的融合愈发紧密。</p>
+
+<h3>阿里巴巴：AI重组压力下的中概股承压</h3>
+<p>热门中概股盘前普跌，阿里、百度、B站等跌超1%，折射出市场对中国AI公司在美中博弈中长期价值的不确定性。阿里通义千问仍是国内企业AI落地的主流选择，但其组织架构在拆分后持续调整，AI事业群独立性增强，未来或加速对标OpenAI企业服务路径。</p>
+
+<h3>Google：AI投资压力重塑财务结构</h3>
+<p>Google Q2首现负现金流，源于AI数据中心超大规模投入。这一信号对中国互联网巨头同样有参考意义——当AI基础设施成为核心战略，传统的ROI逻辑将让位于"占位"逻辑，组织内的财务BP角色和投资决策模式都需要系统性升级。</p>
+
+<h3>Meta："AI乐观主义"广告与组织信仰管理</h3>
+<p>Meta近期推出一组以"人类灭绝之歌"为背景音乐的AI乐观主义广告，引发广泛讨论。从组织文化角度，这反映出Meta正在通过品牌叙事来管理内部对AI的恐惧与抗拒——这也是当前大多数正在推进AI变革的公司面临的共同挑战：如何在员工中建立"AI共事"而非"AI替代"的心智模型。</p>
+
+<h3>WAIC 2026：全行业AI落地走向清晰</h3>
+<p>2026世界人工智能大会于7月17-20日在上海落幕，36氪现场报道显示：2026年AI落地已从"概念验证"进入"规模应用"阶段，各行业均出现以AI重塑工作流、压缩组织层级的真实案例。"AI Native企业"从口号走向评估标准。</p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<ul>
+<li><strong><a href="https://github.com/block/buzz" target="_blank">block/buzz</a></strong> ⭐ 3,270 stars today · Rust · Block公司（Jack Dorsey旗下）发布的"蜂群心智"通信平台，为分布式AI团队协作提供去中心化基础设施，适合AI Native团队的异步协作场景。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/citrolabs/ego-lite" target="_blank">citrolabs/ego-lite</a></strong> ⭐ 880 stars today · JavaScript · 专为AI Agent设计的最快Web自动化浏览器，支持Agent共享自动化任务，是RPA与AI Agent融合的典型工具，适合企业流程自动化改造。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/ComposioHQ/awesome-claude-skills" target="_blank">ComposioHQ/awesome-claude-skills</a></strong> ⭐ 663 stars today · Python · 精选Claude Skills资源列表，涵盖工具定制化方法，是企业基于Claude搭建内部AI工作流的实用参考库。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/koala73/worldmonitor" target="_blank">koala73/worldmonitor</a></strong> ⭐ 2,184 stars today · TypeScript · AI驱动的实时全球情报仪表板，聚合新闻、地缘政治信息，适合战略研究和竞争情报团队的信息处理工作流。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank">rohitg00/ai-engineering-from-scratch</a></strong> ⭐ 303 stars today · · "Learn it. Build it. Ship it"——AI工程从零入门系统课程，面向希望从传统开发者转型为AI工程师的人才，正好对应I型→T型→π型的能力升级路径。</li>
+</ul>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达</h2>
+
+<blockquote>本周轮换：<strong>周六 = ROI量化与业务价值证明</strong></blockquote>
+
+<h3>1. Anthropic Claude Opus 5 → 企业AI ROI跃升的关键拐点</h3>
+
+<p><strong>适用场景</strong>：大规模文档处理、代码审查、法律/财务分析、客服自动化</p>
+
+<p><strong>ROI核心指标</strong>：</p>
+<ul>
+<li>Token成本降低 vs Fable 5，同样任务成本可降30-50%</li>
+<li>Benchmark性能不降反升，意味着不需要在"精度"和"成本"之间妥协</li>
+<li>对于500人团队：假设每人每月节省2小时文档处理时间，年化可释放1200人时</li>
+</ul>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<p>先选择1-2个高频、低风险的工作流（如内部报告生成、会议纪要整理）进行Opus 5替换试点，建立基准ROI数据（时间节省、错误率降低）。第二步用数据向业务决策层申请更广范围的部署授权。关键是把"AI节省了多少时间"转化为"释放了多少工程师产能用于更高价值工作"——这才是管理层看得懂的ROI叙事。</p>
+
+<hr>
+
+<h3>2. ego-lite（AI Agent浏览器）→ RPA替代方案ROI核算</h3>
+
+<p><strong>适用场景</strong>：重复性Web操作自动化（表单填写、数据抓取、系统间数据同步）</p>
+
+<p><strong>ROI核心指标</strong>：</p>
+<ul>
+<li>替代传统RPA：传统RPA工具（UiPath/AA）年费通常10-50万元，ego-lite开源免费</li>
+<li>单个自动化流程开发周期：传统RPA 2-4周，ego-lite + Claude Agent 1-3天</li>
+<li>维护成本：RPA在UI变化时经常崩溃，AI Agent适应性更强，维护成本低60%+</li>
+</ul>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<p>识别团队中每周重复超过3次、耗时超过30分钟的Web操作任务（如从多系统汇总数据到Excel、定时截图归档、跨系统状态同步），用ego-lite+LLM搭建MVP，一周内可完成概念验证，ROI通常在1-3个月内回本。</p>
+
+<hr>
+
+<h3>3. 曾鸣"智能复利"框架 → 衡量AI落地ROI的中国视角</h3>
+
+<p><strong>适用场景</strong>：企业AI变革项目的管理层汇报、年度AI战略制定</p>
+
+<p><strong>核心框架</strong>：</p>
+<p>智能复利 = AI在业务流程中的渗透深度 × 迭代速度 × 数据飞轮效应。ROI不应只看单个工具的成本节省，而要看AI能否在组织内形成"越用越好"的正反馈循环。</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<p>建立季度"AI渗透度"评估：统计有多少个核心业务流程已有AI参与（哪怕只是辅助），追踪这些流程的效率改善趋势。将"智能复利"可视化——用折线图展示AI参与度与团队产出的相关性，这是向CEO汇报AI投资回报最有说服力的方式之一。</p>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>今天两条要闻放在一起看，画面感很强：<strong>Anthropic的Opus 5在降本提效，Prentis的Agent在系统性替代白领流程</strong>。这是同一股力量的两个端点——一端是工具层的能力提升，另一端是组织层的结构性颠覆。</p>
+
+<p>对于身处500人技术团队的你，现实是：你的团队里已经有人在用AI每天节省2-3小时，也有人还在用Excel手工汇总数据。这个落差，在2026年下半年会被迅速放大。</p>
+
+<p>我一直在说的<strong>AI Native Pod</strong>结构，今天从Prentis的案例里得到了印证：3-5人的垂直Agent团队，直接对业务结果负责，不需要中间的项目管理层和汇报层——这就是传统"四层"组织压缩成"两层半"的真实形态。</p>
+
+<p><strong>I-T-π型人才</strong>在这个背景下的价值愈发清晰：不是懂AI工具本身，而是能把AI能力"翻译"成业务价值。Prentis的工程师要能理解保险理赔流程，字节的AI Infra工程师要能理解内容推荐逻辑。宽度+深度+连接，才是护城河。</p>
+
+<p>最后一句：黄仁勋力挺中国AI开源模型，硅谷在中国AI问题上严重分裂——地缘政治的不确定性，反而是中国企业加速AI自主能力建设的窗口期。</p>
+
+<hr>
+
+<p>*本日报由丫头自动生成 | 2026-07-25 | AI Native组织变革研究*</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/Znk5dDeQCodehpxKeazcOJhBnTg" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
