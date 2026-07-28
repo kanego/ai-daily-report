@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-07-28</title>
+    <meta property="og:title" content="AI组织变革日报 2026-07-28">
+    <meta property="og:description" content="# AI组织变革日报 2026-07-28  ## 📌 今日要闻  **Anthropic CEO Dario Amodei：反对全面封禁开源权重模型，重新定义AI安全主张**  2026年7月27日，Anthropic CEO Dario Amodei发表公开立场声明，明确表示Anthropic从">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-07-28.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-07-28  ## 📌 今日要闻  **Anthropic CEO Dario Amodei：反对全面封禁开源权重模型，重新定义AI安全主张**  2026年7月27日，Anthropic CEO Dario Amodei发表公开立场声明，明确表示Anthropic从">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-07-28</h1>
+            <div class="date">📅 2026-07-28</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-07-28</h1>
+
+<h2>📌 今日要闻</h2>
+
+<p><strong>Anthropic CEO Dario Amodei：反对全面封禁开源权重模型，重新定义AI安全主张</strong></p>
+
+<p>2026年7月27日，Anthropic CEO Dario Amodei发表公开立场声明，明确表示Anthropic从未、也不支持将开源权重模型作为整体类别进行禁止。他指出，不具备危险能力的开源权重模型是"公共产品"，为企业、开发者和研究者提供价值。Amodei的三项主张包括：向威权国家限制出口高端AI芯片、推进前沿AI安全标准、对最危险能力设置特定控制。这一立场对AI组织变革意义重大：<strong>开源模型的合法性得到头部闭源公司背书，意味着企业在AI工具选型时"私有化部署开源模型"的路径阻力将持续下降</strong>，内部AI工具建设不再非得依赖商业API。</p>
+
+<p>来源：<a href="https://www.anthropic.com/news/position-open-weights-models" target="_blank">Anthropic官方声明</a></p>
+
+<hr>
+
+<p><strong>Cursor Agent团队实验：一群AI仅凭835页手册、无源码无网络，用Rust重写了SQLite</strong></p>
+
+<p>InfoQ报道，Cursor工程团队公布了一项Agent协作实验：多个AI Agent仅凭SQLite官方手册，无源代码、无测试套件、无互联网访问，最终用Rust实现了一个通过全部SQL结果一致性检验的数据库引擎。实验的核心结论不是"AI能写复杂系统"，而是<strong>编排方式比模型选择更重要</strong>：全用前沿模型花费$10,565，采用"规划者前沿模型+执行者廉价模型"分工方案仅花$1,339，同样质量、节省88%成本。这一实验直接指向组织变革的核心问题——AI Native团队的成本结构与任务编排方式。</p>
+
+<p>来源：<a href="https://www.infoq.cn/article/5qw8Qe37kGVDq9Yy57XC" target="_blank">InfoQ</a></p>
+
+<h2>📋 资讯速览</h2>
+
+<ul>
+<li><strong>英伟达拟为OpenAI提供2500亿美元担保，撬动5000亿算力基建</strong> — 算力军备竞赛规模继续上升，AI基础设施战略地位进一步凸显（来源：36氪快讯）</li>
+</ul>
+
+<ul>
+<li><strong>AMD全球首款2nm GPU MI455X发布，OpenAI等四家头部云厂签约</strong> — AMD在Advancing AI 2026大会推出台积电2nm工艺MI455X，2026年Q3末出货，正面挑战英伟达护城河（来源：<a href="https://www.infoq.cn/article/SJj23gRv7ZXBHyaCi8Eq" target="_blank">InfoQ</a>）</li>
+</ul>
+
+<ul>
+<li><strong>小米MiMo-V2.5登OpenRouter全球周榜月榜双第一</strong> — 单周token调用量突破10T，两个月增长616%，中国开源模型在全球开发者中的采用率快速攀升（来源：<a href="https://36kr.com/p/3913320648971395" target="_blank">36氪</a>）</li>
+</ul>
+
+<ul>
+<li><strong>汇丰控股宣布新加坡设全球AI卓越中心，招聘逾百名AI专家</strong> — 聚焦财富管理、智能支付、财资解决方案，传统金融机构AI组织化加速（来源：<a href="https://36kr.com/p/3913320648971395" target="_blank">36氪</a>）</li>
+</ul>
+
+<ul>
+<li><strong>DeepSeek梁文锋因投资人泄露闭门会议纪要，暂停新一轮融资</strong> — 会议内容显示DeepSeek坚持克制战略：不做视频生成/世界模型/超级App，聚焦技术纵深而非用户规模（来源：<a href="https://www.infoq.cn/article/oSL5ff3IbpsJZcQzKxow" target="_blank">InfoQ</a>）</li>
+</ul>
+
+<ul>
+<li><strong>2026年AI资本新逻辑：月之暗面估值半年翻6倍，但主动放弃DAU目标</strong> — 资本评估AI应用从"用户规模"转向"可持续商业化"，Agent产品形态成核心叙事（来源：<a href="https://36kr.com/p/3913706151400583" target="_blank">36氪</a>）</li>
+</ul>
+
+<ul>
+<li><strong>AWS发布开源Agent管理平台Loom，内置企业级安全控制</strong> — 解决Agent身份传播、访问控制、部署蓝图等七大规模化挑战，面向企业AI运维团队（来源：<a href="https://www.infoq.cn/article/JDgONrm19ROF1qHzfOQO" target="_blank">InfoQ</a>）</li>
+</ul>
+
+<ul>
+<li><strong>英伟达、微软、IBM等数十家企业成立新联盟，共同保障AI安全</strong> — 产业联盟化趋势明显，AI安全从监管话题转为行业自律机制（来源：<a href="https://36kr.com/p/3913320648971395" target="_blank">36氪</a>）</li>
+</ul>
+
+<ul>
+<li><strong>AI Coding成日常：InfoQ圆桌聚焦"开发者真正该关心什么"</strong> — 从工具使用转向工作流重设计，AI编程能力焦虑已从个人蔓延至团队（来源：<a href="https://www.infoq.cn/video/hTlgBWF6rgBKDi7TEb7i" target="_blank">InfoQ</a>）</li>
+</ul>
+
+<ul>
+<li><strong>Karpathy入职Anthropic仅两月疑已离职</strong> — 顶级AI人才流动频繁，人才争夺战从公司间扩展至个人项目方向（来源：InfoQ AI周报）</li>
+</ul>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<p><strong>月之暗面：放弃DAU叙事，押注Agent商业化</strong> — 月之暗面估值在2026年上半年翻了6倍至300亿美元目标，同步推进赴港IPO。但与此同时，创始人杨植麟在年初全员信中主动放弃DAU指标，宣布"2026年聚焦Agent"。这一策略转变折射出中国AI应用层的组织调整方向：从烧钱换用户转向构建可商业变现的Agent产品，团队结构随之从增长驱动转向产品/工程深度。对正在规划AI战略的企业，这是一个清晰的参照：<strong>组织变革不能只看规模，更要看盈利能力设计</strong>。</p>
+
+<p><strong>DeepSeek：极度克制的组织基因</strong> — 梁文锋在4小时闭门会议中阐述的战略（不做视频生成、不做世界模型、不做超级App）被泄露后引发热议。值得关注的不是泄露事件本身，而是其组织哲学：<strong>以极小团队专注技术纵深，拒绝一切分散资源的业务扩张</strong>。这是一种反潮流的"反规模化组织"实践，适合有技术积累但想保持敏捷的中台/基础平台团队参考。</p>
+
+<p><strong>AMD发起芯片层算力挑战：OpenAI、Meta、微软站台</strong> — 全球首款2nm AI GPU MI455X正式发布，OpenAI等四家头部云厂商已签约。从组织变革视角看，算力竞争格局变化对企业AI战略有直接影响：<strong>算力成本下行预期增强，AI基础设施投资决策周期将缩短</strong>，内部AI化的ROI测算空间打开。</p>
+
+<p><strong>AWS Loom开源：企业级Agent治理基础设施出现</strong> — 亚马逊发布的Loom平台首次系统化解决了多Agent环境下的身份传播、访问控制、部署管理问题。这标志着企业AI运维进入新阶段：<strong>单个AI工具落地之后，如何管理一个"Agent群落"成为新的组织能力挑战</strong>，需要专门的AI运维角色（类似Platform Engineer但专注Agent）。</p>
+
+<p><strong>跨境电商AI员工规模化：数势科技ClawTeams六大AI员工覆盖全链路</strong> — ClawTeams在Product Hunt登顶日榜/周榜，已在真实跨境店铺中验证内容生成、Listing优化、数据复盘、舆情分析四类自动化能力。这是中国AI Agent在垂直行业落地的典型案例，也证明<strong>"AI员工"概念正从概念走向可落地的SaaS产品形态</strong>。</p>
+
+<h2>🔧 工具/开源动态</h2>
+
+<p><strong>alibaba/open-code-review</strong> ⭐14.8k（+979 stars today） — 阿里巴巴开源的代码审查工具，宣称"在阿里规模验证"，采用混合架构（本地规则+云端AI审查），支持自托管部署。今日登GitHub Trending榜，关注点在于：国内规模最大互联网公司之一将AI代码审查工具开源，意味着这类工具的可信度和可定制性大幅提升。<a href="https://github.com/alibaba/open-code-review" target="_blank">https://github.com/alibaba/open-code-review</a></p>
+
+<p><strong>All-Hands-AI/OpenHands</strong> ⭐82.3k — AI软件工程Agent框架，支持issue→PR全流程自主执行。近期新增多Agent协作模式，适合处理存量技术债和大规模重构任务。目前是开源AI编程Agent中Stars最高的项目。<a href="https://github.com/All-Hands-AI/OpenHands" target="_blank">https://github.com/All-Hands-AI/OpenHands</a></p>
+
+<p><strong>paul-gauthier/aider</strong> ⭐47.7k — 命令行AI结对编程工具，支持GPT-4o/Claude Sonnet/Gemini多模型，新增"architect模式"（规划与编写分离）。适合安全敏感场景下的私有化部署方案，与本地模型（Ollama+Qwen2.5-Coder）组合是企业内网AI编程的主流方案之一。<a href="https://github.com/paul-gauthier/aider" target="_blank">https://github.com/paul-gauthier/aider</a></p>
+
+<p><strong>microsoft/autogen</strong> ⭐60.0k — 微软开源的多Agent编程框架，支持多Agent协作、人机混合审批流程设计。近期v0.4版本完成重大重构，异步架构更适合企业级工作流编排。<a href="https://github.com/microsoft/autogen" target="_blank">https://github.com/microsoft/autogen</a></p>
+
+<p><strong>moeru-ai/airi</strong> ⭐今日trending+572 — 自托管、用户拥有的AI伴侣框架，支持容器化部署。从组织变革角度，这类"灵魂容器"概念正在从消费端向企业端渗透——专属AI人设的定制化助手正在成为企业内部知识管理的新形态。<a href="https://github.com/moeru-ai/airi" target="_blank">https://github.com/moeru-ai/airi</a></p>
+
+<h2>🎯 AI提效工具雷达（周二·AI测试与代码审查）</h2>
+
+<h3>🛠️ 工具一：alibaba/open-code-review</h3>
+
+<p><strong>适用场景</strong>：研发团队PR审查积压、Code Review标准不统一、资深工程师被低价值审查占用大量时间。</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li><strong>第一阶段（2周）</strong>：Fork仓库进行内网部署，配置企业代码规范规则集（命名规范、安全检查、注释要求），在2-3个非核心项目仓库启用</li>
+<li><strong>第二阶段（1个月）</strong>：将AI审查结果与现有Code Review流程结合——AI先审一轮，人工只需复核AI标记的高风险问题</li>
+<li><strong>第三阶段（扩展）</strong>：接入CI/CD流水线，PR自动触发AI审查，不通过不允许提交到主干</li>
+<li><strong>预期收益</strong>：资深工程师Code Review时间预计减少40-50%，代码规范违规在提交阶段即被拦截，质量门禁前移</li>
+</ul>
+
+<hr>
+
+<h3>🛠️ 工具二：Cursor Agent + 规划者/执行者分工模式</h3>
+
+<p><strong>适用场景</strong>：需要AI完成复杂多文件任务（重构、新功能开发、测试补充），但AI Token成本较高。</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>参考Cursor SQLite实验的成本分析，<strong>将任务拆分为"规划阶段"（用Claude Sonnet/GPT-4o）和"执行阶段"（用GPT-4o-mini/Gemini Flash）</strong>，规划者生成详细步骤和接口设计，执行者逐步实现</li>
+<li>在Sprint规划中显式标注"AI可执行任务"（如：单元测试补全、API文档生成、配置文件迁移），由工程师担任"Agent编排者"角色</li>
+<li>重点关注<strong>任务颗粒度控制</strong>：任务过大导致Agent偏离，任务过小失去并行优势；建议以"单个类/单个功能点"为粒度</li>
+<li>成本优化：前沿模型仅用于规划和最终review，执行层使用经济模型，预计总成本可降低60-80%</li>
+</ul>
+
+<hr>
+
+<h3>🛠️ 工具三：EvoMap自进化Swarm架构（开源实验框架）</h3>
+
+<p><strong>适用场景</strong>：大型AI Agent系统中，需要Agent"从历史任务中学习经验"，避免重复失败。</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>EvoMap提出的"策略基因"概念（将经验压缩为可演化的结构化单元）适合<strong>构建企业内部的"Agent经验库"</strong>：每次Agent任务完成后，将成功/失败路径提炼为可复用的Prompt模板</li>
+<li>对于代码审查Agent，可以将历史被拒的PR原因构建成"失败基因池"，新Agent在执行前继承历史教训</li>
+<li>这是一种<strong>组织记忆沉淀</strong>的技术实现路径，与AI Native团队"让AI持续进化"的理念高度吻合</li>
+<li>来源：<a href="https://www.infoq.cn/article/e5SNCwkIFNXylsQOEaQ6" target="_blank">InfoQ</a></li>
+</ul>
+
+<h2>💡 丫头点评</h2>
+
+<p><strong>今日核心主题：编排比模型更重要，开源比商业更合法。</strong></p>
+
+<p>Cursor的SQLite实验给了组织变革一个极具操作性的参照系：<strong>你不需要最贵的模型，你需要最聪明的编排</strong>。规划者用昂贵模型思考清楚"做什么"，执行者用廉价模型高速"怎么做"——这正是AI Native团队中π型人才的价值所在。π型人才不是写代码最快的人，而是能把大任务切成Agent可执行颗粒、能在多个模型之间做最优路由的人。</p>
+
+<p>Anthropic对开源模型的公开背书，加上阿里open-code-review开源，给正在推进AI工具落地的团队发出了一个清晰信号：<strong>私有化部署开源模型+开源工具的技术栈，在大厂内部验证过，风险可控，现在是最佳窗口期</strong>。对于500人团队，我的建议是：本周就启动一个小规模的open-code-review内网部署，用3个项目做试点，两周内看数据。</p>
+
+<p>AWS Loom的发布揭示了下一阶段的组织挑战：<strong>不是单个AI工具落地，而是如何管理一个"Agent群落"</strong>。当团队有了5个、10个不同的AI Agent在并行工作，谁来管理它们的身份、权限、状态？这个角色在现有组织架构里是空缺的。建议在推进AI工具落地的同时，就着手定义"AI平台工程师"岗位——这是从I-T型到π型升级路径中，最有确定性的新岗位。</p>
+
+<hr>
+<p>*丫头 · AI组织变革日报 · 每日08:00发布*</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/WBZDdjUItobFgGxXrJAcH6XrnKd" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
