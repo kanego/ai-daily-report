@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-08-06</title>
+    <meta property="og:title" content="AI组织变革日报 2026-08-06">
+    <meta property="og:description" content="# AI组织变革日报 2026-08-06  > 丫头出品 · 每日追踪AI对组织、人才与协作方式的深层重构  ---  ## 📌 今日要闻  ### 1. Google DeepMind 史诗级重组：Hassabis 卸任 CEO、Jeff Dean 离职创业  2026年8月5日，Google ">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-08-06.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-08-06  > 丫头出品 · 每日追踪AI对组织、人才与协作方式的深层重构  ---  ## 📌 今日要闻  ### 1. Google DeepMind 史诗级重组：Hassabis 卸任 CEO、Jeff Dean 离职创业  2026年8月5日，Google ">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-08-06</h1>
+            <div class="date">📅 2026-08-06</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-08-06</h1>
+
+<blockquote>丫头出品 · 每日追踪AI对组织、人才与协作方式的深层重构</blockquote>
+
+<hr>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. Google DeepMind 史诗级重组：Hassabis 卸任 CEO、Jeff Dean 离职创业</h3>
+
+<p>2026年8月5日，Google & Alphabet CEO Sundar Pichai宣布对Google DeepMind进行重大组织调整：<strong>Demis Hassabis</strong> 卸任DeepMind CEO，转任 Chair of GDM（董事长）及 Alphabet首席科学家，聚焦AGI长远战略；<strong>Koray Kavukcuoglu</strong> 接任CEO，继续掌舵日常运营。</p>
+
+<p>更轰动的是：<strong>Jeff Dean</strong>——谷歌27年老将、Google Brain联合创始人——宣布离职，与Sanjay Ghemawat、Quoc Le、Oriol Vinyals 联合创立独立公益公司 <strong>Discovery Loop</strong>，目标是用AI自动化科学研究流程，实现"递归自我改进"（recursive self-improvement）。Pichai在全员信中强调"We have to accelerate all this work and stay focused on the AI frontier"，此次变革标志着AI顶层组织从"研究驱动"向"产品加速+AGI战略分离"双轨进化，是AI时代最高规格的组织重构样本之一。</p>
+
+<p><strong>来源：</strong> <a href="https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/" target="_blank">blog.google</a> | <a href="https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/" target="_blank">TechCrunch</a></p>
+
+<hr>
+
+<h3>2. Nadella警告：企业使用专有AI模型在"二次付费"——用知识喂养竞争对手</h3>
+
+<p>微软CEO Satya Nadella发表重磅博文，直指企业AI战略核心隐患：当企业向OpenAI、Anthropic等专有模型输入业务数据时，不仅付出token费用，更将宝贵的<strong>机构知识</strong>（institutional know-how）拱手相让。Nadella警告："模型从'废气'中学习——你写的每个提示词、每次纠错，都在蒸馏成竞争对手无法购买的组织智慧。"他呼吁企业通过"模型蒸馏"（distillation）和私有化部署保留数据主权，并质疑大模型公司"自己无限爬取互联网训练、却限制别人蒸馏自己模型"的双重标准。这一论断对所有正在推进AI Native转型的组织具有直接战略意义：<strong>数据主权应成为AI落地架构的优先考量</strong>。</p>
+
+<p><strong>来源：</strong> TechCrunch（基于Nadella博客文章）</p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<p>1. <strong>Meta发布Muse Code</strong>：Meta开源代码代理Muse Code（Beta），基于Muse Spark 1.2模型，可处理大型代码库的完整软件工程任务，并行启动子代理完成6个特性同时开发，零冲突。对标Anthropic Claude Code和OpenAI Codex。 | <a href="https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/" target="_blank">TechCrunch</a></p>
+
+<p>2. <strong>Prime Agent开源自进化编程代理</strong>：PrimeIntellect发布开源自进化代码代理 Prime Agent，基于 RLM（递归语言模型）+持续工具执行框架，在ARC-AGI-3达到95.5%，超越人类专家基准线。 | <a href="https://www.primeintellect.ai/blog/prime-agent" target="_blank">primeintellect.ai</a></p>
+
+<p>3. <strong>Cisco裁员4000人为AI让路</strong>：Cisco砍掉约5%员工（4000人），CEO直接点名"投资AI和网络安全"为理由，成为又一家"盈利且裁员"的科技公司。Cloudflare、GM同期跟进。 | <a href="https://techcrunch.com/2026/05/14/cisco-cuts-nearly-4000-jobs-to-spend-more-on-ai-reports-record-quarterly-revenue/" target="_blank">TechCrunch</a></p>
+
+<p>4. <strong>Robinhood裁员10%不提AI</strong>：Robinhood CEO Tenev罕见地在裁员信中只字不提AI，改用"扁平化组织、精英团队"叙事，被指是"AI背锅叙事"退潮的信号。 | <a href="https://techcrunch.com/2026/06/16/robinhoods-note-on-10-layoffs-shows-blaming-ai-isnt-cutting-it/" target="_blank">TechCrunch</a></p>
+
+<p>5. <strong>ClickUp替换22%员工为3000个AI代理</strong>：ClickUp CEO Zeb Evans公开宣布用3000个AI代理替换22%员工，声称是组织哲学而非省钱，引发"AI Native组织真相"大讨论。 | TechCrunch</p>
+
+<p>6. <strong>IBM逆势三倍扩招基础岗</strong>：IBM宣布2026年将在美国三倍扩招入门级岗位，但岗位描述重定义——从"能被AI取代的编码任务"转向"人本型协作能力"。 | <a href="https://techcrunch.com/2026/02/12/ibm-will-hire-your-entry-level-talent-in-the-age-of-ai/" target="_blank">TechCrunch</a></p>
+
+<p>7. <strong>Atlassian Jira支持AI代理与人类并排工作</strong>：Atlassian为Jira引入AI代理协作功能，可像给人类分配任务一样指派代理、设截止日、追进度，人机协同进入项目管理主流。 | <a href="https://techcrunch.com/2026/02/25/jiras-latest-update-allows-ai-agents-and-humans-to-work-side-by-side/" target="_blank">TechCrunch</a></p>
+
+<p>8. <strong>Hark浏览器代理：$7亿A轮，无API网站通杀</strong>：Hark发布Handoff代理，可操作没有API的网站（Target、LinkedIn、OpenTable），完成订餐、订机票、购物等任务。CEO Brett Adcock展示了自研后训练模型的差异化路径。 | <a href="https://techcrunch.com/2026/08/05/hark-previews-its-browser-use-agent-for-completing-tasks/" target="_blank">TechCrunch</a></p>
+
+<p>9. <strong>Synthesia AI角色扮演培训：从视频到实时练习</strong>：Synthesia推出 Roleplay Sessions，员工可与AI化身练习销售演讲、绩效谈话，AI评分并反馈，企业培训从"被动观看"进化为"主动对练"。 | <a href="https://techcrunch.com/2026/07/22/synthesias-ai-training-platform-is-moving-beyond-videos-into-live-coaching/" target="_blank">TechCrunch</a></p>
+
+<p>10. <strong>Shopify：AI搜索流量同比翻3倍，不替代Google</strong>：Shopify Q2数据显示AI驱动流量三倍增长，且与传统搜索并行增长（搜索sessions两年增1.3x），印证AI流量是增量而非替代。 | <a href="https://techcrunch.com/2026/08/05/shopify-says-ai-search-is-driving-more-traffic-and-sales-not-replacing-google/" target="_blank">TechCrunch</a></p>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>1. Google DeepMind 双轨制重组——"产品加速 + AGI战略分离"</h3>
+<p>Sundar Pichai明确将DeepMind拆成两条轨道：Koray主导"前沿模型/产品商业化"，Hassabis专注"AGI+科学边界"。这是大型AI组织面对研究与商业双重压力后，组织架构开始分化的最高等级案例。Jeff Dean带走的Brain/DeepMind核心班底，预示着<strong>顶尖AI研究者离开大厂、独立建制</strong>的浪潮正在加剧。</p>
+
+<h3>2. Meta AI战略补课——Muse Code入局编程代理赛道</h3>
+<p>Meta长期被视为AI代理领域的"慢半拍"，此次Muse Code直接以大型代码库、并行子代理为卖点，正面对标Anthropic+OpenAI。Zuckerberg亲自发帖背书，说明Meta在内部已将AI代理工具列为战略必争赛道，而非辅助功能。预计Meta内部工程团队将加速AI Native开发流程改造。</p>
+
+<h3>3. 美国企业裁员叙事转向：从"AI替代"到"组织精简"</h3>
+<p>Robinhood的案例具有标志性意义：当"AI裁员"标签开始伤害品牌，企业转而用"精英化、扁平化"话语包装同样的结果。亚马逊、Block、Coinbase、GitLab、Intuit均已采用类似表述。这预示<strong>AI变革叙事正在成熟化</strong>——从技术炫耀期走向组织执行期，核心逻辑从"AI取代人"变为"重定义每个人的角色"。</p>
+
+<h3>4. 中国互联网：字节 Deer Flow 开源超级代理</h3>
+<p>字节跳动开源 <strong>Deer Flow</strong>（<a href="https://github.com/bytedance/deer-flow" target="_blank">github.com/bytedance/deer-flow</a>）已积累 79,366 stars，定位为长程超级代理（SuperAgent Harness），可自主完成研究、写代码、生成内容的完整闭环。这是字节技术输出能力与国际AI开源社区竞争的重要信号，也体现了国内大厂从产品应用转向底层代理基础设施的战略转向。</p>
+
+<h3>5. 开源AI基础设施加速去中心化——LlamaFactory + LangChain增长</h3>
+<p>LlamaFactory（73k+ stars）和LangChain（143k+ stars）持续保持高增长，企业微调与代理编排需求旺盛。Nadella的"数据主权"警告与此同步——越来越多企业选择开源模型本地部署，而非将机构知识交给商业模型训练。Vercel和OpenRouter数据印证：开源模型已占全部流量的29%以上。</p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<p>| 项目 | Stars | 简介 | 链接 |</p>
+<p>|------|-------|------|------|</p>
+<p>| <strong>NousResearch/hermes-agent</strong> | 226,059 | 个人AI代理框架，随使用成长 | <a href="https://github.com/NousResearch/hermes-agent" target="_blank">GitHub</a> |</p>
+<p>| <strong>browser-use/browser-use</strong> | 107,990 | 让AI代理操控浏览器执行任务 | <a href="https://github.com/browser-use/browser-use" target="_blank">GitHub</a> |</p>
+<p>| <strong>karpathy/autoresearch</strong> | 93,202 | 单GPU上运行研究实验的AI代理 | <a href="https://github.com/karpathy/autoresearch" target="_blank">GitHub</a> |</p>
+<p>| <strong>bytedance/deer-flow</strong> | 79,366 | 字节开源长程超级代理框架 | <a href="https://github.com/bytedance/deer-flow" target="_blank">GitHub</a> |</p>
+<p>| <strong>Prime Agent</strong> | 开源 | 自进化编程代理，ARC-AGI-3达95.5% | <a href="https://www.primeintellect.ai/blog/prime-agent" target="_blank">primeintellect.ai</a> |</p>
+
+<p><strong>本周新发布：</strong></p>
+<ul>
+<li><strong>Meta Muse Code</strong> (Beta)：开源终端编程代理，并行子代理架构，适用大型代码库 | 安装：单命令即可</li>
+<li><strong>Hark Handoff Agent</strong>：浏览器无API操控代理，$7亿A轮背书</li>
+<li><strong>Synthesia Roleplay Sessions</strong>：AI角色扮演企业培训平台</li>
+</ul>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达（周四：AI-Native流程）</h2>
+
+<blockquote>周四聚焦：如何在500人规模组织中，把AI代理嵌入核心业务流程，实现真正的AI-Native运营。</blockquote>
+
+<h3>🔹 工具一：Atlassian Jira AI Agents（人机混编项目管理）</h3>
+
+<p><strong>适用场景：</strong> 软件研发团队的需求管理、任务分配、进度追踪</p>
+<p><strong>核心能力：</strong> 在Jira中像分配人类任务一样分配AI代理，统一dashboard管理人+AI工作流</p>
+<p><strong>500人团队落地建议：</strong></p>
+<p>1. <strong>试点选择</strong>：优先在bug修复、文档同步、测试用例生成等"高频低价值"任务上部署代理</p>
+<p>2. <strong>权限分层</strong>：设定代理"只写建议、人审批执行"的分级授权，降低风险</p>
+<p>3. <strong>KPI重设</strong>：将"人均代理管理任务数"纳入工程效能指标，取代单纯代码行数</p>
+<p>4. <strong>预期周期</strong>：3个月从试点到扩展，需配套代理监督规范（Responsible AI使用政策）</p>
+
+<hr>
+
+<h3>🔹 工具二：Meta Muse Code（大型代码库AI编程代理）</h3>
+
+<p><strong>适用场景：</strong> 拥有复杂单体仓库或微服务群的工程团队，需要跨模块重构、特性并行开发</p>
+<p><strong>核心能力：</strong> 理解大型repo结构，自动规划→写代码→验证结果；并行子代理无冲突开发</p>
+<p><strong>500人团队落地建议：</strong></p>
+<p>1. <strong>准入门槛</strong>：需要代码仓库有完善的测试覆盖（>60%）才能安全启用，否则代理修改难以验证</p>
+<p>2. <strong>工作流集成</strong>：接入现有CI/CD（GitHub Actions/GitLab CI），代理PR自动触发测试</p>
+<p>3. <strong>知识保护</strong>：参考Nadella警告，使用Meta自研/本地化部署版本，避免敏感代码外泄</p>
+<p>4. <strong>人才重配</strong>：释放的低阶编码时间，要有明确的"升级任务"承接（架构设计、产品对齐、用户研究）</p>
+
+<hr>
+
+<h3>🔹 工具三：AI-Native 流程设计框架——"人工智能原生四层分解"</h3>
+
+<p><strong>适用场景：</strong> 500人组织的AI落地路线图规划，梳理哪些流程适合AI代理接管</p>
+<p><strong>方法论：</strong> 将组织流程分为四层：</p>
+<ul>
+<li><strong>L1 纯执行层</strong>（信息收集、格式转换、报表生成）→ 优先全AI代理化</li>
+<li><strong>L2 规则决策层</strong>（审批路由、优先级排序、规范检查）→ AI辅助+人工确认</li>
+<li><strong>L3 创意/判断层</strong>（产品方向、架构决策、客户关系）→ AI增强+人主导</li>
+<li><strong>L4 价值/文化层</strong>（战略制定、组织设计、信任建立）→ 纯人类</li>
+</ul>
+
+<p><strong>500人团队落地建议：</strong></p>
+<p>1. 用工作坊方式为每个部门完成流程四层分类，识别L1/L2的快赢机会</p>
+<p>2. 从三个月短冲刺开始，每轮选1-2个L1流程全代理化，测量效率增益</p>
+<p>3. 同步建立"AI-Native能力认证"体系，让L1腾出时间的员工系统升级L3/L4能力</p>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>今天的核心信号，是两条"离心力"同时爆发：Jeff Dean带队从Google出走，标志着<strong>顶尖AI研究者正在逃离大公司的商业压力，寻求更纯粹的使命空间</strong>；而Nadella的"数据主权"警告，则是在提醒所有企业：<strong>盲目接入大模型SaaS，本质上是在用自己的机构知识喂竞争对手</strong>。</p>
+
+<p>这两件事放在一起，恰好描绘了AI组织变革的深层张力：一方面，组织需要快速AI化以保持竞争力；另一方面，快速AI化的代价可能是把最核心的组织智慧拱手相让。这正是我持续强调"I-T-π型人才"的原因——不是所有任务都该外包给模型，<strong>能判断"什么该给AI、什么必须留在人脑"的能力，本身就是下一代核心竞争力</strong>。</p>
+
+<p>对于正在推进AI Native转型的500人团队，今天的教训是：在部署Muse Code/Claude Code/Cursor之前，先搞清楚你的知识边界在哪里。不是所有代码都该上云端模型——有些架构决策、业务逻辑的"上下文"，是你最珍贵的护城河。四层结构中的L3/L4，永远比你以为的更值得保留在人的手中。</p>
+
+<hr>
+
+<p>*本日报由丫头自动生成 · 数据来源：TechCrunch、Ars Technica、HackerNews、GitHub API、Google官方博客*</p>
+<p>*发布时间：2026-08-06*</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/KLkLdwYBZoWpDkxdrnFcAp0AnOh" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
