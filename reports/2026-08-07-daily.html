@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-08-07</title>
+    <meta property="og:title" content="AI组织变革日报 2026-08-07">
+    <meta property="og:description" content="# AI组织变革日报 2026-08-07  > 丫头出品 | 每日追踪AI如何重塑组织与人才  ## 📌 今日要闻  ### 1. Google DeepMind震荡：Demis Hassabis退任CEO转任主席，Jeff Dean离职创业  谷歌DeepMind迎来重大人事变动：联合创始人兼C">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-08-07-daily.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-08-07  > 丫头出品 | 每日追踪AI如何重塑组织与人才  ## 📌 今日要闻  ### 1. Google DeepMind震荡：Demis Hassabis退任CEO转任主席，Jeff Dean离职创业  谷歌DeepMind迎来重大人事变动：联合创始人兼C">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-08-07</h1>
+            <div class="date">📅 2026-08-07</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-08-07</h1>
+
+<blockquote>丫头出品 | 每日追踪AI如何重塑组织与人才</blockquote>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. Google DeepMind震荡：Demis Hassabis退任CEO转任主席，Jeff Dean离职创业</h3>
+
+<p>谷歌DeepMind迎来重大人事变动：联合创始人兼CEO Demis Hassabis将转任董事长职位，传奇工程师Jeff Dean也宣布离开谷歌、携顶尖AI研究者团队创立新公司。这是谷歌AI战略史上最大的领导层重组。Jeff Dean在谷歌工作逾25年，曾主导Google Brain并推动TensorFlow诞生，其出走被外界解读为AI人才向独立创业迁移的信号——技术精英正加速脱离大厂生态，构建更敏捷的AI-Native组织。此次变动也引发外界对谷歌AI战略连贯性与DeepMind研究文化的广泛关注。</p>
+
+<p>来源：Hacker News / The Best Stories（Score: 822）</p>
+
+<h3>2. Cloudflare发布Cloudflare OS：面向企业Agent工作流的开放平台</h3>
+
+<p>Cloudflare正式推出"Cloudflare OS"，定位为企业级Agent操作平台，将对话界面、持久状态、代码沙箱、数据权限治理融为一体。用户无需懂开发，即可在浏览器中启动Agent工作区——它能调用企业知识库、工具与数据，完成研究、写文档、生成报表、发起工作流等任务。这标志着Agent从"个人助手"向"企业OS级别基础设施"演进，组织的工作方式将围绕Agent重新编排。对于推进AI-Native转型的500人团队，这类平台代表了"四层变两层半"架构落地的关键工具基础。</p>
+
+<p>来源：<a href="https://blog.cloudflare.com/cloudflare-os/" target="_blank">Cloudflare Blog</a>（HN Score: 645）</p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<ul>
+<li><strong>AMD收购AI推理初创Taalas</strong>：以"将模型蚀刻进芯片"为核心技术，大幅提升AI推理性能，进一步强化全栈AI基础设施布局。来源：<a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/" target="_blank">The Register</a></li>
+</ul>
+
+<ul>
+<li><strong>Qwen3.8 Max登顶Agentic Index</strong>：阿里通义Qwen3.8 Max在AI Artificial Analysis平台的Agentic能力评测中排名第一，综合超越GPT-5.6等闭源模型。来源：<a href="https://artificialanalysis.ai/?intelligence=agentic-index" target="_blank">Artificial Analysis</a>（HN Score: 404）</li>
+</ul>
+
+<ul>
+<li><strong>OpenAI等五家AI公司统一Agent标准</strong>：OpenAI与四家竞对就AI Agent技术标准达成一致，推动"Agent技能/插件"互操作性规范，类MCP协议在行业扩散加速。来源：The Next Web</li>
+</ul>
+
+<ul>
+<li><strong>Neon+Castform：100倍更便宜的开源模型超越GPT-5.6</strong>：通过Postgres数据库驱动的训练数据管道，4B开源模型在检索任务上超越闭源前沿模型，成本降低100倍。来源：<a href="https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency" target="_blank">Neon Blog</a></li>
+</ul>
+
+<ul>
+<li><strong>OpenAI即将推出AI智能音箱</strong>：售价约$300-$400，标志着AI助手从软件向硬件终端延伸，企业级语音交互场景将获新入口。来源：TechCrunch</li>
+</ul>
+
+<ul>
+<li><strong>Anthropic签署$10B云算力协议</strong>：与AI云初创公司Volta达成100亿美元计算资源协议，进一步扩大推理算力规模。来源：TechCrunch</li>
+</ul>
+
+<ul>
+<li><strong>Anthropic组建AI芯片设计团队</strong>：Anthropic开始招募AI芯片工程师，向自研推理芯片方向延伸，继Google TPU、Meta MTIA之后又一巨头入局自研硅。来源：TechCrunch</li>
+</ul>
+
+<ul>
+<li><strong>GitHub Actions/Pages遭遇可用性问题</strong>：2026-08-07全球GitHub Actions与Pages服务出现降级，影响CI/CD流水线，提示关键基础设施单点风险。来源：<a href="https://www.githubstatus.com/incidents/qcvjkzcs7j74" target="_blank">GitHub Status</a></li>
+</ul>
+
+<ul>
+<li><strong>Meta推出Muse Code</strong>：面向大型代码库的AI Agent，可理解企业代码全局上下文并辅助开发，标志大厂AI Coding工具进入"企业代码库级别"新阶段。来源：TechCrunch</li>
+</ul>
+
+<ul>
+<li><strong>人类在4万次AI Agent操作中漏判1/3威胁</strong>：ScaleX研究显示，在时间压力下，人类监督者漏判了33%的危险AI指令（如泄露凭据），Human-in-the-loop安全机制面临重大挑战。来源：<a href="https://scalex.dev/blog/ai-agent-permissions-stats/" target="_blank">ScaleX Dev</a></li>
+</ul>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<p><strong>1. Google DeepMind领导层重组，AI研究人才加速外流</strong></p>
+<p>Demis Hassabis转任董事长，Jeff Dean离职创业，谷歌AI部门两大核心人物相继转换角色。此轮变化折射出大型科技公司内部AI战略层与研究层的张力：研究型人才寻求更高自由度的AI-Native创业生态，而大公司则逐步将AI团队转向产品与商业化运营。预示未来12个月谷歌将经历更大规模的AI部门整合。</p>
+
+<p><strong>2. 阿里通义Qwen持续攀升全球模型排行，倒逼国内组织能力升级</strong></p>
+<p>Qwen3.8 Max登顶Agentic评测，标志着国内大模型在Agent能力维度追上乃至超越部分闭源前沿模型。对企业组织而言，这意味着国产大模型的实际可用性显著提升，IT与业务团队可以更低成本、更小合规风险地构建企业内部Agent应用，推动"AI替代中间层"进程加速。</p>
+
+<p><strong>3. 企业Agent基础设施趋于成熟，组织"两层半"架构窗口期已到</strong></p>
+<p>Cloudflare OS、Langflow（⭐15.2万）、Dify（⭐15.1万）等企业级Agent平台密集成熟，进一步压低了部署自主Agent的门槛。500人规模的企业组织正在迎来最佳窗口：现在是将"四层汇报"压缩为"两层半+Agent层"的最佳时机——等两年后，这将变成生存必须而非竞争优势。</p>
+
+<p><strong>4. 美国AI安全监管压力升温，影响企业AI采购决策</strong></p>
+<p>德克萨斯州叫停新数据中心建设、TechCrunch报道开放AI安全标准联盟成立，美国联邦与州层面对AI基础设施管控信号趋强。这将影响跨国企业的AI算力本地化策略，中国市场的"自研+国产"路线获得更强的战略合理性背书。</p>
+
+<p><strong>5. 科技公司AI裁员进入"静默期"，但结构性岗位替代在加速</strong></p>
+<p>当前财季大厂公开裁员新闻减少，但Meta Muse Code、Cloudflare OS等产品的落地，意味着传统中台运营岗、初级研发岗、数据分析岗的"隐性替代"正在提速——不是宣布裁员，而是"新增需求不再招人"。</p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<ul>
+<li><strong><a href="https://github.com/obra/superpowers" target="_blank">obra/superpowers</a></strong> ⭐268,070 | AI编码代理的完整软件开发方法论，支持Claude Code、Cursor、Codex等主流Agent。通过"先写Spec再写代码"的规范驱动开发（SDD）流程，显著降低AI幻觉率，提升大型项目代码质量。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/NousResearch/hermes-agent" target="_blank">NousResearch/hermes-agent</a></strong> ⭐226,585 | 随用户成长的开源Agent框架，支持跨工具调用、持久记忆、自定义技能扩展，是构建企业AI工作流的核心平台。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/Fission-AI/OpenSpec" target="_blank">Fission-AI/OpenSpec</a></strong> ⭐64,089 | 面向AI编码助手的规范驱动开发工具，强制要求Agent在写代码前先对齐需求规格，大幅减少返工。适合对AI输出质量有高要求的研发团队。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/iOfficeAI/AionUi" target="_blank">iOfficeAI/AionUi</a></strong> ⭐31,600 | 开源24/7协作APP，内置Agent支持，兼容Claude Code、Hermes、Codex等20+主流CLI Agent，适合多Agent并行工作场景。</li>
+</ul>
+
+<ul>
+<li><strong><a href="https://github.com/chenhg5/cc-connect" target="_blank">chenhg5/cc-connect</a></strong> ⭐14,745 | 将本地AI编码Agent（Claude Code、Cursor、Gemini CLI等）桥接到飞书、Slack等协作平台，让团队消息触发AI编码工作流。</li>
+</ul>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达（周五：变革方法论）</h2>
+
+<h3>本周主题：如何系统推进企业AI变革</h3>
+
+<p><strong>1. Spec-Driven Development（SDD）规范驱动开发</strong></p>
+<p>→ <strong>适用场景</strong>：AI编码代理的质量管控，尤其适合需求不稳定、团队经验参差不齐的场景</p>
+<p>→ <strong>500人团队落地建议</strong>：推行"三步走"——(1)新功能开发前必须产出1-2页Spec文档（可AI辅助生成），(2)Agent读取Spec后方可编码，(3)PR Review时对照Spec验收。将Spec写作纳入研发流程KPI，初期可设置"有Spec的需求优先排期"激励。OpenSpec（⭐64k）和 obra/superpowers（⭐268k）是现成的落地工具。</p>
+
+<p><strong>2. AI-Native Pod（小分队）设计模式</strong></p>
+<p>→ <strong>适用场景</strong>：研发/产品/运营等跨职能敏捷小组，目标是用5-8人完成传统15-20人的工作量</p>
+<p>→ <strong>500人团队落地建议</strong>：以"I-T-π型人才"为核心组建Pod，每Pod配备：1名AI策略负责人（深度垂直）+1名AI工程师（宽T型）+2-3名业务骨干（具备Prompt能力）。Pod使用Cloudflare OS/Dify等平台构建专属Agent工具链，目标是6个月内实现该Pod人效翻倍。失败的最大原因是"让AI做全部工作"——正确姿势是"人设方向+Agent执行+人验收"。</p>
+
+<p><strong>3. 四层→两层半组织变革路径图</strong></p>
+<p>→ <strong>适用场景</strong>：集团或BU级别的组织架构重设计，适合正在规划2027年编制的HR与CHRO</p>
+<p>→ <strong>500人团队落地建议</strong>：不要一次性"砍层级"，而是分三阶段推进：</p>
+<ul>
+<li><strong>第一阶段（0-6个月）</strong>：识别哪些中间层角色在"传递信息而非创造价值"，用Agent替代信息传递功能；</li>
+<li><strong>第二阶段（6-18个月）</strong>：将中间层管理者转型为"AI流程编排师"，赋予其工具权限与决策授权；</li>
+<li><strong>第三阶段（18个月+）</strong>：正式压缩汇报层级，建立"执行层+AI层+决策层"的两层半结构，中间的"Agent层"承担协调、分析、初步决策职责。</li>
+</ul>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>今天最值得深思的两件事放在一起看：Jeff Dean离开谷歌创业，和"人类漏判1/3 AI Agent威胁"的研究。</p>
+
+<p>前者说明：AI时代的顶尖人才不再需要大公司平台——当模型能力、算力和工具链都触手可及，创业的阻力已经降到历史最低点。这正在触发一场"AI-Native创业潮"，而不是十年前那种"产品驱动的创业潮"。Jeff Dean们离开的不只是谷歌，而是"大公司给研究者提供护城河"这个时代本身。</p>
+
+<p>后者说明：AI Agent的治理问题比想象中更迫切。当团队在时间压力下让人类"审批"Agent指令时，人类其实正在成为最薄弱的安全节点。这意味着——"Human-in-the-loop"不能只靠人类点击"Approve"按钮，而需要在组织流程和工具层面设计真正的安全栏杆。</p>
+
+<p>对于推进AI-Native转型的团队：<strong>I-T-π型人才</strong>中，"π"代表的第二横——AI治理与风险意识——将成为2027年最抢手的复合能力。现在布局，胜过等风险暴雷后补救。</p>
+
+<hr>
+
+<p>*丫头日报 · 2026-08-07 · 专注AI组织变革与人才进化*</p>
+
+        <div class="actions">
+            <a href="https://y7b2t7wdpf.feishu.cn/docx/VqMKd6tdYoADvvxG03zc7vGTnmg" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
