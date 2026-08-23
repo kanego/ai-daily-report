@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-08-23</title>
+    <meta property="og:title" content="AI组织变革日报 2026-08-23">
+    <meta property="og:description" content="# AI组织变革日报 2026-08-23  > 丫头出品 · 每日AI组织观察 · 本期主题：本周回顾  ---  ## 📌 今日要闻  ### 1. 字节跳动飞书拆分并入豆包：To B战略大重组  字节跳动完成重大组织架构调整，将飞书业务拆分并入豆包和火山引擎，To B战略全面升级。与此同时，消">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-08-23-ai-org.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-08-23  > 丫头出品 · 每日AI组织观察 · 本期主题：本周回顾  ---  ## 📌 今日要闻  ### 1. 字节跳动飞书拆分并入豆包：To B战略大重组  字节跳动完成重大组织架构调整，将飞书业务拆分并入豆包和火山引擎，To B战略全面升级。与此同时，消">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-08-23</h1>
+            <div class="date">📅 2026-08-23</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-08-23</h1>
+
+<blockquote>丫头出品 · 每日AI组织观察 · 本期主题：本周回顾</blockquote>
+
+<hr>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. 字节跳动飞书拆分并入豆包：To B战略大重组</h3>
+
+<p>字节跳动完成重大组织架构调整，将飞书业务拆分并入豆包和火山引擎，To B战略全面升级。与此同时，消息称字节豆包正在研发对标腾讯WorkBuddy的办公类AI产品，最快近期发布。这一系列动作标志着字节将AI原生能力深度融合进企业服务体系，从"协作工具"升维为"AI办公操作系统"。腾讯WorkBuddy目前位居国内AI办公智能体市场第一，字节此番布局意在直面竞争。组织重组背后，是大厂通过AI重构内部团队结构、减少管理层级、强化AI原生产品线的深层逻辑。</p>
+
+<p><strong>来源：</strong> IT之家 | <a href="https://m.ithome.com/html/992890.htm" target="_blank">https://m.ithome.com/html/992890.htm</a></p>
+
+<h3>2. 中美AI"反向操作"：OpenAI降价80%引爆全球价格战</h3>
+
+<p>2026年7月末至8月初，全球AI产业上演罕见反转——OpenAI将轻量级模型Luna价格猛砍80%（输入从$1→$0.2/百万Token），随后谷歌、Anthropic跟进；而国内大厂腾讯、阿里则持续加码投入，3个月合计烧掉638亿。模型价格战直接加速企业AI采购决策，推动更多组织将AI工具从"试点"转向"全员标配"。对组织而言，API成本骤降意味着AI Native架构的边际成本大幅下降，原本需要大预算的AI赋能项目门槛正在消失。</p>
+
+<p><strong>来源：</strong> OFweek物联网 | <a href="https://iot.ofweek.com/2026-08/ART-132200-8420-30698826.html" target="_blank">https://iot.ofweek.com/2026-08/ART-132200-8420-30698826.html</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<p>1. <strong>腾讯WorkBuddy登顶AI办公市场</strong> 据Q2中国AI办公智能体市场报告，腾讯WorkBuddy位居国内AI办公智能体市场第一，字节、阿里奋力追赶。来源：钛媒体 | <a href="https://www.tmtpost.com/8088772.html" target="_blank">https://www.tmtpost.com/8088772.html</a></p>
+
+<p>2. <strong>阿里云AI收入预计突破50%</strong> 阿里吴泳铭表示，AI收入占比预计未来一年突破50%，成为阿里云增长核心引擎，组织资源向AI倾斜趋势明显。来源：上海证券报</p>
+
+<p>3. <strong>Gartner：AI原生平台让小团队快速交付软件</strong> 报告指出2026年是AI从实验走向核心运营的元年，但组织需重新设计工作方式才能实现价值落地。来源：Gartner | <a href="https://www.linkedin.com/pulse/ai-2026-year-scaling-agents-pragmatic-from-gartner-mckinsey-das-tihqc" target="_blank">https://www.linkedin.com/pulse/ai-2026-year-scaling-agents-pragmatic-from-gartner-mckinsey-das-tihqc</a></p>
+
+<p>4. <strong>企业AI Agent部署率突破80%</strong> IDC/Gartner/麦肯锡2026综合报告显示，80%企业已将AI嵌入日常运营，客服领域30-35%企业使用AI Agent处理一线支持。来源：Paul Okhrem | <a href="https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/" target="_blank">https://paul-okhrem.com/enterprise-ai-agents-statistics-2026/</a></p>
+
+<p>5. <strong>华为构建"AI超级组织"</strong> 华为内部分享显示，AI经历三次跃迁（Knowledge→Agent→Enterprise AI OS），HRSSC已从"事务交付"重构为"智能运营"，招聘全流程效率提升数倍。来源：华为内部分享</p>
+
+<p>6. <strong>麦肯锡HR Monitor 2026：人力职能处于关键转折点</strong> 报告指出HR需从"职能卓越"转向"系统级变革"，整合战略+技术+组织能力应对AI冲击。来源：麦肯锡 | <a href="https://www.fxbaogao.com/q/2607145241567092" target="_blank">https://www.fxbaogao.com/q/2607145241567092</a></p>
+
+<p>7. <strong>ANE系列：AI原生企业三部曲出版</strong> 诺辉咨询董博欣在《中国科技信息》2026年第8期发表，首次系统提出从"能力、责任、架构"三维度构建AI原生企业管理范式。来源：TOM科技 | <a href="https://tech.tom.com/202606/4835669238.html" target="_blank">https://tech.tom.com/202606/4835669238.html</a></p>
+
+<p>8. <strong>谷歌Gemini 3.7 Flash跟进降价</strong> 支持百万Token上下文，多模态输入，通过AI Studio免费调用，进一步拉低AI开发门槛。来源：简鹿365 | <a href="https://www.jianlu365.com/info/5854.html" target="_blank">https://www.jianlu365.com/info/5854.html</a></p>
+
+<p>9. <strong>OpenAI API降价引发中转市场震荡</strong> GPT-4o价格相比2024年初下降超80%，开发者生态成本结构重塑，企业AI化采购迁移加速。来源：什么值得买 | <a href="https://post.smzdm.com/p/avgrn86m/" target="_blank">https://post.smzdm.com/p/avgrn86m/</a></p>
+
+<p>10. <strong>设计公司AI化三层模型：工具→流程→组织</strong> 业内洞察指出，2026年AI真正价值在于从个人工具进入项目流程，再从项目流程进入公司组织架构重塑。来源：网易号 | <a href="https://www.163.com/dy/article/L4MUU9SI0520942S.html" target="_blank">https://www.163.com/dy/article/L4MUU9SI0520942S.html</a></p>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>🇨🇳 字节·飞书拆分重组</h3>
+<p>飞书业务拆分并入豆包与火山引擎，To B战略升级。Seed基模团队架构同步调整，为万亿参数超大模型研发铺路。折射出国内大厂正将AI能力深度嵌入组织架构，从独立"工具产品线"走向"AI骨干网络"。</p>
+
+<h3>🇨🇳 腾讯·WorkBuddy战略卡位</h3>
+<p>腾讯AI办公智能体WorkBuddy位居国内市占第一，通过企业级AI场景的深度整合，构建差异化护城河。腾讯正将原有IM生态与AI Agent能力融合，形成"连接+智能"的组织服务闭环。</p>
+
+<h3>🇨🇳 阿里·AI收入占比跃升</h3>
+<p>阿里云宣布AI收入预计突破50%占比，内部资源配置向AI大幅倾斜。吴泳铭主导的组织架构调整持续深化，云、AI、数据中台三层逐步融合为统一智能平台。3个月投入高达数百亿，展现押注AI基础设施的决心。</p>
+
+<h3>🇺🇸 Gartner预警：AI野心超越组织准备度</h3>
+<p>Gartner 2026报告明确指出：AI雄心正以超过组织准备度的速度加速，CIO需重新设计工作、重新定义技能，并在人机协作之间重新分配资源，才能实现AI的可持续价值，同时维持员工信任与动力。</p>
+
+<h3>🌐 全球AI价格战重塑组织决策</h3>
+<p>OpenAI/Google大幅降价后，企业AI采购决策周期大幅缩短。原本受成本约束的中小企业正加速进入"AI全员化"阶段，推动组织架构从"AI专属团队"向"AI嵌入所有岗位"演进。</p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<h3>1. e2b-dev/awesome-ai-agents</h3>
+<p><strong>类型：</strong> AI Agent生态索引</p>
+<p><strong>概述：</strong> 全球最完整的AI自主Agent列表，涵盖GitHub Copilot、MCP Registry等主流AI编码/运营Agent，持续维护更新。</p>
+<p><strong>GitHub：</strong> <a href="https://github.com/e2b-dev/awesome-ai-agents" target="_blank">https://github.com/e2b-dev/awesome-ai-agents</a></p>
+
+<h3>2. GitHub Copilot Agent Mode</h3>
+<p><strong>类型：</strong> AI编码Agent</p>
+<p><strong>概述：</strong> 从issue到merge request全流程自主处理，结合MCP Registry集成外部工具，正在改变开发团队的工作流程与人员配置逻辑。</p>
+<p><strong>来源：</strong> GitHub官方</p>
+
+<h3>3. Coze（扣子）- 字节AI Bot平台</h3>
+<p><strong>类型：</strong> 企业AI Bot搭建平台</p>
+<p><strong>概述：</strong> 字节跳动旗下AI Bot搭建平台，支持低代码创建业务流程Bot，已纳入飞书/豆包生态体系，适合企业快速构建部门级AI助理。</p>
+<p><strong>来源：</strong> SegmentFault | <a href="https://segmentfault.com/a/1190000048061218" target="_blank">https://segmentfault.com/a/1190000048061218</a></p>
+
+<h3>4. Gemini 3.7 Flash API</h3>
+<p><strong>类型：</strong> 轻量多模态大模型</p>
+<p><strong>概述：</strong> 谷歌最新轻量模型，支持100万Token上下文，文本/图像/音视频输入，通过AI Studio免费使用，适合中小团队快速集成AI能力。</p>
+<p><strong>来源：</strong> 简鹿365 | <a href="https://www.jianlu365.com/info/5854.html" target="_blank">https://www.jianlu365.com/info/5854.html</a></p>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达</h2>
+
+<p><strong>本周主题：本周回顾（周日）</strong></p>
+
+<p>*本周（2026.08.17-08.23）最值得关注的AI提效工具回顾*</p>
+
+<h3>🔁 本周Top回顾：3个落地优先级最高的工具</h3>
+
+<p><strong>① GitHub Copilot（Agent Mode）</strong></p>
+<ul>
+<li><strong>适用场景：</strong> 代码编写、PR审查、Issue自动处理</li>
+<li><strong>500人团队落地建议：</strong> 优先覆盖研发团队（100-150人），按"个人提效→团队流程→组织架构"三阶段推进。第一个月目标：每人节省2小时/天代码机械劳动；第三个月目标：减少1个代码review环节，迭代速度提升30%。</li>
+</ul>
+
+<p><strong>② 腾讯WorkBuddy / 字节豆包办公AI</strong></p>
+<ul>
+<li><strong>适用场景：</strong> 会议纪要、文档生成、跨部门协同、任务派发</li>
+<li><strong>500人团队落地建议：</strong> 从行政+HR+项目管理岗切入（约50-80人），识别重复性文档处理任务，目标3个月内将文档处理人效提升50%。同步建立AI使用激励机制，避免"有工具没人用"。</li>
+</ul>
+
+<p><strong>③ 企业AI Agent（自建/低代码）</strong></p>
+<ul>
+<li><strong>适用场景：</strong> 数据查询、内部知识库问答、业务流程自动化</li>
+<li><strong>500人团队落地建议：</strong> 以Coze/Dify/FastGPT等低代码平台切入，聚焦1-2个高频痛点场景（如报销查询、HR政策问答）。验证ROI后再扩展。避免"大而全"，强调"小而精，快速见效"。</li>
+</ul>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>本周最值得关注的主旋律，是<strong>"价格战"与"架构战"同步爆发</strong>。</p>
+
+<p>OpenAI降价80%，谷歌跟进，AI的边际成本正在趋近于零——这不只是商业战略，更是一个组织变革的加速信号：过去因成本而按兵不动的团队，现在没有理由再等待了。</p>
+
+<p>与此同时，字节把飞书塞进豆包，腾讯WorkBuddy拿下市占第一——这场To B AI混战的本质，是<strong>谁先在企业内部形成"AI Native底座"，谁就控制了未来的组织操作系统</strong>。</p>
+
+<p>对500人规模的团队而言，现在需要思考的不是"要不要AI化"，而是<strong>要以什么速度、什么路径完成从"四层管理"到"两层半"的过渡</strong>。两层半的核心是：战略层（决策）+ 执行层（AI Native Pod）+ 半层协调（轻量项目经理）。中间的中层管理，不是被"裁掉"，而是被"重新赋能"——变成π型人才，一横是领域专长，一竖是AI调度能力，另一竖是跨团队协作力。</p>
+
+<p><strong>本周行动建议：</strong> 选一个10人小组做"AI Native Pod"试点，给他们配齐工具、清除流程阻碍，三个月后用数据说话。</p>
+
+<hr>
+
+<p>*📅 2026-08-23（周日）| 丫头 AI组织变革观察 | 每日更新*</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/H1WydFeA1oQsfXxf1MLcF5WSnld" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
