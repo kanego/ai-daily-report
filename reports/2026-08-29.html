@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-08-29</title>
+    <meta property="og:title" content="AI组织变革日报 2026-08-29">
+    <meta property="og:description" content="# AI组织变革日报 2026-08-29  > 作者：丫头 | 每日追踪AI对组织、团队与工作方式的深层重构  ---  ## 📌 今日要闻  ### 1. 字节跳动AI办公大整合：豆包工作正式发布，TRAE与扣子并入豆包体系  8月25日，字节跳动正式发布企业级AI办公产品「豆包工作」，定位面向">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-08-29.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-08-29  > 作者：丫头 | 每日追踪AI对组织、团队与工作方式的深层重构  ---  ## 📌 今日要闻  ### 1. 字节跳动AI办公大整合：豆包工作正式发布，TRAE与扣子并入豆包体系  8月25日，字节跳动正式发布企业级AI办公产品「豆包工作」，定位面向">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-08-29</h1>
+            <div class="date">📅 2026-08-29</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-08-29</h1>
+
+<blockquote>作者：丫头 | 每日追踪AI对组织、团队与工作方式的深层重构</blockquote>
+
+<hr>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. 字节跳动AI办公大整合：豆包工作正式发布，TRAE与扣子并入豆包体系</h3>
+
+<p>8月25日，字节跳动正式发布企业级AI办公产品「豆包工作」，定位面向生产力场景的企业级Agent，可自主拆解任务、推进复杂工作，并与飞书深度打通，能调用飞书内沉淀的聊天记录、文档、日历等上下文信息。更引人注目的是，字节同步宣布将TRAE（AI编程）、扣子（Agent平台）团队并入豆包体系，飞书Aily也更名为「豆包工作伙伴」。此前，7月底飞书产品团队已与豆包产品团队完成合并。这意味着字节在AI办公赛道完成了一次重大组织整合——从分散作战到统一品牌，豆包成为字节AI办公业务的主干。与此同时，阿里将QoderWork、悟空等AI产品整合为「千问办公」并打通钉钉、阿里云；腾讯WorkBuddy发展势头强劲，中国互联网三巨头的AI办公战线格局基本成形。</p>
+
+<p>来源：<a href="https://post.smzdm.com/p/a6zdl9wg/" target="_blank">豆包工作今天发布，TRAE和扣子并入豆包</a> | <a href="https://tg.okhk.net/posts/11051" target="_blank">字节AI办公大收编</a></p>
+
+<hr>
+
+<h3>2. 腾讯汤道生发布长文：AI正在重塑组织形态与产品研发模式</h3>
+
+<p>8月25日晚，腾讯集团高级执行副总裁、云与智慧产业事业群CEO汤道生在腾讯内部年刊《知点》发表长文《和AI一起长跑：这两年的一些思考》，系统回顾了两年来推进AI落地的实践与思考。他表示，AI在改变产品方式的同时，也在重塑传统组织形态和产品研发模式——WorkBuddy等内部工具让非技术研发人员（产品经理、运营）也能借助AI完成写方案、做数据报告等工作，组织边界正在模糊化。他强调「熬得久比起得早更重要」，主张以长期主义面对AI竞争，而非盲目追求速度。这一观点与行业内普遍的焦虑化叙事形成对比，值得组织变革研究者关注。</p>
+
+<p>来源：<a href="https://www.tmtpost.com/8118158.html" target="_blank">腾讯汤道生，为"慢"作答</a> | <a href="https://www.vbnvbn.com/article/detail/r0g7.html" target="_blank">腾讯汤道生深度复盘WorkBuddy</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<p>1. <strong>科技业裁员潮持续</strong> | 2026年全球科技业已有超17.5万人遭裁员，Apple、Microsoft、Oracle、Amazon、Meta、LinkedIn等巨头均在其中，AI转型被普遍引用为结构性原因。来源：<a href="https://economictimes.indiatimes.com/news/international/global-trends/tech-layoffs-2026-more-than-175000-workers-laid-off-as-apple-microsoft-oracle-amazon-meta-tiktok-uber-linkedin-and-dozens-of-companies-cut-jobs-amid-ai-boom/articleshow/133511127.cms" target="_blank">经济时报</a></p>
+
+<p>2. <strong>Amazon多轮裁员</strong> | Amazon 2026年已累计裁员超3万人，最新波及卖家服务（Selling Partner Services）团队，同步加大AI基础设施投入。来源：<a href="https://www.storyboard18.com/brand-marketing/amazon-layoffs-2026-seller-services-unit-hit-by-fresh-cuts-after-30000-job-losses-amid-ai-push-98118.htm" target="_blank">Storyboard18</a></p>
+
+<p>3. <strong>Meta压平组织层级</strong> | Meta大规模重组，7000人重新分配岗位，方向是"更扁平、管理层更少、以AI工具为核心"，意在减少管理层级、提高一线执行效率。来源：<a href="https://cryptobriefing.com/meta-halts-layoffs-ai-workforce-changes/" target="_blank">CryptoBriefing</a></p>
+
+<p>4. <strong>阿里千问负责人离职</strong> | 阿里巴巴千问（Qwen）团队负责人林俊旸离职，内部正推动AI团队从独立作战转向多模态融合开发，激进架构调整引发内部信任危机。来源：<a href="https://opensource.fiai.online/news/lin-junyang-leaves-alibaba-qwen-team-emergency-meeting/" target="_blank">AI News Hub</a></p>
+
+<p>5. <strong>字节Seed 2.0让行业意外</strong> | 2026年春节期间字节Seed 2.0大模型性能让业界意外，证明算力+组织效率的组合优势；传统"砸钱拉新到留存"链条在AI产品上已断裂。来源：<a href="https://h5.ifeng.com/c/vivoArticle/v0026Hnz--YJ0kYIk-_EekL0x3GIje9yWNBHlcCHG6tBRFAJA__" target="_blank">凤凰网</a></p>
+
+<p>6. <strong>腾讯WorkBuddy拿到AI办公"船票"</strong> | WorkBuddy帮助腾讯在AI办公赛道后发先至，背后是腾讯从CodeBuddy底座演进的内部研发路径，证明内部工具孵化的可行性。来源：<a href="https://t.cj.sina.com.cn/articles/view/7062088949/1a4eeecf500101boek" target="_blank">新浪财经</a></p>
+
+<p>7. <strong>Composio AI Agent工具包</strong> | Composio为AI Agent提供1000+预认证工具集，含GitHub、Slack、Gmail等主流应用，处理鉴权、限速和错误处理，7月已达29,448 GitHub Stars。来源：<a href="https://github.com/ComposioHQ/composio" target="_blank">GitHub</a></p>
+
+<p>8. <strong>Cursor AI编程工具持续爆发</strong> | Cursor以"让开发者极度高效"为定位，Agent模式支持将意图直接转化为代码，成为2026年AI编程生产力工具标杆。来源：<a href="https://cursor.com/" target="_blank">Cursor</a></p>
+
+<p>9. <strong>Gemini Code Assist企业版升级</strong> | Google发布Gemini Code Assist Enterprise，基于Gemini 3模型+100万token上下文，覆盖完整软件开发生命周期，面向团队和企业提供AI编程助手。来源：<a href="https://codeassist.google/" target="_blank">Google</a></p>
+
+<p>10. <strong>Paf工程团队定制85个GPT</strong> | 博彩软件公司Paf工程团队创建85个定制GPT工具，显著提升开发者生产力，并将ChatGPT Enterprise引入内部编程学院，加速65名开发者的培训。来源：<a href="https://openai.com/index/paf/" target="_blank">OpenAI</a></p>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>🇨🇳 中国</h3>
+
+<p><strong>1. 字节：AI办公品牌统一，组织整合加速</strong></p>
+<p>字节跳动将TRAE（AI编程）、扣子（Agent平台）并入豆包体系，飞书产品团队也于7月底与豆包团队合并。这是一次典型的"AI驱动组织收缩"——从多中心作战转向单一核心品牌，减少内部竞争与资源分散。对于500人规模团队来说，这种"产品线合并+团队整合"的路径值得借鉴：优先做减法，让AI工具聚焦主战场。</p>
+
+<p><strong>2. 腾讯：以长期主义重塑产品与组织边界</strong></p>
+<p>汤道生长文透露，WorkBuddy等AI工具正模糊"研发"与"非研发"之间的职能边界，产品经理、运营人员正借助AI完成原本需要工程师的任务。腾讯的组织变革不是裁员，而是"能力扩容"——同等人力，AI赋能后承接更多复杂工作。</p>
+
+<p><strong>3. 阿里：架构调整激进，内部信任危机浮现</strong></p>
+<p>阿里推动AI团队从独立作战转向多模态融合开发，但林俊旸离职事件暴露出：激进的架构调整若缺乏透明沟通，会引发内部信任危机。这对任何正在推动AI转型的组织都是警示：变革速度与组织文化容忍度需要匹配。</p>
+
+<h3>🇺🇸 美国</h3>
+
+<p><strong>4. Meta：7000人重新分配，践行扁平化AI-Native组织</strong></p>
+<p>Meta的变革不是简单裁员，而是将7000人从传统管理岗/职能岗重新分配至AI驱动的一线岗位，压平层级、减少管理者，让工程师和产品直接与AI工具协作。这是目前全球最大规模的"AI驱动组织扁平化"实践。</p>
+
+<p><strong>5. Amazon：裁员3万+，AI基础设施持续加码</strong></p>
+<p>Amazon 2026年裁员已超3万人，但同期大幅增加AI基础设施投入。这种"收缩人力、扩张AI算力"的组合策略，正在成为美国科技巨头的标准动作，也预示着未来两三年内"单位人效"将成为组织竞争力的核心指标。</p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<p><strong>1. Composio</strong> ⭐ 29,448 Stars</p>
+<p><a href="https://github.com/ComposioHQ/composio" target="_blank">github.com/ComposioHQ/composio</a></p>
+<p>为AI Agent提供1000+预认证工具集，支持GitHub、Slack、Gmail、Notion等主流应用接入，内置鉴权、限速、错误处理，大幅降低Agent与外部系统集成的开发门槛。适合企业快速搭建内部AI Agent工作流。</p>
+
+<p><strong>2. Cursor</strong> — AI编程Agent</p>
+<p><a href="https://cursor.com/" target="_blank">cursor.com</a></p>
+<p>以"将意图直接转化为代码"为核心交互，Agent模式支持跨文件多步骤代码生成，已成为2026年工程团队AI提效的标配工具。</p>
+
+<p><strong>3. 字节豆包工作（企业级Agent）</strong></p>
+<p><a href="https://m.ebrun.com/699317.html" target="_blank">ebrun.com 报道</a></p>
+<p>与飞书深度打通的企业级AI办公Agent，可调用企业内积累的聊天记录、文档、日历等上下文，自主拆解复杂任务。字节内部实践：飞书+豆包工作构成"AI-Native协作底座"。</p>
+
+<p><strong>4. Gemini Code Assist Enterprise</strong></p>
+<p><a href="https://codeassist.google/" target="_blank">codeassist.google</a></p>
+<p>基于Gemini 3模型，支持100万token上下文，覆盖代码生成→审查→测试→部署全链路，适合大型团队统一AI编程基础设施。</p>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达（本周主题：ROI — 如何量化AI转型的投资回报）</h2>
+
+<blockquote>今天是周六，本版块聚焦：如何评估和证明AI工具的实际ROI？</blockquote>
+
+<h3>🔢 1. Paf工程团队案例 — 定制GPT的ROI路径</h3>
+
+<p><strong>名称</strong>：ChatGPT Enterprise + 定制GPT工作流</p>
+<p><strong>适用场景</strong>：有一定工程能力的团队，需要将AI工具规模化内化至日常研发流程</p>
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>Phase 1（1-2个月）：识别高频重复性任务（Code Review、文档生成、测试用例编写），针对性创建3-5个定制GPT</li>
+<li>Phase 2（3-4个月）：推广到工程师团队，收集"省时数据"（每人每天节省X小时）</li>
+<li>ROI公式：`（节省工时 × 人力成本） / AI工具订阅费用`，Paf案例显示通常在3-6个月内实现正ROI</li>
+<li>Phase 3：将实践扩展至非技术岗位（PM、运营），85个定制GPT是终态，不是起点</li>
+</ul>
+
+<p>来源：<a href="https://openai.com/index/paf/" target="_blank">OpenAI Paf案例</a></p>
+
+<hr>
+
+<h3>📊 2. "单位人效"指标体系 — 衡量AI转型的核心ROI框架</h3>
+
+<p><strong>名称</strong>：人效ROI仪表板（AI Workforce ROI Dashboard）</p>
+<p><strong>适用场景</strong>：正在推进AI转型、需要向管理层汇报价值的团队负责人</p>
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>建立基线：转型前记录核心指标（代码提交频率、需求交付周期、Bug率、人均承接项目数）</li>
+<li>AI工具引入后每季度复盘：重点看"同等人力，产出是否增加"而非只看"裁了多少人"</li>
+<li>关键ROI维度：①速度ROI（交付周期缩短%）②质量ROI（Bug率降低%）③成本ROI（外包依赖降低%）④人才ROI（吸引AI-Native人才的竞争力提升）</li>
+<li>参考数据点：字节/腾讯等内部实践均显示，AI编程工具可将开发效率提升30-50%，但需要3-6个月适应期</li>
+</ul>
+
+<hr>
+
+<h3>🔄 3. "能力扩容"vs"人力收缩" — 两种ROI叙事的选择</h3>
+
+<p><strong>名称</strong>：AI转型ROI叙事策略</p>
+<p><strong>适用场景</strong>：需要向组织内部（员工、中层）传达AI转型价值的领导者</p>
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>腾讯路径（能力扩容）：同等人力承接更多工作，适合文化偏稳定、需要保留人才的组织；ROI体现在"业务增量"</li>
+<li>Meta路径（组织重构）：减少管理层级、重分配岗位，适合已有明确战略方向的成熟大公司；ROI体现在"效率提升+成本节约"</li>
+<li>对于500人团队：建议优先采用"能力扩容"叙事，在AI工具稳定落地、ROI数据充分后，再逐步优化组织结构；避免过早触发人才恐慌导致核心人员流失</li>
+</ul>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>今天有两件事值得放在一起看：字节把TRAE、扣子、飞书全揉进豆包，腾讯汤道生说"AI正在重塑传统组织形态"。表面上是产品整合，本质上是<strong>AI正在强制组织做减法</strong>。</p>
+
+<p>当一个AI Agent能跨越飞书聊天、文档、日历自主拆解任务，你就不再需要那么多"信息传递岗"——项目协调、会议跟进、文档整理，这些原本支撑大型团队协作的角色，正在被Agent悄悄替代。</p>
+
+<p>这恰恰是"<strong>四层→两层半</strong>"架构加速落地的逻辑基础：当AI承接了大量中间层的信息处理工作，组织就自然地向"决策者 + 执行者 + AI"的结构收敛，中间的管理层级和职能协调层会逐渐压薄。</p>
+
+<p>对于正在构建AI-Native团队的管理者来说，现在的关键动作不是"引入哪个AI工具"，而是<strong>重新设计工作流</strong>——让I型人才成长为π型，让工程师直连业务决策，让Agent处理流转。字节今天的组织整合，其实是给所有人演示了一遍"AI-Native Pod"的终态长什么样。</p>
+
+<hr>
+
+<p>*本报告由丫头自动生成 | 数据来源于公开网络资讯 | 仅供参考*</p>
+
+        <div class="actions">
+            <a href="https://w42apyamlvp4.feishu.cn/docx/LMDAdJ8rNoPgaKxj2PgccXewnzf" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
