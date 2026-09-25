@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-09-25</title>
+    <meta property="og:title" content="AI组织变革日报 2026-09-25">
+    <meta property="og:description" content="# AI组织变革日报 2026-09-25  > 丫头出品 · 每日一报 · 聚焦AI如何重塑组织与人  ---  ## 📌 今日要闻  ### 1. 豆包&quot;对话团队砍掉一半&quot;风波：字节AI组织内卷加速  9月24日，字节跳动旗下AI产品豆包出现舆论风波。有自媒体报道称&quot;豆包Session（对话）团">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-09-25-ai-org.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-09-25  > 丫头出品 · 每日一报 · 聚焦AI如何重塑组织与人  ---  ## 📌 今日要闻  ### 1. 豆包&quot;对话团队砍掉一半&quot;风波：字节AI组织内卷加速  9月24日，字节跳动旗下AI产品豆包出现舆论风波。有自媒体报道称&quot;豆包Session（对话）团">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-09-25</h1>
+            <div class="date">📅 2026-09-25</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-09-25</h1>
+
+<blockquote>丫头出品 · 每日一报 · 聚焦AI如何重塑组织与人</blockquote>
+
+<hr>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. 豆包"对话团队砍掉一半"风波：字节AI组织内卷加速</h3>
+
+<p>9月24日，字节跳动旗下AI产品豆包出现舆论风波。有自媒体报道称"豆包Session（对话）团队被砍掉一半"，随即引发热议。豆包公关负责人刘星当日在个人社交账户辟谣，强调"信息不实，是分工调整而非裁员"。但据多方信源，2026年7月飞书产品与豆包产品团队已完成整合，资深HR高管赵祺也于2025年9月转岗至豆包、负责为AI业务重建人才体系。此次组织调整背后，折射的是字节在AI时代加速淘汰非核心产品线、聚焦少数核心战场的战略取舍——这不是裁员，是资源重新集中。对于AI Native团队而言，这一信号清晰：大厂正在用组织重组倒逼业务聚焦，非核心岗位面临持续整合压力。</p>
+
+<p><strong>来源：</strong> <a href="https://www.guancha.cn/CaiJing/2026_09_24_902003.shtml" target="_blank">观察者网</a> | <a href="https://m.mp.oeeee.com/a/BAAFRD0000202609241672336.html" target="_blank">南都N视频</a></p>
+
+<hr>
+
+<h3>2. Uber裁掉23%的HR团队，AI用完全年预算只需4个月</h3>
+
+<p>Uber于2026年6月宣布削减People部门（含HR、招聘、设施、文化）23%的岗位，CEO明确表态"此番调整势在必行"。更引人深思的数据是：Uber员工对AI工具的使用频率极高，导致公司2026年全年AI项目预算在短短4个月内被耗尽，95%的工程师在日常工作中使用AI辅助。尽管Uber官方坚称此次裁员"与AI无关"，但裁员与AI提效同步发生的时间节点，已成为整个行业的一面镜子——当AI承接了大量人力工作后，支持性部门首当其冲。HR、招聘、后台职能正成为组织AI化的第一块多米诺骨牌。</p>
+
+<p><strong>来源：</strong> <a href="https://layoffready.co/blog/uber-hr-layoffs-ai-2026-what-it-means-for-your-job" target="_blank">LayoffReady</a> | <a href="https://news.aibase.com/news/28648" target="_blank">AIBase</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<p>1. <strong>豆包辟谣裁员</strong> | 字节AI产品豆包Session团队调整被误读为裁员，官方称属分工优化。<a href="https://m.mp.oeeee.com/a/BAAFRD0000202609241672336.html" target="_blank">南都N视频</a></p>
+
+<p>2. <strong>Uber HR裁员23%</strong> | Uber削减人力部门近四分之一，与AI提效同步发生，引发行业广泛关注。<a href="https://tech.yahoo.com/general/breaking-news/article/tech-layoffs-2026-tracking-all-the-job-losses-across-xbox-apple-oracle-uber-tiktok-meta-and-others-144545528.html" target="_blank">Yahoo Tech</a></p>
+
+<p>3. <strong>腾讯WorkBuddy "拿到AI办公船票"</strong> | 腾讯WorkBuddy在2026企业AI办公赛道被认为后发先至，与阿里、字节展开全面竞争。<a href="https://t.cj.sina.com.cn/articles/view/7062088949/1a4eeecf500101boek" target="_blank">新浪财经</a></p>
+
+<p>4. <strong>飞书Aily全新升级</strong> | 2026年7月飞书Aily升级，AI从助手进化为可主动工作、多智能体协同的"数字同事"。<a href="https://www.news.cn/tech/20260723/5a84c09560134a5c9937a825773fba95/c.html" target="_blank">新华网</a></p>
+
+<p>5. <strong>字节跳动视觉大模型负责人更迭</strong> | 字节Seed旗下AI4S团队酝酿新一轮组织调整，含从字节分拆的可能性。<a href="https://www.pai.com.cn/p/01k0bnf9nhwrkhfyvbntedrktc" target="_blank">电商派</a></p>
+
+<p>6. <strong>中国七大AI厂商ARR达107亿美元</strong> | 中国头部AI厂商合计年度经常性收入约107亿美元，但仅为OpenAI+Anthropic的一小部分，差距明显。<a href="https://www.mydigit.cn/thread-621547-1-1.html" target="_blank">数字尾巴</a></p>
+
+<p>7. <strong>OpenCode突破20.8万GitHub Stars</strong> | 开源AI编程助手OpenCode在terminal/IDE/桌面三端运行，月活开发者超1600万，已成主流AI编码工具。<a href="https://opencode.ai/" target="_blank">opencode.ai</a></p>
+
+<p>8. <strong>Anthropic CEO呼吁协调放缓AI发展</strong> | Dario Amodei于2026年9月12日公开倡议，建议各方协调放缓AI开发速度，以更好理解技术风险。来源：RFI报道</p>
+
+<p>9. <strong>阿里、腾讯、百度自由现金流转负</strong> | 2026年上半年三巨头合计自由现金流降至负160亿元（去年同期为正1700亿元），AI投入压力空前。<a href="https://www.mydigit.cn/thread-621547-1-1.html" target="_blank">数字尾巴</a></p>
+
+<p>10. <strong>ECC工具链登上GitHub Trending</strong> | ECC（The #1 agentic engineering toolkit）作为Agent工程运营层，提供skills/memory/planning/security一站式支持。<a href="https://ecc.tools/" target="_blank">ecc.tools</a></p>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>🇨🇳 字节跳动：AI业务整合加速，非核心产品线收缩</h3>
+<p>豆包与飞书产品团队于2026年7月完成整合，豆包Session团队本周出现调整传言。字节AI4S科学智能团队也在酝酿独立分拆。总体方向：把更多资源压注在少数核心AI产品，其余产品线整合或收缩。这是大厂AI化转型的标准动作——先聚焦、再扩张。</p>
+
+<h3>🇨🇳 腾讯：WorkBuddy + 多产品矩阵布局AI办公</h3>
+<p>腾讯在AI办公领域同时押注WorkBuddy、QClaw、Marvis三条产品线，与阿里（QoderWork/悟空/MuleRun）、字节（Trae/扣子/豆包办公/飞书Aily）形成三强鼎立格局。2026年被认为是AI办公"分船票"的关键年，后发先至的逻辑在于WorkBuddy的企业端渗透策略。</p>
+
+<h3>🇨🇳 中国AI厂商：收入规模差距与现金流双重压力</h3>
+<p>七大中国AI厂商ARR合计107亿美元，但与OpenAI+Anthropic的差距仍然悬殊。同时阿里、腾讯、百度三家现金流集体转负（上半年合计-160亿元人民币），意味着AI军备竞赛进入"烧钱换市场"的关键阶段，组织压缩与效率提升是必然选择。</p>
+
+<h3>🇺🇸 Uber：AI提效后，支持性部门率先收缩</h3>
+<p>Uber HR部门被削减23%，是硅谷AI替代路径的典型案例：AI先提升工程师产能→AI预算4个月耗尽→重新评估支持性岗位价值→HR/招聘类职能率先收缩。95%工程师使用AI编码，已是Uber的现实。</p>
+
+<h3>🌐 AI发展节奏争议：Anthropic CEO呼吁放缓</h3>
+<p>Dario Amodei于9月12日公开倡议协调放缓AI开发，这是AI公司CEO中罕见的表态。背后是对模型能力急速跃迁、风险尚未充分理解的担忧。这一信号可能影响部分企业的AI落地节奏，但对已深度AI化的大厂而言，踩刹车几乎不现实。</p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<h3>1. OpenCode — 开源AI编程Agent</h3>
+<ul>
+<li><strong>GitHub：</strong> <a href="https://github.com/opencode-ai/opencode" target="_blank">opencode-ai/opencode</a> ⭐ 208,000+</li>
+<li>基于Go语言构建的CLI AI编程助手，支持terminal/IDE/桌面三端，月活超1600万开发者，950+贡献者，13,000+commits</li>
+<li>已成为Cursor的主要开源替代品，支持多模型接入</li>
+</ul>
+
+<h3>2. ECC — Agentic工程运营层</h3>
+<ul>
+<li><strong>官网：</strong> <a href="https://ecc.tools/" target="_blank">ecc.tools</a></li>
+<li>为Agent harness提供统一运营底座：skills、memory、planning、security四大模块，曾登顶GitHub Trending（2026年9月）</li>
+<li>适合企业搭建内部Agent工程标准的基础设施</li>
+</ul>
+
+<h3>3. 飞书Aily — 企业级AI Agent平台</h3>
+<ul>
+<li><strong>特性：</strong> 主动工作、团队共享智能体、多智能体协同，接入飞书MCP生态</li>
+<li>2026年7月全新升级，AI从工具变成"会主动干活的数字同事"</li>
+<li>适合中大型企业的知识管理、流程自动化场景</li>
+</ul>
+
+<h3>4. 腾讯 teamai-cli — AI团队协作CLI工具</h3>
+<ul>
+<li>腾讯开源的AI团队协作命令行工具，面向工程师团队的AI协同工作流</li>
+<li>来源：飞书Aily工具集页面提及</li>
+</ul>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达（周五：变革方法论）</h2>
+
+<blockquote>今天聚焦"组织变革的落地方法论"，帮助500人规模团队真正推进AI化转型</blockquote>
+
+<h3>🔴 方法一：AI Native Pod 结构（小队制）</h3>
+<p><strong>适用场景：</strong> 需要打破职能墙、快速验证AI产品的核心团队</p>
+<p><strong>核心逻辑：</strong> 以"1个产品经理 + 2个全栈工程师 + 1个AI工程师 + 0.5个运营"构成自主作战单元（Pod），每个Pod对一个业务结果负责，AI工具是Pod的标配基础设施而非附加选项。</p>
+<p><strong>500人团队落地建议：</strong></p>
+<ul>
+<li>第一步：选3-5个战略级场景，各组建1个AI Native Pod，给6个月验证期</li>
+<li>第二步：Pod独立于原有职能汇报线，直接汇报业务负责人</li>
+<li>第三步：Pod产出的流程/工具沉淀为全团队可复用的"AI工具包"</li>
+</ul>
+
+<h3>🟡 方法二：I-T-π型人才培养路径</h3>
+<p><strong>适用场景：</strong> 应对AI替代压力的个人成长与团队人才结构重塑</p>
+<p><strong>核心逻辑：</strong> 从T型（一专多能）升级到π型（两个专业深度 + AI工具横向杠杆），鼓励每个人同时掌握一个业务领域和一个AI工具使用深度，形成"人 + AI"的新型生产单元。</p>
+<p><strong>500人团队落地建议：</strong></p>
+<ul>
+<li>将"AI工具使用深度"纳入绩效评估体系</li>
+<li>设立π型人才激励通道（不依赖管理晋升，技术专家路径）</li>
+<li>每季度组织AI工具马拉松（Hackathon），识别π型苗子</li>
+</ul>
+
+<h3>🟢 方法三：四层→两层半组织压缩法</h3>
+<p><strong>适用场景：</strong> 传统层级组织向扁平AI化组织的转型</p>
+<p><strong>核心逻辑：</strong> 传统的"战略层→管理层→执行层→操作层"四层结构，在AI提效后可以压缩为"战略层→AI增强执行层→自动化操作层"两层半。中间管理层的协调功能逐渐被AI Dashboard和Agent自动路由取代。</p>
+<p><strong>500人团队落地建议：</strong></p>
+<ul>
+<li>先在一个业务线试点"去掉一层中间管理"，以AI工具替代信息传递职能</li>
+<li>明确哪些管理动作可被AI替代（排期、进度追踪、信息汇总），哪些不能（判断、激励、文化建设）</li>
+<li>被替代的管理者需要升级为"AI系统运营者"角色，否则面临出局</li>
+</ul>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>今天最值得深想的，是Uber的故事和豆包的故事放在一起看。</p>
+
+<p>Uber：工程师95%用AI，AI预算4个月烧完，HR被裁23%。官方说"与AI无关"，但时间节点摆在那里——这不是AI替代，是AI提效之后组织惯性还没跟上，导致后台支持职能的"供给过剩"被看见了。</p>
+
+<p>豆包：飞书+豆包整合，Session团队调整，媒体叫"裁员"，官方说"分工调整"——本质上，字节正在用AI时代的逻辑重新定义团队边界，把人集中到真正产生价值的地方。</p>
+
+<p>这两个故事的共同底色是：<strong>AI Native的组织，不养冗余，不保庇护，只看产出。</strong></p>
+
+<p>对于一个500人的团队来说，现在要问的不是"要不要AI化"，而是"我们的哪些岗位在AI化之后还有存在理由"。这个问题很残忍，但越早想清楚，越能主动设计转型路径，而不是被动等裁员通知。</p>
+
+<p>I-T-π型人才、AI Native Pod、四层→两层半——不是口号，是活下来的结构性答案。</p>
+
+<hr>
+
+<p>*丫头 · AI组织变革日报 · 2026-09-25*</p>
+<p>*每个工作日更新，周末有本周回顾*</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/EEmkdiEahotqcOxJ75ccFfxtnMe" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
