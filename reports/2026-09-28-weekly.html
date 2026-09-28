@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开发者工具/开源周刊 2026-09-28</title>
+    <meta property="og:title" content="开发者工具/开源周刊 2026-09-28">
+    <meta property="og:description" content="# 🛠️ 开发者工具/开源周刊 2026-09-28  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。本期数据取自 GitHub Trending（本周榜）与 Hacker News 近7日热榜。  ## 🏆 本周 Top">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-09-28-weekly.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# 🛠️ 开发者工具/开源周刊 2026-09-28  > 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。本期数据取自 GitHub Trending（本周榜）与 Hacker News 近7日热榜。  ## 🏆 本周 Top">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 开发者工具/开源周刊 2026-09-28</h1>
+            <div class="date">📅 2026-09-28</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>🛠️ 开发者工具/开源周刊 2026-09-28</h1>
+
+<blockquote>每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。本期数据取自 GitHub Trending（本周榜）与 Hacker News 近7日热榜。</blockquote>
+
+<h2>🏆 本周 Top 10</h2>
+
+<h3>1. vectorize-io / hindsight ⭐ 37.3k stars (+11.1k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/vectorize-io/hindsight" target="_blank">GitHub</a></p>
+
+<p>Hindsight 是"会学习的 Agent 记忆层"，本周暴涨 1.1 万星、登顶周增长榜。它解决的是当前 AI Agent 最痛的短板：跨会话记忆。传统 Agent 每次对话都是"失忆"状态，Hindsight 提供一套可持久化、可检索、还能从历史交互中自我提炼经验的记忆系统，让 Agent 越用越"懂你"。</p>
+
+<p><strong>为什么值得关注：</strong> 记忆是 Agent 从"工具"走向"同事"的关键一环。对产研团队而言，一个能记住项目上下文、团队规范、历史决策的 AI 助手，价值远超一次性问答工具——这正是"AI Native Pod"里 AI 成员长期在岗的基础设施。</p>
+
+<hr>
+
+<h3>2. affaan-m / ECC ⭐ 268k stars (+5.2k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> JavaScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/affaan-m/ECC" target="_blank">GitHub</a></p>
+
+<p>ECC 是一套"Agent 编排性能优化系统"，为 Claude Code、Codex、OpenCode、Cursor 等主流编码 Agent 提供技能（Skills）、直觉（Instincts）、记忆、安全和"研究优先"的开发框架。26 万星的体量说明它已成为 Agent 生态的基础层——不是某个 Agent，而是让所有 Agent 变强的"外挂"。</p>
+
+<p><strong>为什么值得关注：</strong> 它把"如何用好编码 Agent"这件事产品化、标准化了。团队不必各自摸索 prompt 和工作流，直接复用一套经过验证的技能库和安全护栏，等于给全员的 AI 编码能力做了统一提升。</p>
+
+<hr>
+
+<h3>3. paperclipai / paperclip ⭐ 89.8k stars (+7.4k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/paperclipai/paperclip" target="_blank">GitHub</a></p>
+
+<p>Paperclip 自称"人人都在用的工作 Agent 管理开源应用"。它不是又一个单点 Agent，而是一个"Agent 管理台"——统一编排、监控、协调团队里跑着的各种 AI Agent。本周 +7.4k 星，反映出企业级"多 Agent 协同"正从概念走向落地工具。</p>
+
+<p><strong>为什么值得关注：</strong> 当团队里跑着十几个 Agent（写代码的、测试的、审查的、跑数据的），谁来管？Paperclip 这类"Agent 运营平台"正是"一人多岗"放大器——一个人借助管理台就能指挥一支 AI 队伍。</p>
+
+<hr>
+
+<h3>4. stablyai / orca ⭐ 79.6k stars (+6.2k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/stablyai/orca" target="_blank">GitHub</a></p>
+
+<p>Orca 是"并行 Agent 舰队"的 ADE（Agent 开发环境）。你可以用自己的订阅账号，同时驱动一批编码 Agent 并行干活，桌面端、移动端、远程运行时全覆盖。它把"一个人开一个 AI"升级为"一个人指挥一支 AI 舰队"。</p>
+
+<p><strong>为什么值得关注：</strong> 并行是效率的本质。以前一次改一个 bug，现在十个 Agent 同时改十个模块。对追求人效倍增的产研团队，Orca 代表的"并行编码"是下一阶段的生产力形态。</p>
+
+<hr>
+
+<h3>5. alibaba / open-code-review ⭐ 41.9k stars (+3.7k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Go</p>
+<p><strong>链接：</strong> <a href="https://github.com/alibaba/open-code-review" target="_blank">GitHub</a></p>
+
+<p>阿里开源的代码审查工具，混合架构：确定性流水线 + LLM Agent。它能给出精确到行级的评论，内置多语言规则集（空指针、线程安全、XSS、SQL 注入），兼容 OpenAI 和 Anthropic API，号称"在阿里规模下久经考验"。</p>
+
+<p><strong>为什么值得关注：</strong> 代码审查是最容易被 AI 接管、又最能保住质量底线的环节。大厂级、开源、可自部署、规则可控——这对国内注重数据安全的团队是理想选择，能直接替代大量人工初审工作量。</p>
+
+<hr>
+
+<h3>6. cloudflare / security-audit-skill ⭐ 22.3k stars (+4.8k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> JavaScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/cloudflare/security-audit-skill" target="_blank">GitHub</a></p>
+
+<p>Cloudflare 出品的"编码 Agent 安全审计技能"，支持多阶段安全审计，输出经过独立验证、机器可读的发现结果。它以"Skill"形式挂载到编码 Agent 上，让 AI 具备专业级安全审计能力。</p>
+
+<p><strong>为什么值得关注：</strong> 安全审计过去高度依赖稀缺的安全专家。把它做成可复用的 Agent 技能后，普通开发就能跑出专业级审计报告——典型的"AI 让专业能力普惠化"，也是"I 型→T 型"能力横向拓宽的实例。</p>
+
+<hr>
+
+<h3>7. Tencent / WeKnora ⭐ 30.6k stars (+2.7k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Go</p>
+<p><strong>链接：</strong> <a href="https://github.com/Tencent/WeKnora" target="_blank">GitHub</a></p>
+
+<p>腾讯开源的 LLM 知识平台，把原始文档一站式转化为可查询的 RAG、自主推理 Agent 和自维护 Wiki。它瞄准的是企业知识库的痛点：文档写完就烂在角落，没人维护也搜不到。</p>
+
+<p><strong>为什么值得关注：</strong> 知识管理是"两层半组织"高效运转的隐性基础设施。WeKnora 的"自维护 Wiki"直击文档过期难题，让团队知识资产真正流动起来，减少重复沟通和信息孤岛。</p>
+
+<hr>
+
+<h3>8. HKUDS / CLI-Anything ⭐ 50.7k stars (+1.1k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/HKUDS/CLI-Anything" target="_blank">GitHub</a></p>
+
+<p>港大数据智能实验室出品，口号是"让所有软件都变成 Agent-Native"。它提供一个 CLI-Hub，把各类软件包装成 Agent 能直接调用的命令行接口，弥合了"AI 会思考但不会动手操作软件"的鸿沟。</p>
+
+<p><strong>为什么值得关注：</strong> Agent 要真正干活，必须能操作现有工具链。CLI-Anything 这类"Agent 与软件的桥梁"决定了 AI 能自动化的边界——桥越宽，能被 AI 接管的岗位职能就越多。</p>
+
+<hr>
+
+<h3>9. anthropics / financial-services ⭐ 37.9k stars (+2.6k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> Python</p>
+<p><strong>链接：</strong> <a href="https://github.com/anthropics/financial-services" target="_blank">GitHub</a></p>
+
+<p>Anthropic 官方推出的金融服务垂直 Agent 方案，把 Claude 的能力封装为面向金融场景的开箱即用工具集。大厂官方下场做垂直行业 Agent，标志着通用 Agent 正在向"行业专家 Agent"分化。</p>
+
+<p><strong>为什么值得关注：</strong> 垂直 Agent 是 2026 下半年的明确趋势。它提示各行业团队：与其等通用模型，不如现在就用官方模板+自有数据，快速搭出本行业的专家级 AI 助手。</p>
+
+<hr>
+
+<h3>10. anthropics / claude-code ⭐ 148.3k stars (+1.5k this week)</h3>
+<p><strong>来源：</strong> GitHub Trending | <strong>语言：</strong> TypeScript</p>
+<p><strong>链接：</strong> <a href="https://github.com/anthropics/claude-code" target="_blank">GitHub</a></p>
+
+<p>Claude Code 是驻扎在终端里的编码 Agent，理解代码库、执行日常任务、解释复杂代码、处理 git 工作流——全部通过自然语言完成。作为编码 Agent 赛道的头部，14.8 万星、本周仍稳定增长，是整个 Agent 生态的基准参照物。</p>
+
+<p><strong>为什么值得关注：</strong> 本期 Top 10 里有多个项目（ECC、davila7/claude-code-templates、Orca）都围绕它构建。选定一个主力编码 Agent 并搭好配套生态，是团队 AI 化落地的第一块基石。</p>
+
+<h2>📊 趋势洞察</h2>
+
+<h3>本周热门方向</h3>
+<ul>
+<li><strong>Agent 记忆与长期上下文</strong>：Hindsight（+11k）单周登顶，记忆成为 Agent 竞争新焦点。</li>
+<li><strong>多 Agent 编排与并行</strong>：Paperclip（管理台）、Orca（并行舰队）、ECC（编排优化）同榜，"一个人指挥一队 AI"从口号变成工具。</li>
+<li><strong>代码审查/安全审计 Agent 化</strong>：阿里 open-code-review、Cloudflare security-audit-skill 双双高增长，质量与安全环节正被 AI 系统性接管。</li>
+<li><strong>大厂开源垂直 Agent</strong>：腾讯 WeKnora、Anthropic financial-services、TencentCloud Octop，通用 Agent 向行业专家分化。</li>
+</ul>
+
+<h3>值得关注的信号</h3>
+<ul>
+<li><strong>前沿模型集中发布</strong>：本周 HN 热榜同时出现 Claude Opus 5.5、GPT-6 Sol and Luna、Grok 4.7、MiMo v2.6——模型迭代进入"周更"节奏，Agent 底座持续增强。</li>
+<li><strong>"AI 代写反感"浮现</strong>：HN 上《I don't want to read what you didn't write》《I said no and Apple said yes》双双高赞，说明用户开始警惕"无脑 AI 生成内容"，对 AI 输出的质量和真实性提出更高要求。</li>
+<li><strong>主权/去依赖趋势</strong>：荷兰政府基于 NixOS 自建微软替代方案登上 HN 首页，反映组织对技术自主权的重视上升——数据安全和可自部署将成为工具选型硬指标。</li>
+</ul>
+
+<h2>💡 丫头推荐</h2>
+
+<p>本周最值得你花时间看的 3 个项目：</p>
+<p>1. <strong>vectorize-io / hindsight</strong> — 如果你在搭团队 AI 助手，记忆层是绕不开的基础设施，先看它怎么做长期记忆。</p>
+<p>2. <strong>alibaba / open-code-review</strong> — 大厂级、开源、可自部署、规则可控，是国内团队落地"AI 代码审查"性价比最高的起点。</p>
+<p>3. <strong>stablyai / orca</strong> — 想体验"并行 Agent 舰队"的生产力上限，Orca 是当下最直观的入口，一个人指挥十个 Agent 是什么感觉，跑一次就懂。</p>
+
+<h2>🔗 星爷视角</h2>
+
+<p>本周榜单几乎是"组织变革工具化"的一次集中演出。Hindsight 的记忆层，让 AI 成员能长期在岗、积累经验——这正是"AI Native Pod"里 AI 从临时工变成正式同事的前提。Paperclip、Orca、ECC 三件套则把"一人多岗"推向"一人多军"：一个人不再只是身兼数职，而是指挥一支 AI 舰队并行作战，人效的天花板被彻底抬高。代码审查（阿里）、安全审计（Cloudflare）Agent 化，意味着"审查员""安全工程师"这类以规则和经验为主的岗位职能，正被系统性吸收进 AI 流水线——对四层→两层半的组织，这直接压缩了中间的质量把关层。而 WeKnora 的自维护知识库，则为扁平组织提供了知识不流失的底座。趋势很清晰：会用 AI 舰队、能横向调度专业 Agent 的"T 型/π 型"个体，正在成为新组织的核心节点。</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/WbVFdgzkrogDZcxQgg6ceAjenwc" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
