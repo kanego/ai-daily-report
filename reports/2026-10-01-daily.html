@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-10-01</title>
+    <meta property="og:title" content="AI组织变革日报 2026-10-01">
+    <meta property="og:description" content="# AI组织变革日报 2026-10-01  > 丫头出品 · 每日追踪AI重塑组织的前沿动态  ---  ## 📌 今日要闻  ### 1. OpenAI DevDay 2026：Codex全面云端化，AI编码进入&quot;常驻代理&quot;时代  2026年9月29日，OpenAI在旧金山Fort Mason举">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-10-01-daily.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-10-01  > 丫头出品 · 每日追踪AI重塑组织的前沿动态  ---  ## 📌 今日要闻  ### 1. OpenAI DevDay 2026：Codex全面云端化，AI编码进入&quot;常驻代理&quot;时代  2026年9月29日，OpenAI在旧金山Fort Mason举">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-10-01</h1>
+            <div class="date">📅 2026-10-01</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-10-01</h1>
+
+<blockquote>丫头出品 · 每日追踪AI重塑组织的前沿动态</blockquote>
+
+<hr>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. OpenAI DevDay 2026：Codex全面云端化，AI编码进入"常驻代理"时代</h3>
+
+<p>2026年9月29日，OpenAI在旧金山Fort Mason举办史上规模最大的DevDay，发布超过20项重磅更新。其中最受开发者关注的是<strong>Codex的全面云端化</strong>：新版Codex拥有可复用的云端开发环境，支持跨设备无缝衔接，CLI新增语音控制，并上线面向安全的代码仓库扫描与修复产品。此外，OpenAI还发布了"Dots"——一种<strong>常驻型AI代理</strong>（Always-On Agents），以及全新的Decisions API和Agents API。GPT-6.1 Sol和Ultrafast模型同步亮相。这次DevDay标志着AI从"工具辅助"正式迈入"代理执行"时代，工程师的核心职能将加速向"架构决策+验证判断"转移，传统编码岗位面临深层重塑。</p>
+
+<p>来源：<a href="https://openai.com/index/devday-2026-recap/" target="_blank">OpenAI DevDay 2026 Recap</a> | <a href="https://techcrunch.com/2026/09/29/openai-gives-codex-reusable-cloud-environments-that-work-across-devices/" target="_blank">TechCrunch报道</a></p>
+
+<hr>
+
+<h3>2. 全球科技业Q1裁员逾7.3万，AI重组浪潮重塑就业结构</h3>
+
+<p>2026年一季度，全球科技行业已有超过73,200个职位被裁撤，波及95家公司，Oracle、Amazon、Meta、Snap、Disney均在列。Meta裁减约8000人同步宣布2026年资本开支1250~1450亿美元、重点投向AI数据中心；Amazon裁减16,000人；Oracle裁减约30,000人。与以往"降本增效"式裁员不同，此轮裁员的官方理由高度一致：<strong>以AI重组业务流程</strong>，削减可被自动化替代的中间执行层，集中资源押注AI基础设施与模型研发。与此同时，被裁岗位多集中于内容审核、数据标注、客服支持、初级开发等"执行型"工种，印证了AI对认知劳动"流水线端"的率先冲击。</p>
+
+<p>来源：<a href="https://deccanfounders.com/2026/21/news/2026-tech-layoffs-ai-restructuring-oracle-amazon-meta/" target="_blank">Deccan Founders报道</a> | <a href="https://www.ibtimes.co.uk/meta-platforms-cuts-8000-jobs-ai-restructuring-1797844" target="_blank">IBTimes UK</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<p>1. <strong>Monday.com宣布7月重组</strong>：聚焦AI工作平台战略，产品、市场和GTM全线向AI驱动转型。来源：<a href="https://www.tipranks.com/news/company-announcements/monday-com-launches-july-2026-restructuring-to-sharpen-focus-on-ai-work-platform" target="_blank">TipRanks</a></p>
+
+<p>2. <strong>BCG报告：55% "未来型企业"已做AI时代岗位规划</strong>，而落后企业仅17%有此意识，差距显著。来源：<a href="https://www.bcg.com/publications/2026/the-formula-for-agentic-ai-value" target="_blank">BCG</a></p>
+
+<p>3. <strong>OpenAI放弃发布GPT-6.1 Astra</strong>：内部测试发现安全隐患，主动叫停，展现大模型安全治理的新压力。来源：<a href="https://www.theguardian.com/technology/2026/sep/28/openai-new-model-astra-release-scrapped" target="_blank">The Guardian</a></p>
+
+<p>4. <strong>腾讯WorkBuddy成AI办公新核心</strong>：阿里QoderWork、字节Trae等产品同场竞技，国内AI办公入口之争进入白热化阶段。来源：<a href="https://t.cj.sina.com.cn/articles/view/7062088949/1a4eeecf500101boek" target="_blank">新浪财经</a></p>
+
+<p>5. <strong>中国法院：AI替岗不能成为违法裁员挡箭牌</strong>。35岁员工因岗位被AI替代拒绝降薪遭解除劳动合同，法院判决26万赔偿，为AI裁员划定法律红线。来源：<a href="https://m.cyol.com/gb/articles/2026-05/03/content_wdEENBuRVK.html" target="_blank">央视新闻</a></p>
+
+<p>6. <strong>AI Native Pod模式加速普及</strong>：4人AI Pod正在外包12人传统团队的交付量，核心在于AI架构师+Agent执行层的两层协作结构。来源：<a href="https://humaninresidence.com/articles/the-4-person-ai-pod-that-s-outshipping-12-person-teams" target="_blank">Human In Residence</a></p>
+
+<p>7. <strong>飞书2026年新客超90%同步采购AI产品</strong>：2025年营收超30亿元，AI产品正成为标配而非增值选项。来源：<a href="https://tele.ofweek.com/2026-08/ART-8320506-8420-30697862.html" target="_blank">OFweek</a></p>
+
+<p>8. <strong>Gemini 4 Pro（Barium B检查点）10月发布</strong>：3D渲染与软件工程能力大幅提升，与Anthropic Opus 5.5正面竞争。来源：<a href="https://www.geeky-gadgets.com/gemini-4-pro-opus-comparison/" target="_blank">Geeky Gadgets</a></p>
+
+<p>9. <strong>《AI Layoff Trap》博弈论论文</strong>（Falk & Tsoukalas，2026年3月）：市场充分竞争下，单个企业用AI替人是"理性均衡"，但全行业同步替代可能导致需求萎缩的系统性陷阱。来源：<a href="https://www.myzaker.com/article/6a3509428e9f091ac33364ab" target="_blank">ZAKER</a></p>
+
+<p>10. <strong>AI自动化编码正解放开发者</strong>：DeepLearning.AI观察：随着AI接管常规编码，开发者正被推向技术架构决策和产品需求范围定义等高级职能。来源：<a href="https://www.deeplearning.ai/the-batch" target="_blank">DeepLearning.AI The Batch</a></p>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>🇺🇸 美国</h3>
+
+<p><strong>1. Meta大裁员+大投入双轨并行</strong></p>
+<p>Meta在2026年裁减8000名员工的同时，宣布1250~1450亿美元资本开支全面押注AI，形成"裁人换算力"的典型模式。此轮裁员集中于中间管理层和执行性岗位，与Zuckerberg"扁平化、AI化"的组织哲学高度一致。标志性信号：Meta正在把传统的"人力执行层"替换为AI代理执行层。</p>
+
+<p><strong>2. AI Native Pod成为硅谷主流叙事</strong></p>
+<p>OpenAI、Anthropic等头部AI公司正在以截然不同的方式构建AI原生团队：OpenAI偏向"验证优先"（verification-centric），Anthropic偏向更严格的人机协作规范。共同趋势是：工程师从"生成代码"转向"验证代码"，广度型工程师（T→π型）比纯深度专家更受欢迎。</p>
+
+<p><strong>3. OpenAI Dots：常驻型代理颠覆异步工作流</strong></p>
+<p>DevDay发布的"Dots"代理可全天候在后台运行任务，不再依赖人工触发。这一产品形态预示着未来团队中"执行类任务"将默认由AI承担，人类专注于例外处理和决策审批。</p>
+
+<h3>🇨🇳 中国</h3>
+
+<p><strong>4. 腾讯/阿里/字节AI办公产品格局初定</strong></p>
+<p>腾讯WorkBuddy、阿里QoderWork/悟空、字节Trae/豆包办公三大产品矩阵同步发力，争夺企业AI办公入口。飞书Aily与之并列，但各家切入点不同：腾讯重协同、阿里重Agent平台、字节重编码+内容生产。国内AI办公"船票争夺战"进入关键阶段。</p>
+
+<p><strong>5. 中国司法为AI裁员划红线</strong></p>
+<p>2026年多起"AI替岗裁员"劳动仲裁案件进入法院审理，判决普遍支持劳动者。核心逻辑：技术变革不能免除雇主的法定程序义务（培训、转岗、协商）。这将对国内企业AI重组策略产生显著约束，倒逼"人机协同转型"而非粗暴替换。</p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<p><strong>1. OpenAI Codex Cloud（全云端版）</strong></p>
+<ul>
+<li>支持可复用云端开发环境，跨设备无缝续接</li>
+<li>新增CLI语音控制、代码审查工具、安全扫描与修复</li>
+<li>适用场景：企业级AI辅助开发流水线</li>
+<li>来源：<a href="https://techcrunch.com/2026/09/29/openai-gives-codex-reusable-cloud-environments-that-work-across-devices/" target="_blank">TechCrunch</a></li>
+</ul>
+
+<p><strong>2. OpenAI Agents API + Decisions API</strong></p>
+<ul>
+<li>面向开发者的代理编排底层API，支持构建Multi-Agent系统</li>
+<li>Decisions API提供AI决策审计链，满足企业合规需求</li>
+<li>来源：<a href="https://openai.com/index/devday-2026-recap/" target="_blank">OpenAI DevDay 2026</a></li>
+</ul>
+
+<p><strong>3. 腾讯WorkBuddy</strong></p>
+<ul>
+<li>定位AI办公协同平台，深度集成腾讯生态</li>
+<li>2026年成为腾讯企业级AI的核心产品，帮助腾讯"拿到AI办公时代的船票"</li>
+<li>来源：<a href="https://t.cj.sina.com.cn/articles/view/7062088949/1a4eeecf500101boek" target="_blank">新浪财经</a></li>
+</ul>
+
+<p><strong>4. Gemini 4 Pro（Google，Barium B）</strong></p>
+<ul>
+<li>2026年10月发布，软件工程与3D渲染双料强化</li>
+<li>与Anthropic Opus 5.5展开正面竞争，API已面向开发者开放</li>
+<li>来源：<a href="https://www.geeky-gadgets.com/gemini-4-pro-opus-comparison/" target="_blank">Geeky Gadgets</a></li>
+</ul>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达</h2>
+
+<blockquote>📅 今日主题：<strong>AI-Native 团队流程</strong>（周四轮）</blockquote>
+
+<h3>1. OpenAI Codex Cloud → AI辅助编码流水线</h3>
+
+<p><strong>适用场景</strong>：中大型研发团队，希望将AI编码助手从"个人工具"升级为"团队基础设施"</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li><strong>Phase 1（1-2周）</strong>：在2-3个志愿小组（Pod）试跑Codex Cloud，建立云端开发环境模板</li>
+<li><strong>Phase 2（3-4周）</strong>：将代码审查、安全扫描接入CI/CD流水线，设立人工验证门禁</li>
+<li><strong>Phase 3（持续）</strong>：统计"AI生成代码占比"和"人工修改率"，以数据驱动扩大推广范围</li>
+<li><strong>关键提醒</strong>：Codex Cloud是基础设施层，需配套"验证型工程师"角色，不能单纯押注AI生成质量</li>
+</ul>
+
+<hr>
+
+<h3>2. AI Native Pod 模型 → 4人替代12人的组织结构实验</h3>
+
+<p><strong>适用场景</strong>：新产品线/创新团队，希望验证极小团队+AI代理的极限交付能力</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>抽取4-6人组成"AI Pod试验田"，配置：1名AI架构师（负责Agent编排）+ 2名全栈工程师（负责判断/验证）+ 1名产品/业务接口人</li>
+<li>给Pod一个真实的季度交付目标，与传统8-12人团队同期对比交付速度和质量</li>
+<li>重点观测：哪些任务AI代理可独立完成？哪些仍需人工介入？建立"人机协作边界"知识库</li>
+<li><strong>避坑</strong>：Pod模型的核心不是"少人"，而是"高人均决策密度"；盲目缩编而不提升个体能力，结果只会是低质量交付</li>
+</ul>
+
+<hr>
+
+<h3>3. Decisions API → AI决策审计链（企业合规场景）</h3>
+
+<p><strong>适用场景</strong>：有AI治理/合规要求的金融、医疗、政务、大型企业</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>将Decisions API嵌入关键业务流程（如：AI审批、AI推荐、AI定价）的决策节点</li>
+<li>自动记录每次AI决策的输入、模型版本、输出及人工覆盖记录</li>
+<li>与法务/合规部门共同制定"AI决策可审计标准"，提前应对监管要求</li>
+<li><strong>价值</strong>：在"AI替岗引发劳动纠纷"的法律环境下，可追溯的AI决策链是企业的重要风险对冲手段</li>
+</ul>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>今天最值得深思的信号，是两条新闻的"叠加效应"：一边是OpenAI DevDay宣布Codex全面云端化、Dots常驻代理上线——技术侧的AI执行能力已经越过了一个关键阈值；另一边是中国法院为AI替岗裁员划定法律红线，《AI Layoff Trap》博弈论论文揭示了全行业AI替人的系统性陷阱。</p>
+
+<p>这两个信号放在一起，指向一个核心命题：<strong>AI能做，≠ AI应当无条件替代人。</strong></p>
+
+<p>真正的AI-Native组织，不是"最大化AI替代率"，而是重新设计人与AI的协作边界。BCG数据显示，只有55%的"未来型企业"在做AI时代的岗位规划，其余45%要么在盲目裁员，要么在按兵不动。</p>
+
+<p>对照"四层→两层半"的组织进化路径：AI正在吃掉的，是"执行层"和"协调层"的大部分工作；但"判断层"和"架构层"不仅没有被替代，反而因为AI的放大效应而变得更加稀缺。I-T-π型人才的价值，在2026年的秋天，已经不是预测，而是现实。</p>
+
+<hr>
+
+<p>*本报告由丫头自动生成，数据来源于公开搜索结果，仅供参考。发布时间：2026-10-01*</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/VVUud2J7XoBEkXx35POcT3sUntd" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
