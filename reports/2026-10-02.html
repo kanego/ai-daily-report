@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-10-02</title>
+    <meta property="og:title" content="AI组织变革日报 2026-10-02">
+    <meta property="og:description" content="# AI组织变革日报 2026-10-02  > 今日是周五，工具雷达主题：**变革方法论**  ---  ## 📌 今日要闻  ### 1. Meta裁员8000人、同步向AI重组7000人——科技业AI结构性重组进入新阶段  Meta在2026年宣布裁减约8000名员工，同时将7000个岗位重新">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-10-02.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-10-02  > 今日是周五，工具雷达主题：**变革方法论**  ---  ## 📌 今日要闻  ### 1. Meta裁员8000人、同步向AI重组7000人——科技业AI结构性重组进入新阶段  Meta在2026年宣布裁减约8000名员工，同时将7000个岗位重新">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-10-02</h1>
+            <div class="date">📅 2026-10-02</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-10-02</h1>
+
+<blockquote>今日是周五，工具雷达主题：<strong>变革方法论</strong></blockquote>
+
+<hr>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. Meta裁员8000人、同步向AI重组7000人——科技业AI结构性重组进入新阶段</h3>
+
+<p>Meta在2026年宣布裁减约8000名员工，同时将7000个岗位重新分配至AI团队，并将2026年资本支出上调至1250亿至1450亿美元，其中大部分用于AI数据中心、定制芯片和模型训练。扎克伯格明确将生成式AI和AI Agent列为公司最高战略优先级。这一举措标志着AI对大型科技公司组织架构影响正从"预测阶段"进入"现实阶段"。据统计，2026年全球科技行业裁员人数已超过10万人，Q1共有73,200人被裁，涉及Oracle、Amazon、Meta、Snap等95家企业。AI不再只是生产力工具，而是直接重塑组织形态的结构性力量。</p>
+
+<p>来源：<a href="https://kaelzhang.com/blog/meta-ai-restructuring-8000-layoffs-2026/" target="_blank">Meta裁员8000人报道</a> | <a href="https://deccanfounders.com/2026/21/news/2026-tech-layoffs-ai-restructuring-oracle-amazon-meta/" target="_blank">Q1科技裁员统计</a></p>
+
+<h3>2. Monday.com裁员20%：SaaS协作平台全面向"AI Work Platform"转型</h3>
+
+<p>2026年7月22日，Monday.com启动重组计划，裁减约630名员工（占全球员工总数20%），将公司战略重心彻底转向AI工作平台。新定位不再是"任务管理工具"，而是"让AI替你执行工作"的AI Work Platform——人与AI Agent在同一平台协同，AI不只是辅助，而是直接执行任务。250,000+客户已在使用，这是SaaS行业从"工具时代"转向"AI Agent时代"最具代表性的案例之一。</p>
+
+<p>来源：<a href="https://ir.monday.com/news-and-events/news-releases/news-details/2026/monday-com-Goes-All-In-on-AI-From-Work-Management-Platform-to-AI-Work-Platform/default.aspx" target="_blank">Monday.com官方公告</a> | <a href="https://techstartups.com/2026/07/27/monday-com-lays-off-20-of-workforce-as-ai-restructuring-cuts-620-jobs/" target="_blank">裁员详情</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<p>1. <strong>OpenAI三位高管离职，全面转向企业AI</strong> | OpenAI完成领导层重组，聚焦企业部署与可重复销售，Anthropic趁势拿下70%企业合同。来源：<a href="https://aihaberleri.org/en/news/openai-loses-3-executives-in-2026-restructuring-what-it-means-for-enterprise-ai-and-coding-tools" target="_blank">aihaberleri.org</a></p>
+
+<p>2. <strong>OpenAI-微软伙伴关系重组</strong> | OpenAI完成1100亿美元融资（Amazon领投500亿），迫使与微软关系重新谈判。来源：<a href="https://udit.co/blog/microsoft-openai-partnership-restructured-new-terms" target="_blank">udit.co</a></p>
+
+<p>3. <strong>AI替岗裁员引发劳动争议，法院判决保护劳动者</strong> | 中国2026年多起AI替岗引发降薪开除案例，法院认定违法，AI替岗不是"免责牌"。来源：<a href="https://m.cyol.com/gb/articles/2026-05/03/content_wdEENBuRVK.html" target="_blank">m.cyol.com</a></p>
+
+<p>4. <strong>《AI Layoff Trap》论文：用博弈论揭示AI裁员困局</strong> | 经济学家Falk等人证明：在充分竞争市场中，单个企业用AI替人"划算"，但全局是囚徒困境。来源：<a href="https://www.myzaker.com/article/6a3509428e9f091ac33364ab" target="_blank">myzaker.com</a></p>
+
+<p>5. <strong>老板说AI提升效率，员工说压力倍增</strong> | Guardian报道：Block、Amazon、Dow、UPS等企业一边裁人一边用AI提产出，留下来的员工压力山大却缺少培训。来源：<a href="https://www.theguardian.com/technology/2026/apr/14/ai-productivity-workplace-errors" target="_blank">The Guardian</a></p>
+
+<p>6. <strong>NVIDIA全员AI辅助：40000工程师效率大提升</strong> | Jensen Huang表示NVIDIA所有4万名工程师均使用Cursor AI辅助，生产力显著提升。来源：<a href="https://cursor.com/en-US" target="_blank">cursor.com</a></p>
+
+<p>7. <strong>Supabase AI工具创建超60%新数据库</strong> | AI工具现在生成超60%的新Supabase数据库，开发者生态正在被AI重塑。来源：<a href="https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-monday-september-28-2026/" target="_blank">theneuron.ai</a></p>
+
+<p>8. <strong>"真正淘汰我的不是AI，而是不用AI的公司"</strong> | 组织变革核心矛盾：只想替人不愿重设流程的企业，最终都败在了竞争对手手里。来源：<a href="https://enovace.com/strategy/2026/04/29/ai-ai/" target="_blank">enovace.com</a></p>
+
+<p>9. <strong>2026 AI劳动力转变警告：自主AI Agent将彻底重构现代职场</strong> | 报告指出2026年是AI Agent从实验室走向生产环境的关键节点，职场架构将不可逆转。来源：<a href="https://blog.enso.bot/warning-the-2026-ai-workforce-shift-will-steal-your-job-mp3nidvo" target="_blank">blog.enso.bot</a></p>
+
+<p>10. <strong>OpenAI进军企业AI销售，新增Chief Revenue Officer</strong> | 领导层调整旨在提升企业部署能力，为潜在IPO做准备。来源：<a href="https://www.aidenza.in/articles/hires-new-cro-as-executive-shake-up-continues" target="_blank">aidenza.in</a></p>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>1. Meta：裁旧补新，AI重分配</h3>
+<p>Meta裁员8000人的同时，将7000个岗位转向AI团队，资本支出大幅提升至1250-1450亿美元。这是典型的"组织再平衡"而非单纯收缩——传统业务运营岗收缩，AI研发/部署岗扩张。这种"裁员+内部再分配"模式预计将成为大厂标准动作。</p>
+
+<h3>2. OpenAI：从明星独角兽变企业服务商</h3>
+<p>2026年OpenAI经历了三位高管离职，战略从"消费端AI"转向"企业AI部署"。Anthropic趁机拿下70%企业合同。这一转变折射出整个行业：技术能力不再是护城河，销售执行力和企业集成能力才是。</p>
+
+<h3>3. SaaS行业全面AI化转型</h3>
+<p>Monday.com是最明显的代表：从任务管理工具变为AI执行平台，裁员20%的同时产品形态彻底重构。预计未来12个月内，更多SaaS企业将面临"要么AI化、要么被淘汰"的抉择。</p>
+
+<h3>4. 中国职场：AI替岗引发劳动法博弈</h3>
+<p>2026年多起AI替岗降薪纠纷进入司法程序，法院判决为劳动者撑腰。国际劳工组织研究显示，全球1/4就业岗位可能受生成式AI影响。中国立法和司法正在逐步建立AI时代的劳动保护框架。</p>
+
+<h3>5. 2026全球科技裁员超10万：AI加速组织进化</h3>
+<p>Q1 2026就有73,200人被裁，主要来自Oracle、Amazon、Meta、Snap、Disney。这波裁员的显著特征：不是公司经营亏损，而是主动押注AI、主动清退"AI可替代岗位"——组织进化逻辑彻底改变。</p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<h3>1. Cursor — AI编码助手（企业级）</h3>
+<p>NVIDIA 4万名工程师全员使用，Jensen Huang亲口背书。面向企业团队提供AI辅助编码，支持多语言、代码补全、Agentic编辑。企业版已成主流开发工具栈标配。</p>
+<p>🔗 https://cursor.com</p>
+
+<h3>2. Supabase — AI优先的后端基础设施</h3>
+<p>开源Postgres平台，10M+开发者，AI工具现在创建超60%的新Supabase数据库，成为AI-Native应用开发栈的核心基础设施。估值已达$10B级别。</p>
+<p>🔗 https://github.com/supabase/supabase</p>
+
+<h3>3. Monday.com AI Work Platform — AI Agent协作平台</h3>
+<p>250,000+企业客户，AI Agent与人类团队在同一平台执行任务，从"任务管理"升级为"工作执行"。是目前最大规模的企业AI Agent落地案例之一。</p>
+<p>🔗 https://ir.monday.com</p>
+
+<h3>4. Claude for Enterprise（Anthropic）</h3>
+<p>2026年拿下70%企业AI合同，在代码、分析、长文档处理上领先。OpenAI企业侧失势后，Claude成为最主流的企业级AI工具选择。</p>
+
+<h3>5. Free.ai Coder — 免费AI编程工具</h3>
+<p>支持Python、JavaScript等30+语言，无需注册，适合个人开发者和小团队低成本起步。</p>
+<p>🔗 https://free.ai/coder/</p>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达（周五：变革方法论）</h2>
+
+<h3>方法一：AI Native Pod 小分队模型</h3>
+<p><strong>适用场景</strong>：500人研发团队的组织重设计</p>
+<p><strong>核心逻辑</strong>：以6-8人跨职能AI Pod为基本单元，每个Pod包含产品、工程、数据、AI prompt工程师，配合AI Agent完成过去需要20-30人的工作量。</p>
+<p><strong>落地建议</strong>：</p>
+<ul>
+<li>第一阶段（1-3个月）：选择1-2个低风险业务线试点Pod，配置完整AI工具栈（Cursor+Claude+Supabase）</li>
+<li>第二阶段（3-6个月）：总结Pod模型SOP，培训I型→T型→π型人才转型路径</li>
+<li>第三阶段（6-12个月）：全面推广，四层架构（CEO-VP-Manager-IC）压缩为两层半（CEO-Lead-IC+AI）</li>
+</ul>
+
+<h3>方法二：AI增强的"两会一报"机制</h3>
+<p><strong>适用场景</strong>：中大型团队日常协作降本提效</p>
+<p><strong>核心逻辑</strong>：用AI自动生成会议纪要、周报、状态更新，减少人工信息同步时间60%+</p>
+<p><strong>落地建议</strong>：</p>
+<ul>
+<li>每次会议结束后，AI自动生成结构化纪要（决策项/行动项/Owner/DDL）</li>
+<li>每周AI汇总各Pod进展，管理层只需Review异常项</li>
+<li>500人团队预计每周节省1500人时，相当于增加37.5人当量产能</li>
+</ul>
+
+<h3>方法三：变革阻力地图（AI辅助）</h3>
+<p><strong>适用场景</strong>：大规模AI转型中的人员管理</p>
+<p><strong>核心逻辑</strong>：用AI分析员工行为数据，识别"变革早期采用者"与"阻力中心"，精准设计培训和激励方案</p>
+<p><strong>落地建议</strong>：</p>
+<ul>
+<li>通过工具使用数据（Cursor使用率/Claude调用量/AI产出比）识别各层级AI接受程度</li>
+<li>对阻力高的团队优先安排AI价值可视化案例培训</li>
+<li>建立"AI贡献度"作为绩效维度，而非单纯用产出量衡量</li>
+</ul>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>今天的核心主题只有一个词：<strong>结构性重组</strong>。Meta裁8000、补7000的"AI再平衡"，Monday.com裁20%全押AI Work Platform，OpenAI从明星产品公司变身企业服务商……这些不是偶然的公司决策，而是AI浪潮下组织进化的必然轨迹。</p>
+
+<p>值得注意的是两个反差信号：一方面老板们高喊AI提效，另一方面Guardian记录了员工在"缺乏培训、压力倍增"的状态下被迫使用AI——这正是"工具导入"和"组织重设计"之间的鸿沟。真正的AI Native组织，不是把AI工具扔给员工，而是重新设计工作流、重新定义角色，让人和AI各尽其能。</p>
+
+<p>对于建设中的500人团队，今天的教训很清晰：<strong>从AI Pod试点开始，让一个小团队先跑通"两层半"架构，用数据说话，再推全盘</strong>。I-T-π型人才的培养不是培训课能解决的，要靠真实项目历练。丫头建议：这个季度就启动第一个AI Native Pod，选最敢折腾的人，给最有挑战的任务。</p>
+
+<hr>
+
+<p>*本日报由丫头AI自动生成 | 数据来源：公开网络信息 | 发布时间：2026-10-02*</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/PQ8Wd44Nno3kLoxmUufcv4junFh" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
