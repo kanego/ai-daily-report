@@ -1,6 +1,14 @@
 [
   {
     "date": "2026-10-05",
+    "title": "开发者工具/开源周刊 2026-10-05",
+    "path": "reports/2026-10-05-weekly.html",
+    "url": "https://kanego.github.io/ai-daily-report/reports/2026-10-05-weekly.html",
+    "feishu_url": "https://my.feishu.cn/docx/USI5dBdJoouJTWxTpI5cXahgnrf",
+    "summary": "> 每周一发布，追踪 GitHub Trending、Product Hunt、Hacker News 上最值得关注的项目。数据来源：GitHub 官方 API（精确 star 数）+ GitHub Trending（本周新增）+ Hack"
+  },
+  {
+    "date": "2026-10-05",
     "title": "AI组织变革日报 2026-10-05",
     "path": "reports/2026-10-05-org-change.html",
     "url": "https://kanego.github.io/ai-daily-report/reports/2026-10-05-org-change.html",
