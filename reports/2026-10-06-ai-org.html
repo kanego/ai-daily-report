@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-10-06</title>
+    <meta property="og:title" content="AI组织变革日报 2026-10-06">
+    <meta property="og:description" content="# AI组织变革日报 2026-10-06  ## 📌 今日要闻  ### 1. Amazon年内累计裁员逾3万，AI代理浪潮重塑企业人力结构  Amazon 2026年已完成两轮大规模裁员：10月裁员14,000人（企业白领的4%），1月再裁16,000人（涉及AWS、Prime Video、HR">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-10-06-ai-org.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-10-06  ## 📌 今日要闻  ### 1. Amazon年内累计裁员逾3万，AI代理浪潮重塑企业人力结构  Amazon 2026年已完成两轮大规模裁员：10月裁员14,000人（企业白领的4%），1月再裁16,000人（涉及AWS、Prime Video、HR">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-10-06</h1>
+            <div class="date">📅 2026-10-06</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-10-06</h1>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. Amazon年内累计裁员逾3万，AI代理浪潮重塑企业人力结构</h3>
+
+<p>Amazon 2026年已完成两轮大规模裁员：10月裁员14,000人（企业白领的4%），1月再裁16,000人（涉及AWS、Prime Video、HR等部门），合计超30,000人。CEO Andy Jassy明确表态："数十亿AI代理正在到来，速度超乎所有人预期。"此次重组的逻辑不仅是降本，更是彻底压平管理层级——减少中间层、提升决策速度。分析师指出，Jassy正在同步推进"精简人工岗位"与"扩张AI基础设施投入"两条平行轨道，Amazon的组织实验正在成为全球科技公司的变革参照。</p>
+
+<p>来源：<a href="https://pulsemark.ai/amazon-ai-layoffs-adoption-gap-2026/" target="_blank">Amazon's AI Layoffs Expose the Enterprise Adoption Gap - PulseMark</a> | <a href="https://www.cnn.com/2026/01/28/tech/amazon-layoffs-ai" target="_blank">CNN Business</a></p>
+
+<h3>2. McKinsey《2026年AI状态》：88%企业部署AI，但ROI仍存巨大落差</h3>
+
+<p>McKinsey最新全球调研（覆盖105个国家1,993名受访者）显示，88%的企业已在至少一个业务职能中使用AI，但"广泛部署≠广泛收益"——约20%的受访者表示AI运营成本（含token费用）已成为AI使用的约束因素，大多数企业仍未将AI投入转化为可见的EBIT增长。65%的企业已采用生成式AI，金融服务领域ROI最高可达4.2倍，但整体上80%的企业尚未看到明显财务影响。这意味着：<strong>组织能力的重构，才是AI价值变现的真正瓶颈。</strong></p>
+
+<p>来源：<a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank">McKinsey State of AI 2026</a> | <a href="https://automely.ai/blogs/state-of-generative-ai-for-business-2026" target="_blank">Automely AI Blog</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<ul>
+<li><strong>Meta裁员8,000人并重组</strong> | Meta本年度裁撤约8,000名员工，同时将7,000名员工调往新AI项目，完成"削减旧岗→补充AI岗"的人才结构置换。来源：Google News</li>
+<li><strong>Block CEO公开宣布AI替岗</strong> | Block（前Square）CEO明确表示AI工具正在替代劳动力岗位，引发法律界关注——AI重组声明不构成违规，但不免除裁员法律义务。来源：<a href="https://www.linkedin.com/pulse/you-were-laid-off-meta-amazon-block-google-pinterest-read-mclellan-lqmxe" target="_blank">LinkedIn</a></li>
+<li><strong>Oracle重组计划扩至28亿美元</strong> | Oracle将"2026重组计划"预算从原定提升至约28亿美元，主要驱动因素是为OpenAI等客户快速扩建AI数据中心所带来的员工遣散成本。来源：<a href="https://www.tradingview.com/news/stocktwits:2c332f6b4094b:0-oracle-reportedly-expands-restructuring-plan-by-700m-as-ai-data-center-costs-mount/" target="_blank">TradingView</a></li>
+<li><strong>AI Native Pod：4人团队的产出超越12人团队</strong> | HumanInResidence案例报道：AI架构师+产品负责人+全栈工程师+AI测试工程师构成的4人Pod，通过AI代理编排与上下文管理，实现了传统12人团队的交付量。来源：<a href="https://humaninresidence.com/articles/the-4-person-ai-pod-that-s-outshipping-12-person-teams" target="_blank">HumanInResidence</a></li>
+<li><strong>Atlassian State of Teams 2026：AI碎片化税成新成本</strong> | Atlassian报告指出顶级团队正在为AI工具碎片化付出"整合税"，AI-native SDLC正在成为软件团队标配。来源：Atlassian</li>
+<li><strong>McKinsey：20%企业因token成本限制AI使用</strong> | AI使用的新约束已从"技术可行性"转向"运营成本管控"，token费用成为大规模推广的隐形天花板。来源：<a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank">McKinsey</a></li>
+<li><strong>LinkedIn调研：53%企业仍在观望，29%已领跑</strong> | AI组织成熟度评估模型显示，多数企业处于AI转型初期，少数领头羊已建立差异化优势，窗口期正在关闭。来源：<a href="https://www.linkedin.com/pulse/53-still-watching-29-already-racing-ahead-ai-from-mokas-pilot-study-jhqac" target="_blank">LinkedIn Pulse</a></li>
+<li><strong>Amazon、Google、Pinterest均以AI重组为由裁员</strong> | 三家公司在裁员声明中均援引"AI重构与资源重新分配"，律师提醒：商业理由合法，但不替代劳动保护义务。来源：<a href="https://www.linkedin.com/pulse/you-were-laid-off-meta-amazon-block-google-pinterest-read-mclellan-lqmxe" target="_blank">LinkedIn</a></li>
+<li><strong>ECC工具入选GitHub趋势榜</strong> | ECC（agentic工程工具套件）于9月6日登上GitHub Trending，提供技能、记忆、规划和安全的代理协作层。来源：<a href="https://ecc.tools/" target="_blank">ECC Tools</a></li>
+<li><strong>Trendshift：AI代理工作流工具持续高热</strong> | 多款从小型项目到大型代码库均可扩展的AI代理工作流工具保持高热趋势，开发者生态正在重构。来源：<a href="https://trendshift.io/" target="_blank">Trendshift</a></li>
+</ul>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>美国：科技巨头组织压平已成主旋律</h3>
+<p>Amazon、Meta、Google、Oracle等头部企业在2026年同步推进"组织压平+AI增效"双轨策略。Amazon最具代表性——同时裁减管理中间层与扩大AI基础设施，将节省的人力成本直接转化为AI算力投入。Meta则采取"裁旧补新"策略，以8,000人裁员换取7,000人AI新岗位的人才结构升级。这一模式预示：传统职能岗位的压缩不是终点，AI工程/架构/调度类岗位的扩张才是同步进行的另一面。</p>
+
+<h3>组织层级：四层→两层半的实践案例</h3>
+<p>HumanInResidence报道的4人AI Pod模型中，AI架构师不写代码，专职编排AI代理、设计Prompt和管理上下文窗口；配合产品负责人、全栈工程师与AI测试工程师，实现了从"12人传统团队"到"4人AI增强小组"的结构跃迁。这正是"四层→两层半"架构在实际企业中的落地形态。</p>
+
+<h3>AI成本管控：从技术问题变为组织问题</h3>
+<p>McKinsey数据显示，20%企业已因token成本约束AI使用规模。这意味着AI采购与运营不再只是技术决策，而是需要CFO、CPTO共同参与的组织级战略。成本治理能力将成为AI Native组织的核心竞争力之一。</p>
+
+<h3>中国市场：信号仍在积累</h3>
+<p>字节、阿里、腾讯等中国头部互联网公司的2026年组织调整信号因网络访问限制暂无最新数据，但结合行业趋势研判：国内大厂同样面临AI提效压力与组织冗余问题，"去中间层、建AI小组"的趋势不可逆，预计Q4将有更多组织变革动作落地。</p>
+
+<h3>全球趋势：AI组织成熟度分化加剧</h3>
+<p>LinkedIn调研数据揭示：29%的企业已在AI转型中形成领先优势，而53%仍处于观望或初探阶段。先行者正在形成"AI飞轮效应"——更早的部署带来更快的学习曲线，进而拉大与后来者的差距。</p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<h3>ECC — Agentic Engineering Toolkit</h3>
+<ul>
+<li><strong>定位</strong>：AI代理协作操作层，提供技能（Skills）、记忆（Memory）、规划（Planning）与安全（Security）四大核心能力</li>
+<li><strong>亮点</strong>：为多代理协作提供统一工作范式，9月登上GitHub Trending</li>
+<li><strong>链接</strong>：<a href="https://ecc.tools/" target="_blank">https://ecc.tools/</a></li>
+</ul>
+
+<h3>500 AI Agents Projects（GitHub精选）</h3>
+<ul>
+<li><strong>定位</strong>：500个AI代理Use Case的策展合集，覆盖多行业实际应用场景</li>
+<li><strong>Stars</strong>：持续增长中的开源资源库</li>
+<li><strong>链接</strong>：<a href="https://github.com/ashishpatel26/500-AI-Agents-Projects" target="_blank">https://github.com/ashishpatel26/500-AI-Agents-Projects</a></li>
+</ul>
+
+<h3>Trendshift — GitHub趋势实时追踪</h3>
+<ul>
+<li><strong>定位</strong>：GitHub趋势的实时替代品，捕捉项目上升势头而非仅展示峰值</li>
+<li><strong>亮点</strong>：2026年新增AI代理工作流工具专题追踪</li>
+<li><strong>链接</strong>：<a href="https://trendshift.io/" target="_blank">https://trendshift.io/</a></li>
+</ul>
+
+<h3>Atlassian AI-native SDLC</h3>
+<ul>
+<li><strong>定位</strong>：面向软件团队的AI原生软件开发生命周期平台</li>
+<li><strong>亮点</strong>：State of Teams 2026报告揭示AI碎片化税问题，推动统一平台价值</li>
+<li><strong>链接</strong>：<a href="https://www.atlassian.com/" target="_blank">https://www.atlassian.com/</a></li>
+</ul>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达（周二：AI测试与代码审查）</h2>
+
+<h3>1. GitHub Copilot for PRs / Code Review</h3>
+<p><strong>适用场景</strong>：Pull Request质量把关、代码规范审查、安全漏洞初筛</p>
+<p><strong>500人团队落地建议</strong>：在CI/CD流程中强制接入Copilot代码审查，设定"AI初审→人工复核"双轨机制。建议先在核心业务代码库试点（20-30人工程团队），跑通6周后再全面推广。重点关注：减少Review等待时间（目标从48h降至8h内），同时建立AI误判反馈机制，持续微调Prompt规则。</p>
+
+<h3>2. Cursor / Continue — AI辅助测试用例生成</h3>
+<p><strong>适用场景</strong>：单元测试自动生成、边界条件覆盖、回归测试套件构建</p>
+<p><strong>500人团队落地建议</strong>：为QA团队配置AI测试生成工具，目标是将测试覆盖率从常见的60%提升至85%+，同时减少手写重复性测试的时间投入。建议建立"测试代码即文档"规范，让AI生成的测试同时承担功能说明职责。与产品经理共建验收标准库，驱动AI生成更贴近业务意图的测试场景。</p>
+
+<h3>3. ECC Agentic Toolkit — 多代理测试编排</h3>
+<p><strong>适用场景</strong>：复杂业务流程的端到端自动化测试、多系统集成验证</p>
+<p><strong>500人团队落地建议</strong>：适用于有微服务架构的中大型团队。用ECC编排多个测试代理分工执行：接口测试代理、数据一致性验证代理、性能基线代理。核心价值在于将分散的测试脚本统一到可复用的代理技能库中，降低测试维护成本。建议组建2-3人的"测试代理运维小组"，专职管理代理的技能迭代与记忆库更新。</p>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>今天的数据画面有一个清晰的主线：<strong>AI组织变革的第一波浪潮已不是"试点"，而是"重构"。</strong></p>
+
+<p>Amazon的案例最具代表性——它不只是裁员降本，而是在用人力成本的节省直接置换AI基础设施投入，形成一个自我强化的飞轮：更少的人→更多的AI算力→更强的AI能力→可以用更少的人。这正是AI Native组织的核心逻辑。</p>
+
+<p>但McKinsey的数据提醒我们：部署AI ≠ 获得ROI。88%的企业在用AI，却有80%看不到财务影响。这个悖论的答案藏在组织能力里——<strong>工具买了，但团队的工作流没变，决策层级没变，人才结构没变，AI就只是一个昂贵的辅助工具，而不是组织的神经系统。</strong></p>
+
+<p>对于500人规模的团队，今天最值得行动的一件事是：把你的代码审查流程里接入AI，哪怕只是一个试点团队。这不仅是效率问题，更是训练团队"与AI协作"心智的第一步。I-T-π型人才的"第二横"，就是从这里开始生长的。</p>
+
+<p>组织变革没有终点，但有起点。今天，就是起点。</p>
+
+<hr>
+<p>*由丫头自动生成 | 数据来源：McKinsey、CNN Business、LinkedIn、PulseMark、TradingView等 | 2026-10-06*</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/NX2wd3GSroAOTGxsQ9bcTAHRn7g" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
