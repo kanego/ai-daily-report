@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-10-09</title>
+    <meta property="og:title" content="AI组织变革日报 2026-10-09">
+    <meta property="og:description" content="# AI组织变革日报 2026-10-09  > 丫头出品 · 每日聚焦AI驱动的组织进化  ---  ## 📌 今日要闻  ### 1. McKinsey全球AI调研2026：65%企业&quot;AI在用&quot;，只有22%见到P&L改善  McKinsey最新发布的《2026年AI全球调研》（State of">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-10-09-ai-org.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-10-09  > 丫头出品 · 每日聚焦AI驱动的组织进化  ---  ## 📌 今日要闻  ### 1. McKinsey全球AI调研2026：65%企业&quot;AI在用&quot;，只有22%见到P&L改善  McKinsey最新发布的《2026年AI全球调研》（State of">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-10-09</h1>
+            <div class="date">📅 2026-10-09</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-10-09</h1>
+
+<blockquote>丫头出品 · 每日聚焦AI驱动的组织进化</blockquote>
+
+<hr>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. McKinsey全球AI调研2026：65%企业"AI在用"，只有22%见到P&L改善</h3>
+
+<p>McKinsey最新发布的《2026年AI全球调研》（State of AI 2026）显示，全球已有65%的企业宣称AI进入生产环境，但仅22%的受访组织报告了实质性的损益改善。约20%的受访者表示AI相关运营成本（含Token费用）已开始制约其AI使用规模，但大多数组织仍计划在未来一年增加AI投入。McKinsey的核心判断是：<strong>AI采纳本身不创造企业价值，只有同步改变围绕AI的组织结构，才能真正释放价值。</strong> 这一结论直接指向"技术落地 vs. 组织变革"的核心矛盾——工具买到了，人和流程没有跟上。</p>
+
+<p>来源：<a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank">McKinsey State of AI 2026</a></p>
+
+<hr>
+
+<h3>2. Gartner预测：2026年将有1/5组织用AI压扁管理层，中层管理岗位削减超50%</h3>
+
+<p>LinkedIn上广泛流传的一篇分析文章引用Gartner预测：到2026年，约20%的组织将借助AI工具系统性地扁平化管理架构，削减超过一半的中层管理职位。文章作者Wilco Jansen指出，2026年的重组浪潮与以往周期性裁员不同——这是一次结构性的、由AI能力驱动的组织形态变迁。AI正在接管过去由中层经理承担的信息传递、进度追踪、绩效汇报等职能，导致管理跨度大幅扩大，传统"四层组织"正在向"两层半"演进。</p>
+
+<p>来源：<a href="https://www.linkedin.com/pulse/what-2026-restructuring-wave-wilco-jansen-mifse" target="_blank">LinkedIn - What the 2026 Restructuring Wave Is About</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<p>1. <strong>NVIDIA全员Cursor</strong>：Jensen Huang披露NVIDIA 3万+工程师100%使用Cursor，代码提交量提升3倍，效率实质性改变。<a href="https://cursor.com/blog/nvidia" target="_blank">来源</a></p>
+
+<p>2. <strong>Meta拆分AI-Native Pods</strong>：Meta正将团队重组为小型AI原生小组，快速迭代+质量闸口并行，摒弃传统专家分工模式。<a href="https://www.linkedin.com/posts/theadsn_meta-isnt-just-rolling-out-ai-the-usual-activity-7447372656670310400-hMCZ" target="_blank">来源</a></p>
+
+<p>3. <strong>字节豆包团队传裁员</strong>：媒体报道豆包通用Session团队缩编，有内部员工称"对话团队砍半"，豆包战略重心疑似向垂直场景转移。<a href="https://www.aibase.com/news/31338" target="_blank">来源</a></p>
+
+<p>4. <strong>Bain调研：40%企业AI成本节约不足10%</strong>：Bain对951家企业的调研显示，40%企业实现的AI成本节约低于目标的10%，远低于预期11-20%目标，"实现率"成为衡量AI落地质量的新核心指标。<a href="https://www.bain.com/insights/realization-rate-the-metric-reshaping-enterprise-ai/" target="_blank">来源</a></p>
+
+<p>5. <strong>IBM 2026 CEO研究</strong>：AI优先型CEO在战略执行和AI规模化上均领先同行，IBM IBV调研覆盖全球顶级CEO，关键发现是"工作流重设计"比"模型选择"更影响ROI。<a href="https://www.ibm.com/thought-leadership/institute-business-value/c-suite-study/ceo" target="_blank">来源</a></p>
+
+<p>6. <strong>Roland Berger AI优先变革命令</strong>：Roland Berger最新报告指出，真正实现AI变革影响的组织，都是从明确业务目标出发倒推技术选型，而非从技术可行性出发。<a href="https://www.rolandberger.com/en/Insights/Publications/The-AI-first-transformation-imperative.html" target="_blank">来源</a></p>
+
+<p>7. <strong>MIT Sloan研究：AI ROI与工作流重设计强相关</strong>：MIT Sloan 2026年5月研究发现，AI投资回报与工作流重新设计的深度高度正相关，与所选AI模型的关系反而不显著。来源：MIT Sloan Management Review</p>
+
+<p>8. <strong>营销团队AI原生化</strong>：Frontlines播客案例：营销团队从专家分工转型为AI原生通才，用AI工具打造更精简敏捷的团队，内容生产周期大幅缩短。<a href="https://www.frontlines.io/podcasts/rachael-obrien/" target="_blank">来源</a></p>
+
+<p>9. <strong>Valtech调研：60%总监级认为AI已跨工作流整合</strong>：Valtech 2026年5月对1003名AI工作者调研显示，总监级中60.1%认为AI已实现跨工作流、工具和团队的整合，但基层员工体感差异明显。<a href="https://dev.to/unlocked-consulting/your-ai-programme-looks-better-from-where-you-are-sitting-5a7a" target="_blank">来源</a></p>
+
+<p>10. <strong>NVIDIA GTC Berlin 2026定档10月21日</strong>：Jensen Huang将在柏林Tempodrom发表主题演讲，预计发布新一代AI基础设施路线图，组织级AI部署将是重点议题之一。<a href="https://www.nvidia.com/en-eu/gtc/keynote/" target="_blank">来源</a></p>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>1. 字节跳动豆包：通用团队收缩，垂直化重组</h3>
+<p>字节豆包通用Session团队据报出现大规模缩编，"对话团队砍半"的说法在内部引发讨论。这折射出字节AI产品策略的转型——从通用对话竞赛退出，转向垂直行业深耕。大厂AI团队从"功能扩张期"进入"精兵精简期"，组织形态随产品战略同步收缩。</p>
+<p>来源：<a href="https://www.aibase.com/news/31338" target="_blank">AIBase</a></p>
+
+<h3>2. Meta：AI-Native Pod成为正式组织单元</h3>
+<p>Meta不再把AI当作传统团队的辅助工具，而是将整个团队结构重新设计为AI原生的协作单元——小规模、高频迭代、项目制驱动，通过质量关口而非层级汇报管控质量。这标志着硅谷头部互联网公司的组织设计正式进入"后矩阵时代"。</p>
+<p>来源：<a href="https://www.linkedin.com/posts/theadsn_meta-isnt-just-rolling-out-ai-the-usual-activity-7447372656670310400-hMCZ" target="_blank">LinkedIn</a></p>
+
+<h3>3. NVIDIA：工具落地倒逼组织流程重塑</h3>
+<p>NVIDIA 3万+工程师全量使用Cursor的案例，不仅是工具采纳故事，更是一次系统性的研发流程重构。从个人提效到自动化核心生产工作流，NVIDIA展示了AI工具如何从"个体加速器"升级为"组织生产力基础设施"。这对中国大厂研发体系的工具化路径具有直接参考价值。</p>
+<p>来源：<a href="https://cursor.com/blog/nvidia" target="_blank">Cursor Blog</a></p>
+
+<h3>4. Bain全球951家企业：AI落地"实现率"分化加剧</h3>
+<p>Bain调研发现，AI落地效果出现明显的"马太效应"——少数企业通过流程重设计实现超额回报，大量企业则停留在工具采购层面，成本节约不及目标的一半。中国企业在AI落地"最后一公里"上同样面临相同挑战：技术就绪，但组织和流程未就绪。</p>
+<p>来源：<a href="https://www.bain.com/insights/realization-rate-the-metric-reshaping-enterprise-ai/" target="_blank">Bain & Company</a></p>
+
+<h3>5. 全球重组浪潮：中层管理岗位系统性消失</h3>
+<p>Gartner 2026年预测正在成为现实：AI正在接管中层经理的信息汇聚、进度追踪、团队协调职能，导致管理跨度从传统的1:8扩大到1:20甚至更高。无论中美，"四层组织"向"两层半"的演进都是不可逆的结构性趋势，区别只在于速度与主动性。</p>
+<p>来源：<a href="https://www.linkedin.com/pulse/what-2026-restructuring-wave-wilco-jansen-mifse" target="_blank">LinkedIn - 2026 Restructuring Wave</a></p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<h3>1. Cursor — AI编码智能体</h3>
+<ul>
+<li><strong>定位</strong>：企业级AI编码助手，支持大型代码库索引</li>
+<li><strong>亮点</strong>：NVIDIA 3万工程师全量采用，代码提交量3倍提升；Jensen Huang公开背书"最爱的企业AI服务"</li>
+<li><strong>链接</strong>：<a href="https://cursor.com/blog/nvidia" target="_blank">cursor.com/blog/nvidia</a></li>
+</ul>
+
+<h3>2. Atlassian Rovo — 团队生产力AI</h3>
+<ul>
+<li><strong>定位</strong>：为Atlassian生态（Jira/Confluence）注入AI能力，支持跨工具智能搜索、定义与摘要</li>
+<li><strong>亮点</strong>：无缝整合现有工作流，适合已深度使用Atlassian的研发/产品团队</li>
+<li><strong>链接</strong>：<a href="https://xix.ai/tool/atlassian-rovo-unlock-team-productivity-with-ai.html" target="_blank">xix.ai</a></li>
+</ul>
+
+<h3>3. Gumloop — AI原生自动化平台</h3>
+<ul>
+<li><strong>定位</strong>：AI原生团队自动化工作流平台，无需代码即可构建复杂AI流程</li>
+<li><strong>亮点</strong>：被多个AI原生团队用于替代传统RPA和Zapier，适合500人以下团队快速落地</li>
+<li><strong>链接</strong>：<a href="https://www.gumloop.com/blog/best-ai-apps" target="_blank">gumloop.com</a></li>
+</ul>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达｜周五专题：变革方法论</h2>
+
+<blockquote>今日聚焦：如何系统推进AI驱动的组织变革，而非只是工具采购</blockquote>
+
+<h3>方法论一：McKinsey三层地平线框架（Three Horizons of AI Adoption）</h3>
+
+<p><strong>适用场景</strong>：500人团队制定AI落地路线图</p>
+
+<p><strong>三层框架</strong>：</p>
+<ul>
+<li><strong>第一层 赋能（Enablement）</strong>：让个人获得AI工具访问权，解决"有没有"问题</li>
+<li><strong>第二层 整合（Integration）</strong>：将AI融入工作流，解决"用不用"问题</li>
+<li><strong>第三层 变革（Transformation）</strong>：重新设计组织结构和业务流程，解决"变没变"问题</li>
+</ul>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<p>大多数企业卡在第一层——买了工具、发了账号，但没有推动工作流重设计。建议设立"AI变革官（CAIO）"角色，专门负责推动第二层到第三层的跃迁。每季度选取2-3个核心业务流程做深度重设计，而不是全面铺开浅尝辄止。</p>
+
+<p>来源：<a href="https://www.linkedin.com/posts/tesshgreener_from-adoption-to-impact-three-horizons-of-activity-7491911819297538048-EE2T" target="_blank">LinkedIn - McKinsey Three Horizons</a></p>
+
+<hr>
+
+<h3>方法论二：Bain"实现率"评估模型（Realization Rate）</h3>
+
+<p><strong>适用场景</strong>：评估企业AI投资实际落地效果</p>
+
+<p><strong>核心逻辑</strong>：</p>
+<p>实现率 = 实际AI成本节约 / 目标AI成本节约</p>
+
+<p>Bain调研显示，全球40%企业实现率低于50%——即花了100%的预算，只拿回不到一半的预期收益。根因是：Agentic流程仍需大量人工监督，而业务案例中未计入这部分成本。</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<p>在启动AI项目前，先建立"实现率基线"——明确人工监督成本、流程改造成本、培训成本，将其纳入ROI计算。每季度更新实现率报表，以此作为AI投入优先级的决策依据，而非只看工具授权数量。</p>
+
+<p>来源：<a href="https://www.bain.com/insights/realization-rate-the-metric-reshaping-enterprise-ai/" target="_blank">Bain & Company</a></p>
+
+<hr>
+
+<h3>方法论三：Roland Berger"业务目标倒推"法</h3>
+
+<p><strong>适用场景</strong>：AI战略规划与技术选型</p>
+
+<p><strong>核心原则</strong>：</p>
+<p>从明确的业务目标出发，倒推技术选型——而非从技术可行性出发找应用场景。优先级排列依据：业务价值 × 可行性 × 组织就绪度。</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<p>避免"AI工具采购清单"思维。建议每个业务单元先定义3个最希望改善的核心业务指标（如：客户响应时长、代码交付周期、内容生产成本），再反向筛选AI工具和改造路径。这样选出的AI项目胜率比"从工具找场景"高3-5倍。</p>
+
+<p>来源：<a href="https://www.rolandberger.com/en/Insights/Publications/The-AI-first-transformation-imperative.html" target="_blank">Roland Berger</a></p>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>今天的数据让我想到一个词：<strong>落差</strong>。</p>
+
+<p>McKinsey说65%企业已在用AI，但只有22%真的见到了钱。Bain说40%企业连目标的一半都没达到。这不是技术失败，这是<strong>组织变革滞后</strong>的必然结果。</p>
+
+<p>我们反复说"AI Native"，但大多数组织做的是"AI Adjacent"——工具在边上跑，流程和人还是老样子。</p>
+
+<p>这里面有个结构性陷阱：<strong>买工具很容易，改流程很难，重设组织几乎是最难的</strong>。这就是为什么"四层→两层半"的演进在大厂能推进，在传统企业却步履维艰——因为后者缺少的不是工具，是敢于颠覆自身的意志力。</p>
+
+<p>从I型专家到T型通才，再到π型人才，不是人才市场的选择题，而是组织生存的必选项。当AI Agent能覆盖大部分专业深度工作时，人的价值将越来越体现在<strong>跨域整合能力</strong>和<strong>判断力</strong>上——这正是π型人才的核心竞争力。</p>
+
+<p>500人团队现在要问的不是"要不要用AI"，而是"我们的组织形态，配得上我们想要的AI效率吗？"</p>
+
+<hr>
+
+<p>*丫头 | AI组织变革日报 | 2026-10-09*</p>
+<p>*数据来源：McKinsey、Bain、Roland Berger、IBM、Cursor、LinkedIn等公开资料*</p>
+
+        <div class="actions">
+            <a href="https://feishu.cn/docx/AdagdIM8CokRYAxe6NHcmk81nNb" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
