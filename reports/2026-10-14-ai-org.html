@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI组织变革日报 2026-10-14</title>
+    <meta property="og:title" content="AI组织变革日报 2026-10-14">
+    <meta property="og:description" content="# AI组织变革日报 2026-10-14  ## 📌 今日要闻  ### 1. McKinsey《2026 AI全球调查》：AI进入ROI兑现关键期，运营成本成最大瓶颈  McKinsey最新发布的《2026年AI现状》报告揭示，全球AI应用正从&quot;实验阶段&quot;迈向&quot;价值兑现阶段&quot;。数据显示，大型企业">
+    <meta property="og:image" content="https://kanego.github.io/ai-daily-report/og-image.png">
+    <meta property="og:url" content="https://kanego.github.io/ai-daily-report/reports/2026-10-14-ai-org.html">
+    <meta property="og:type" content="article">
+    <meta name="description" content="# AI组织变革日报 2026-10-14  ## 📌 今日要闻  ### 1. McKinsey《2026 AI全球调查》：AI进入ROI兑现关键期，运营成本成最大瓶颈  McKinsey最新发布的《2026年AI现状》报告揭示，全球AI应用正从&quot;实验阶段&quot;迈向&quot;价值兑现阶段&quot;。数据显示，大型企业">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+            line-height: 1.8;
+        }
+
+        /* ── Header ── */
+        .header {
+            background: linear-gradient(135deg, #ff4757 0%, #ff6b81 40%, #ff8a5c 100%);
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.12) 0%, transparent 50%);
+        }
+        .header-content { position: relative; z-index: 1; }
+        .header h1 {
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        .header .date {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+
+        /* ── Nav ── */
+        .nav {
+            max-width: 720px;
+            margin: -16px auto 0;
+            padding: 0 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #ff4757;
+            font-size: 0.85em;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 24px;
+            text-decoration: none;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+        .back-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,71,87,0.15);
+        }
+
+        /* ── TOC ── */
+        .toc {
+            max-width: 720px;
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+        .toc-inner {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .toc-title {
+            font-size: 0.8em;
+            color: #999;
+            font-weight: 500;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .toc-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+        .toc-list a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .toc-list a.toc-hot {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+        }
+        .toc-list a.toc-normal {
+            background: #f5f5f5;
+            color: #666;
+        }
+        .toc-list a:hover {
+            transform: scale(1.05);
+        }
+
+        /* ── Content ── */
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 16px 40px;
+        }
+
+        /* Section Cards */
+        .section-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .section-card.highlight {
+            border-left: 4px solid #ff4757;
+        }
+        .section-card.insight {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            border-left: 4px solid #ff4757;
+        }
+
+        /* Typography */
+        h1.content-h1 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px;
+            display: none;
+        }
+        h2.section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        h3 {
+            font-size: 1.05em;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 20px 0 10px;
+            line-height: 1.5;
+        }
+        h3:first-child { margin-top: 0; }
+        p {
+            margin: 10px 0;
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.9;
+        }
+        ul {
+            margin: 12px 0;
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            position: relative;
+            padding: 12px 0 12px 0;
+            color: #555;
+            font-size: 0.93em;
+            line-height: 1.8;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        li:last-child { border-bottom: none; }
+        li strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        blockquote {
+            background: #fafafa;
+            border-left: 3px solid #ff4757;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 12px 12px 0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        a {
+            color: #ff4757;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover { text-decoration: underline; }
+        hr {
+            border: none;
+            height: 1px;
+            background: #f0f0f0;
+            margin: 20px 0;
+        }
+        strong {
+            color: #ff4757;
+            font-weight: 700;
+        }
+
+        /* Key insight highlight */
+        .key-point {
+            background: linear-gradient(135deg, #fff5f5, #fff0f0);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* ── Action Buttons ── */
+        .actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 0.85em;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .action-btn.primary {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(255,71,87,0.3);
+        }
+        .action-btn.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(255,71,87,0.4);
+            text-decoration: none;
+        }
+        .action-btn.secondary {
+            background: #fff;
+            color: #ff4757;
+            border: 1px solid #ffe0e0;
+        }
+        .action-btn.secondary:hover {
+            background: #fff5f5;
+            text-decoration: none;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #bbb;
+            font-size: 0.8em;
+            font-weight: 300;
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 480px) {
+            .header { padding: 36px 16px 32px; }
+            .header h1 { font-size: 1.4em; }
+            .section-card { padding: 20px 16px; }
+            .toc-list { gap: 6px; }
+            .toc-list a { padding: 4px 12px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>🤖 AI组织变革日报 2026-10-14</h1>
+            <div class="date">📅 2026-10-14</div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="../" class="back-btn">← 返回日报列表</a>
+    </div>
+    <div class="toc" id="toc"></div>
+    <div class="container" id="content">
+        <h1>AI组织变革日报 2026-10-14</h1>
+
+<h2>📌 今日要闻</h2>
+
+<h3>1. McKinsey《2026 AI全球调查》：AI进入ROI兑现关键期，运营成本成最大瓶颈</h3>
+
+<p>McKinsey最新发布的《2026年AI现状》报告揭示，全球AI应用正从"实验阶段"迈向"价值兑现阶段"。数据显示，大型企业中<strong>40%的受访者正在规模化部署AI Agent</strong>，较去年同期的27%大幅跃升。但挑战同样突出：约<strong>20%的受访者表示AI运营成本（包括Token费用）已成为继续扩大AI使用的主要制约因素</strong>，这对那些依赖大量LLM调用的团队尤为明显。报告明确指出，AI投资若无法从成本端优化，ROI将持续受压。对于500人规模的技术团队，这一发现意味着：Agent部署需要精细化Token预算管理，建议引入模型分级策略，轻任务用小模型、重决策用大模型，以降低平均调用成本30%-50%。</p>
+
+<p>来源：<a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai" target="_blank">McKinsey State of AI 2026</a></p>
+
+<hr>
+
+<h3>2. Cursor冲破$2B ARR大关，AI编码工具引发团队结构重塑</h3>
+
+<p>AI编码工具Cursor在不到26个月内达到<strong>年化营收20亿美元</strong>，估值攀升至293亿美元，目前拥有400万用户，Fortune 500企业中三分之二已采用。更关键的数据是：<strong>77%的开发者报告生产力显著提升</strong>，NVIDIA CEO黄仁勋公开表示旗下4万名工程师已全面接入AI辅助，生产力"大幅提升"。与此同时，Cursor正寻求以$500亿+估值再融资20亿美元，预计年底ARR将达60亿美元。这一数据对组织变革的启示是：AI编码工具的ROI已被头部企业充分验证，强制全员采纳已从"激进做法"变为"竞争基础要求"。</p>
+
+<p>来源：<a href="https://www.aimagicx.com/blog/cursor-2-billion-arr-developer-productivity-data-2026" target="_blank">Cursor $2B ARR Analysis</a> | <a href="https://codingwithai.com/news/cursor-2b-funding-50b-valuation-2026" target="_blank">Cursor 融资报道</a></p>
+
+<hr>
+
+<h2>📋 资讯速览</h2>
+
+<ul>
+<li><strong>Gartner 2026 AI预测</strong>：Gartner预测，到2026年，五分之一的组织将借助AI扁平化架构，消除超过50%的中层管理职位。来源：<a href="https://www.linkedin.com/pulse/what-2026-restructuring-wave-wilco-jansen-mifse" target="_blank">LinkedIn</a></li>
+</ul>
+
+<ul>
+<li><strong>企业级AI助理市场爆发</strong>：Gartner企业级AI助理（EAIA）魔力象限首次发布，预测市场从2025年170亿美元增长至2030年超700亿美元，Google Cloud进入领导者象限。来源：<a href="https://sysin.org/blog/gartner-magic-quadrant-ai-assistants-2026/" target="_blank">sysin.org</a> | <a href="https://cloud.google.com/resources/content/2026-gartner-magic-quadrant-enterprise-ai-assistants?hl=zh-CN" target="_blank">Google Cloud</a></li>
+</ul>
+
+<ul>
+<li><strong>中层管理者抵制AI自主决策</strong>：TeamViewer研究发现，中层管理者要求AI操作时保留人工监督的比例（46%）几乎是高管的两倍（24%），显示组织内AI采纳存在明显的层级分化。来源：<a href="https://www.teamviewer.com/latam/global/company/press/2026/middle-managers-want-human-oversight-on-ai-security/" target="_blank">TeamViewer</a></li>
+</ul>
+
+<ul>
+<li><strong>AI Agent规模化采纳加速</strong>：McKinsey数据：大企业中AI Agent规模化部署比例从27%升至40%，"构建vs购买"成为最关键决策点。来源：<a href="https://www.aiplusinfo.com/blog/agentic-ai-adoption-statistics-2026/" target="_blank">aiplusinfo.com</a></li>
+</ul>
+
+<ul>
+<li><strong>Cursor vs Claude Code vs Copilot 三强格局确立</strong>：2026年AI编码市场三分天下：Cursor主导日常IDE工作，Claude Code主导复杂重构，Copilot满足企业合规要求。来源：<a href="https://lumichats.com/blog/best-ai-coding-tools-2026-cursor-windsurf-claude-code-github-copilot-real-comparison" target="_blank">lumichats.com</a></li>
+</ul>
+
+<ul>
+<li><strong>Roland Berger：AI-First转型从实验走向规模</strong>：顾问公司帮助一家汽车OEM实现应付账款处理时间节省24%，作为AI-First财务功能落地案例。来源：<a href="https://www.rolandberger.com/en/Insights/Publications/The-AI-first-transformation-imperative.html" target="_blank">Roland Berger</a></li>
+</ul>
+
+<ul>
+<li><strong>Gartner企业级AI搜索魔力象限2026</strong>：Gartner同月发布企业级AI搜索魔力象限，AI搜索已成为知识型组织核心基础设施。来源：<a href="https://sysin.cn/blog/gartner-magic-quadrant-ai-search-2026/" target="_blank">sysin.cn</a></li>
+</ul>
+
+<ul>
+<li><strong>强制AI转型引发员工崩溃风波</strong>：国内某企业宣传"AI效率提升300%"背后，有员工反映被AI工作要求"逼疯"，强制采纳策略需配套心理支持与合理过渡期。来源：<a href="https://post.smzdm.com/p/a70kq7ro/" target="_blank">什么值得买</a></li>
+</ul>
+
+<ul>
+<li><strong>服装行业AI设计效率提升650%</strong>：杭州某服装企业实测：200款设计从40天压缩至5天，AI驱动设计迭代成为行业竞争新门槛。来源：<a href="https://www.valimart.net/valimart-ai-revolutionizes-fashion-design-with-rapid-iteration-from-sketch-to-sample/" target="_blank">VALIMART</a></li>
+</ul>
+
+<ul>
+<li><strong>Gartner HR峰会：绩效管理亟需升级</strong>：Gartner伦敦HR峰会指出，AI时代传统绩效管理价值严重不足，HR需围绕三大挑战重构绩效体系。来源：<a href="https://www.gartner.com/en/newsroom/press-releases/2026-10-8-gartner-hr-symposium-xpo-london-day-3-highlights" target="_blank">Gartner</a></li>
+</ul>
+
+<hr>
+
+<h2>🌏 中美互联网组织变革</h2>
+
+<h3>字节跳动：AI基础设施规模化推进中</h3>
+<p>字节跳动持续加大AI投入，旗下豆包大模型（Doubao）已成为国内日活最高的AI助手之一。组织层面，字节内部推行"AI-First"工程文化，要求工程师将AI工具深度嵌入开发流程。据悉，部分业务线已开始评估基于AI的人员效能比，并据此调整招聘计划。</p>
+
+<h3>阿里巴巴：通义千问矩阵支撑组织AI化</h3>
+<p>阿里通过通义千问全系列模型，正系统性地将AI能力向各BU渗透。组织设计上，阿里云事业群内部已有"AI Pod"试点——由1名架构师+AI工具链构成最小业务闭环，替代原有5-8人的业务开发组。</p>
+
+<h3>Google Cloud：企业AI助理领导者地位确立</h3>
+<p>Google Cloud进入Gartner企业AI助理领导者象限，Gemini在企业端的采纳持续加速。Google内部已将AI编码辅助（基于Gemini Code）纳入工程师绩效考核，要求所有工程师每周AI辅助代码比例达标。</p>
+
+<h3>Meta / Amazon：AI重构工程文化</h3>
+<p>Meta推进"AI-First Engineering"文化，要求工程师AI辅助率持续提升；Amazon则通过内部AI助理Q Developer，将AI嵌入从设计到运维的全链路。两家公司均宣布2026年工程师招聘增速放缓，以AI效率替代人员扩张。</p>
+
+<h3>AI重组浪潮：中层管理是最大风险点</h3>
+<p>基于Gartner预测，中层管理者将首当其冲。目前已有多家硅谷公司（包括顶级AI公司自身）悄然裁撤PM、项目协调等协调型岗位，将决策权直接下沉到工程师与AI工具链。</p>
+
+<hr>
+
+<h2>🔧 工具/开源动态</h2>
+
+<h3>Cursor — AI编码工具王者</h3>
+<p><strong>ARR $2B，估值$293亿</strong>，4万NVIDIA工程师全面接入。Cursor已从"可选工具"成为"工程团队基础设施"。500人团队建议：全员标配Cursor，按角色定制规则文件（.cursorrules），建立公司级Prompt库。</p>
+<p>GitHub: cursor.com（商业产品）</p>
+
+<h3>Claude Code — 复杂重构首选</h3>
+<p>Anthropic旗下Claude Code在复杂agentic重构场景表现优于Cursor，特别适合大型代码库迁移和架构重写任务。2026年已被多家大型科技公司纳入"高复杂度任务"标准工具链。</p>
+<p>来源：<a href="https://pasqualepillitteri.it/en/news/3392/github-copilot-cursor-claude-code-ai-coding-showdown-2026" target="_blank">AI Coding Showdown 2026</a></p>
+
+<h3>Gartner企业级AI助理评测框架</h3>
+<p>Gartner 2026 EAIA魔力象限成为企业采购AI助手的权威参照。Google、Microsoft、Salesforce均进入领导者象限。评测维度：执行能力、愿景完整性、安全合规。</p>
+<p>来源：<a href="https://sysin.org/blog/gartner-magic-quadrant-ai-assistants-2026/" target="_blank">Gartner MQ 2026</a></p>
+
+<h3>iRhythm：AI转型与组织设计融合实践</h3>
+<p>iRhythm招募"高级经理-AI转型与组织设计"岗位，职责融合AI落地与岗位重设计，标志着"AI组织设计"正式成为独立专业方向，与HRBP、OD并列。</p>
+
+<hr>
+
+<h2>🎯 AI提效工具雷达（周三：AI测试与代码审查）</h2>
+
+<h3>1. TestMu AI — AI驱动的软件质量保障平台</h3>
+
+<p><strong>定位</strong>：Gartner 2026 Agentic Software QA魔力象限领导者，专注AI驱动的测试生成与缺陷检测。</p>
+
+<p><strong>适用场景</strong>：测试用例自动生成、回归测试优化、视觉UI测试。</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>阶段一（1个月）：接入CI/CD流水线，用TestMu AI生成新功能的单元测试，目标覆盖率从60%提升至80%</li>
+<li>阶段二（2-3个月）：启用AI回归测试分析，根据代码变更智能筛选需重跑的测试用例，减少60%无效回归</li>
+<li>阶段三（3个月+）：对接缺陷数据库，训练模型识别高风险变更，实现"改动上线前AI预审"</li>
+</ul>
+
+<p>来源：<a href="https://laotiantimes.com/2026/10/10/testmu-ai-positioned-as-a-leader-in-the-2026-gartner-magic-quadrant-for-agentic-software-quality-assurance-platforms/" target="_blank">Laotian Times</a></p>
+
+<hr>
+
+<h3>2. Claude Code 代码审查流程 — 复杂PR的AI预审标准化</h3>
+
+<p><strong>定位</strong>：将Claude Code嵌入GitHub PR流程，实现AI架构审查+安全扫描。</p>
+
+<p><strong>适用场景</strong>：大型代码库架构变更、跨团队PR审查、安全合规检查。</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>为每个业务域建立.claude-review规则文件，明确审查重点（性能/安全/架构一致性）</li>
+<li>在PR模板中新增"AI预审结论"字段，要求提交者先跑Claude Code审查并粘贴关键建议</li>
+<li>对Claude Code标记"高风险"的变更，强制双人审查，降低高级工程师在低价值Review上的时间消耗预估节省：每位高级工程师每周节省4-6小时Review时间</li>
+</ul>
+
+<hr>
+
+<h3>3. GitHub Copilot Code Review — 企业合规场景的AI审查基座</h3>
+
+<p><strong>定位</strong>：GitHub原生AI代码审查，与企业SSO/权限体系无缝集成。</p>
+
+<p><strong>适用场景</strong>：已在使用GitHub Enterprise的团队，需满足数据不出域的合规要求。</p>
+
+<p><strong>500人团队落地建议</strong>：</p>
+<ul>
+<li>对于数据安全级别高的团队（金融、医疗），优先选Copilot而非第三方工具，确保代码不离境</li>
+<li>配置Copilot自定义指令，注入团队编码规范和安全checklist</li>
+<li>与PR分支保护规则联动，AI Review通过后方可合并，形成强制门控</li>
+</ul>
+
+<hr>
+
+<h2>💡 丫头点评</h2>
+
+<p>今天有两个信号值得组织建设者重点关注。</p>
+
+<p><strong>第一，AI成本管理即将成为新的核心能力。</strong> McKinsey数据明确：20%的企业已被Token成本"卡脖子"。这不是技术问题，而是组织能力问题——你的团队有没有人能做"AI成本优化设计"？这其实是一个典型的I-T-π型人才需求：既懂业务流程、又懂LLM调用机制、还能设计成本控制框架的复合型人才。建议在2026年Q4把"AI成本治理Owner"作为正式岗位写入组织图。</p>
+
+<p><strong>第二，中层管理者的抵制是变革最大的阻力，但也是最大的机会。</strong> TeamViewer研究揭示的中层管理者对AI自主权的焦虑，折射出的是"四层→两层半"结构转型中最真实的人性摩擦。解法不是强行推动，而是让中层管理者成为"AI团队教练"——从决策者转型为AI Native Pod的协调者与赋能者。给他们新的身份，比裁掉他们更具组织韧性。</p>
+
+<p>今日关键词：<strong>ROI现实主义 + 中层再定位 + 测试AI化</strong>。</p>
+
+        <div class="actions">
+            <a href="https://my.feishu.cn/docx/LSuTdevg5oyae5xGSEocJ0lYnOb" class="action-btn primary" target="_blank">📄 在飞书中查看</a>
+            <a href="../" class="action-btn secondary">← 返回日报列表</a>
+        </div>
+    </div>
+    <div class="footer">
+        <span>由丫头自动生成 ✨ Powered by AI</span>
+    </div>
+    <script>
+        // 1. Wrap sections in cards FIRST
+        const container = document.getElementById('content');
+        const children = Array.from(container.children);
+        let currentCard = null;
+        const fragment = document.createDocumentFragment();
+        let actionsEl = null;
+
+        children.forEach(el => {
+            if (el.classList.contains('actions')) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = null;
+                actionsEl = el;
+                return;
+            }
+            if (el.tagName === 'H2' || (el.tagName === 'H1' && el.classList.contains('content-h1'))) {
+                if (currentCard) fragment.appendChild(currentCard);
+                currentCard = document.createElement('div');
+                currentCard.className = 'section-card';
+                if (el.textContent.includes('丫头点评') || el.textContent.includes('点评')) {
+                    currentCard.classList.add('insight');
+                } else if (el.textContent.includes('今日要闻') || el.textContent.includes('要闻')) {
+                    currentCard.classList.add('highlight');
+                }
+                el.classList.add('section-title');
+                currentCard.appendChild(el);
+            } else if (el.tagName === 'H1' && !el.classList.contains('content-h1')) {
+                el.classList.add('content-h1');
+            } else {
+                if (!currentCard) {
+                    currentCard = document.createElement('div');
+                    currentCard.className = 'section-card';
+                }
+                currentCard.appendChild(el);
+            }
+        });
+        if (currentCard) fragment.appendChild(currentCard);
+        if (actionsEl) fragment.appendChild(actionsEl);
+
+        while (container.firstChild) container.removeChild(container.firstChild);
+        container.appendChild(fragment);
+
+        // 2. Generate TOC AFTER card wrapping
+        const h2s = document.querySelectorAll('.section-card h2.section-title');
+        if (h2s.length > 1) {
+            const toc = document.getElementById('toc');
+            let html = '<div class="toc-inner"><div class="toc-title">📑 目录</div><div class="toc-list">';
+            h2s.forEach((h2, i) => {
+                const id = 'sec-' + i;
+                h2.id = id;
+                const cls = i === 0 ? 'toc-hot' : 'toc-normal';
+                html += `<a href="#${id}" class="${cls}">${h2.textContent}</a>`;
+            });
+            html += '</div></div>';
+            toc.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
